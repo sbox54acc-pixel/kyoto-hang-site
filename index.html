@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>トップ｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+</head>
+<body>
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html" class="active">トップ</a><a href="playlists.html" class="">再生リスト</a><a href="training.html" class="">練習</a><a href="area.html" class="">エリア管理</a><a href="video.html" class="">動画</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>トップ</h1>
+  <p>必要な情報へすぐ移動するための入口です。</p>
+</section>
+<main class="main">
+
+<section class="section">
+  <div class="page-intro">
+    <strong>京都ハングの共有情報入口</strong><br>
+    練習動画、練習資料、エリア管理、動画運用の情報へ移動できます。
+  </div>
+  <div class="cards">
+    <a class="card blue" href="playlists.html"><div class="icon">▶</div><div><strong>再生リスト</strong><div class="small">個人別の練習動画を見る</div></div><div class="arrow">›</div></a>
+    <a class="card green" href="training.html"><div class="icon">△</div><div><strong>練習</strong><div class="small">練習手順・初飛びまでの流れ</div></div><div class="arrow">›</div></a>
+    <a class="card sand" href="area.html"><div class="icon">⚙</div><div><strong>エリア管理</strong><div class="small">草刈り・整備・作業マニュアル</div></div><div class="arrow">›</div></a>
+    <a class="card rose" href="video.html"><div class="icon">●</div><div><strong>動画</strong><div class="small">撮影・アップロード・整理</div></div><div class="arrow">›</div></a>
+  </div>
+</section>
+
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
