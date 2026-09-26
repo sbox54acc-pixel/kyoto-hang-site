@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>再生リストの保存｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.save-guide{display:grid;gap:14px}
+.save-step{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff}
+.save-step-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;margin-bottom:8px}
+.save-step strong{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
+.save-shot{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#eef3f5}
+.save-shot img{display:block;width:100%;height:auto}
+.back-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:13px}
+</style>
+<style id="access-guard-style">
+#access-guard{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#f5f8fa}
+#access-guard[hidden]{display:none}
+#access-card{width:min(100%,420px);background:#fff;border:1px solid #dce6eb;border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;border-radius:12px;outline:none}
+#access-submit{width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;background:#173747;color:#fff;font-size:16px;font-weight:700}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+</head>
+<body>
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">トップ</a>
+    <a href="playlists.html" class="active">再生リスト</a>
+    <a href="training.html">練習</a>
+    <a href="area.html">エリア管理</a>
+    <a href="video.html">動画</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>再生リストの保存</h1>
+  <p>自分の再生リストを、普段使っているYouTubeアカウントに保存しておく方法です。</p>
+</section>
+
+<main class="main">
+  <section class="section">
+    <div class="save-guide">
+      <div class="save-step">
+        <div class="save-step-num">1</div>
+        <strong>自分の再生リストを開く</strong>
+        <div class="small">このサイトの「個人再生リスト」から自分の名前を押して、YouTubeで開きます。</div>
+      </div>
+      <div class="save-step">
+        <div class="save-step-num">2</div>
+        <strong>ブックマークボタンを押す</strong>
+        <div class="small">再生リスト画面上部のブックマーク形のボタンを押します。</div>
+      </div>
+      <div class="save-shot">
+        <img src="playlist-save-guide.jpg" alt="YouTube再生リスト画面のブックマークボタン">
+      </div>
+      <div class="save-step">
+        <div class="save-step-num">3</div>
+        <strong>保存完了</strong>
+        <div class="small">以後は、普段使っているYouTubeアカウントから自分の再生リストをすぐ見返せます。</div>
+      </div>
+    </div>
+    <a class="back-link" href="playlists.html">← 個人再生リストへ戻る</a>
+  </section>
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){guard.hidden=true;return;}
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>

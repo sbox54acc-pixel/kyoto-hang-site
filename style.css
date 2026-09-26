@@ -23,3 +23,11 @@
 }
 .placeholder-item strong{display:block;color:var(--ink);margin-bottom:4px}
 .placeholder-item small{color:var(--muted)}
+
+.save-help-link{
+  display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;
+  padding:16px 17px;border:1px solid var(--line);border-radius:18px;
+  background:#f8fbfc;text-decoration:none;color:inherit
+}
+.save-help-link strong{display:block;color:var(--ink);font-size:15px;line-height:1.5}
+.save-help-link .small{margin-top:5px;color:var(--muted)}
