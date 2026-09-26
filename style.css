@@ -31,3 +31,15 @@
 }
 .save-help-link strong{display:block;color:var(--ink);font-size:15px;line-height:1.5}
 .save-help-link .small{margin-top:5px;color:var(--muted)}
+
+
+html{scroll-padding-top:132px}
+.section[id],.kana-group{scroll-margin-top:132px}
+.guide-link{position:relative;padding-right:42px;text-decoration:none;color:inherit}
+.guide-link .guide-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:24px;color:#788a93}
+.map-block{padding:18px 0 28px}
+.map-block+ .map-block{border-top:1px solid var(--line)}
+.map-block h2{font-size:22px;margin:0 0 8px;color:var(--ink)}
+.map-block p{margin:0 0 14px;font-size:14px;color:#4c6571}
+.map-image{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px;background:#eef3f5}
+.map-note{font-size:11px;color:var(--muted);margin-top:8px}

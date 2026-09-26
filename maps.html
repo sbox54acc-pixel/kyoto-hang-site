@@ -4,17 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>再生リストの保存｜京都ハング ライブラリ</title>
+<title>荒神山 練習・ランディングマップ｜京都ハング ライブラリ</title>
 <link rel="stylesheet" href="style.css">
-<style>
-.save-guide{display:grid;gap:14px}
-.save-step{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff}
-.save-step-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;margin-bottom:8px}
-.save-step strong{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
-.save-shot{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#eef3f5}
-.save-shot img{display:block;width:100%;height:auto}
-.back-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:13px}
-</style>
 <style id="access-guard-style">
 #access-guard{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#f5f8fa}
 #access-guard[hidden]{display:none}
@@ -22,6 +13,7 @@
 #access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
 #access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
 #access-pass{width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;border-radius:12px;outline:none}
+#access-pass:focus{border-color:#4b8ea9}
 #access-submit{width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;background:#173747;color:#fff;font-size:16px;font-weight:700}
 #access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
 </style>
@@ -38,7 +30,6 @@
     </form>
   </div>
 </div>
-
 <div class="site">
 <header class="header">
   <div class="head">
@@ -47,46 +38,31 @@
   </div>
   <nav class="nav">
     <a href="index.html">トップ</a>
-    <a href="playlists.html" class="active">再生リスト</a>
-    <a href="training.html">練習ガイド</a>
+    <a href="playlists.html">再生リスト</a>
+    <a href="training.html" class="active">練習ガイド</a>
     <a href="area.html">エリア管理</a>
     <a href="video.html">動画ガイド</a>
   </nav>
 </header>
-
 <section class="hero">
-  <h1>再生リストの保存</h1>
-  <p>自分の再生リストを、普段使っているYouTubeアカウントに保存しておく方法です。</p>
+  <h1>荒神山 練習・ランディングマップ</h1>
+  <p>練習・初飛び・誘導で使う位置関係を確認するためのマップです。</p>
 </section>
-
 <main class="main">
-  <section class="section">
-    <div class="save-guide">
-      <div class="save-step">
-        <div class="save-step-num">1</div>
-        <strong>自分の再生リストを開く</strong>
-        <div class="small">このサイトの「個人再生リスト」から自分の名前を押して、YouTubeで開きます。</div>
-      </div>
-      <div class="save-step">
-        <div class="save-step-num">2</div>
-        <strong>ブックマークボタンを押す</strong>
-        <div class="small">再生リスト画面上部のブックマーク形のボタンを押します。</div>
-      </div>
-      <div class="save-shot">
-        <img src="playlist-save-guide.jpg" alt="YouTube再生リスト画面のブックマークボタン">
-      </div>
-      <div class="save-step">
-        <div class="save-step-num">3</div>
-        <strong>保存完了</strong>
-        <div class="small">以後は、普段使っているYouTubeアカウントから自分の再生リストをすぐ見返せます。</div>
-      </div>
-    </div>
-    <a class="back-link" href="playlists.html">← 個人再生リストへ戻る</a>
+  <section class="map-block">
+    <h2>初飛び＆誘導用ランディングマップ</h2>
+    <p>初飛び前のランディングアプローチの確認と、誘導時に使用する目標物の名称を統一・共有するために作成しました。思い出したいときや、事前に確認したいときにご利用ください。</p>
+    <img class="map-image" src="landing-map.jpg" alt="荒神山 初飛び・誘導用ランディングマップ">
   </section>
+  <section class="map-block">
+    <h2>台地練習 リターン位置マップ</h2>
+    <p>リターンのアンカーを整理し、番号を奥から順に付け直しました。トーイング時の位置と番号の確認にご利用ください。</p>
+    <img class="map-image" src="return-anchor-map.png" alt="台地練習 リターンのアンカー番号マップ">
+  </section>
+  <a class="back-link" href="training.html">← 練習ガイドへ戻る</a>
 </main>
 <footer class="footer">京都ハング ライブラリ</footer>
 </div>
-
 <script id="access-guard-script">
 (function(){
   const KEY="kyotoHangAccess";
@@ -99,16 +75,8 @@
   setTimeout(()=>input.focus(),50);
   form.addEventListener("submit",function(e){
     e.preventDefault();
-    if(input.value===PASS){
-      sessionStorage.setItem(KEY,"ok");
-      guard.hidden=true;
-      error.textContent="";
-      window.scrollTo(0,0);
-    }else{
-      error.textContent="パスコードが違います。";
-      input.value="";
-      input.focus();
-    }
+    if(input.value===PASS){sessionStorage.setItem(KEY,"ok");guard.hidden=true;error.textContent="";window.scrollTo(0,0);}
+    else{error.textContent="パスコードが違います。";input.value="";input.focus();}
   });
 })();
 </script>
