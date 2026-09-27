@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>動画の投稿とスマホへの保存｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+
+<style>
+.manual-stack{display:grid;gap:14px}
+.manual-block{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+  background:#fff;
+}
+.manual-block h2{margin:0 0 10px;font-size:21px;color:var(--ink)}
+.manual-block ol,.manual-block ul{margin:0;padding-left:1.35em}
+.manual-block li{margin:8px 0}
+.video-wrap{
+  width:min(100%,390px);
+  margin:14px auto 0;
+  aspect-ratio:9/16;
+  border-radius:18px;
+  overflow:hidden;
+  background:#000;
+}
+.video-wrap iframe{width:100%;height:100%;border:0;display:block}
+.caution{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:var(--sand);
+  font-size:13px;
+}
+.back-link{
+  display:inline-flex;
+  margin-top:18px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+
+<div class="site">
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">トップ</a>
+    <a href="playlists.html">再生リスト</a>
+    <a href="training.html">練習ガイド</a>
+    <a href="area.html">エリア管理</a>
+    <a href="video.html" class="active">動画ガイド</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>動画の投稿とスマホへの保存</h1>
+  <p>YouTube Studioを使った基本手順です。</p>
+</section>
+
+<main class="main">
+<section class="section">
+  <div class="manual-stack">
+
+    <section class="manual-block">
+      <h2>操作動画</h2>
+      <p>まずは下の動画を見ると、投稿からスマホへの保存までの流れを確認できます。</p>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/Pz5_naEmVMQ"
+          title="動画の投稿とスマホへの保存"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section class="manual-block">
+      <h2>動画を投稿する</h2>
+      <ol>
+        <li><strong>YouTube Studio</strong>アプリを開く</li>
+        <li>投稿先が<strong>京都ハング</strong>になっていることを確認する</li>
+        <li>上部の<strong>「作成」</strong>から投稿する動画を選ぶ</li>
+        <li>タイトル・公開設定・視聴者設定などを確認する</li>
+        <li><strong>「動画をアップロード」</strong>を押す</li>
+        <li>投稿後、京都ハングのチャンネルに動画が表示されているか確認する</li>
+      </ol>
+    </section>
+
+    <section class="manual-block">
+      <h2>スマホに保存する</h2>
+      <ol>
+        <li>YouTube Studioで<strong>「コンテンツ」</strong>を開く</li>
+        <li>保存したい<strong>自分のアップロード動画</strong>のメニューを開く</li>
+        <li><strong>「デバイスに保存」</strong>を選ぶ</li>
+        <li>スマホに保存されたことを確認する</li>
+      </ol>
+      <div class="caution">
+        他の人が投稿した動画を、京都ハングの編集者権限で同じように保存できるかは未確認です。
+      </div>
+    </section>
+
+  </div>
+
+  <a class="back-link" href="video.html">← 動画ガイドへ戻る</a>
+</section>
+</main>
+
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
