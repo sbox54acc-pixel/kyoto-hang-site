@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>各グライダーの特徴｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+
+<style>
+.flow-stack{display:grid;gap:14px}
+.flow-step{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+  background:#fff;
+}
+.flow-step.finish{background:#eef5f7}
+.step-no{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.06em;
+}
+.flow-step h2{margin:2px 0 6px;font-size:21px;color:var(--ink)}
+.flow-step .purpose{margin:0}
+.flow-step details{
+  margin-top:14px;
+  border-top:1px solid var(--line);
+  padding-top:12px;
+}
+.flow-step summary{
+  cursor:pointer;
+  list-style:none;
+  font-weight:700;
+}
+.flow-step summary::-webkit-details-marker{display:none}
+.flow-step summary::after{
+  content:"▼";
+  float:right;
+  font-size:11px;
+  color:var(--muted);
+}
+.flow-step details[open] summary::after{transform:rotate(180deg)}
+.flow-detail{margin-top:14px}
+.flow-detail h3{margin:14px 0 6px;font-size:15px;color:var(--ink)}
+.flow-detail ul{margin:0;padding-left:1.3em}
+.flow-detail li{margin:6px 0}
+.flow-detail p{margin:0;line-height:1.8}
+.goal{
+  font-weight:600;
+  background:#f7fafb;
+  border-radius:14px;
+  padding:12px 14px;
+}
+.small-note{color:var(--muted);font-size:13px}
+.back-link{
+  display:inline-flex;
+  margin-top:18px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+
+<div class="site">
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">トップ</a>
+    <a href="playlists.html">再生リスト</a>
+    <a href="training.html" class="active">練習ガイド</a>
+    <a href="area.html">エリア管理</a>
+    <a href="video.html">動画ガイド</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>各グライダーの特徴</h1>
+  <p>初飛びまでの練習で使う機体の違いを、練習上の感覚に沿って整理しています。</p>
+</section>
+
+<main class="main">
+<section class="section">
+
+  <div class="flow-stack">
+
+    <section class="flow-step">
+      <div class="step-no">330</div>
+      <h2>330</h2>
+      <p>特大の翼で直進安定性が高い一方で、煽られやすく、一度傾くと修正が難しい機体です。</p>
+      <p>テイクオフ時に傾かないよう気をつけ、飛んだら軽く引いて速度をつけると、機体の直進安定性によってまっすぐ飛びやすくなります。</p>
+      <p>テールが付いているため、テイクオフ時にアタックアングルを調整する必要がなく、フレアーのタイミングにも幅があります。</p>
+    </section>
+
+    <section class="flow-step">
+      <div class="step-no">225</div>
+      <h2>225</h2>
+      <p>飛んでいる感覚は330より少し速く、少し操作しやすい程度で、大きくは変わりません。</p>
+      <p>テイクオフ時にテールを上げて自分でノーズの高さを決めること、レベルキープをしてフレアーをかけるタイミングを図ることが主な練習ポイントになります。</p>
+      <p>操作しやすくなっている一方で、テイクオフとフレアーに気を取られて、飛行中のコントロールが曖昧にならないよう注意します。</p>
+      <p>330と同じく、軽く引いておけばまっすぐ飛びやすい機体です。</p>
+    </section>
+
+    <section class="flow-step">
+      <div class="step-no">145 / 170 / 195</div>
+      <h2>山飛びサイズの機体</h2>
+      <p>コントロールがよく効く分、左右にも取られやすくなります。</p>
+      <p>ここから高度を上げてターン練習へ進むため、これまで以上に細かい操作で、自分でまっすぐ飛ばすことが必要になります。</p>
+      <p>テイクオフとランディングでも、自分で揚力を作る感覚を磨き、山飛びに備えていきます。</p>
+    </section>
+
+  </div>
+
+  <p class="small-note" style="margin-top:16px">ここに書いているのは京都ハングでの練習上の整理です。実際の操作、機体選定、飛行判断は、当日の条件と指導者の判断を優先してください。</p>
+
+  <a class="back-link" href="first-flight.html">← 初飛びまでの流れへ戻る</a>
+</section>
+</main>
+
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
