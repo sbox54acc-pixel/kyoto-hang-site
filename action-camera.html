@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>共用アクションカメラ｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+
+<style>
+.manual-stack{display:grid;gap:14px}
+.manual-block{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+  background:#fff;
+}
+.manual-block h2{
+  margin:0 0 10px;
+  font-size:21px;
+  color:var(--ink);
+}
+.manual-block ul,
+.manual-block ol{
+  margin:0;
+  padding-left:1.35em;
+}
+.manual-block li{margin:7px 0}
+.manual-block strong{color:var(--ink)}
+.photo-placeholder{
+  margin-top:14px;
+  border:1px dashed #b9cbd4;
+  border-radius:16px;
+  min-height:120px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:18px;
+  background:#f8fbfc;
+  color:var(--muted);
+  font-size:12px;
+}
+.caution{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:var(--sand);
+  font-size:13px;
+}
+.back-link{
+  display:inline-flex;
+  margin-top:18px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+
+<div class="site">
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">トップ</a>
+    <a href="playlists.html">再生リスト</a>
+    <a href="training.html">練習ガイド</a>
+    <a href="area.html">エリア管理</a>
+    <a href="video.html" class="active">動画ガイド</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>共用アクションカメラ</h1>
+  <p>MOVIO M1034K 4K｜まずは撮影に必要な基本だけをまとめています。</p>
+</section>
+
+<main class="main">
+<section class="section">
+  <div class="manual-stack">
+
+    <section class="manual-block">
+      <h2>1. 撮影前の準備・確認</h2>
+      <ul>
+        <li><strong>バッテリー残量</strong>が十分にあるか確認する</li>
+        <li><strong>日付・時刻</strong>がずれていないか確認する</li>
+        <li><strong>撮影設定</strong>を確認する</li>
+        <li>取り付け後、撮りたい範囲が<strong>カメラの画角に収まっているか</strong>確認する</li>
+      </ul>
+      <div class="caution">
+        日付表示は基本ON。日時がずれている場合の合わせ方は、今後補助マニュアルとして追加します。
+      </div>
+    </section>
+
+    <section class="manual-block">
+      <h2>2. グライダーへのセット</h2>
+      <ul>
+        <li>カメラは<strong>テール</strong>または<strong>クロスバー</strong>に取り付ける</li>
+        <li>取り付けベルトを巻き付け、しっかり固定する</li>
+        <li>落下防止のため、<strong>サブの紐も結んでおく</strong></li>
+        <li>取り付け後、カメラがぐらつかないか確認する</li>
+      </ul>
+      <div class="caution">
+        <strong>テールに取り付ける場合は、特に落下しないよう念入りに確認してください。</strong>
+      </div>
+      <div class="photo-placeholder">
+        写真を追加予定<br>
+        テールへの取り付け例 / クロスバーへの取り付け例
+      </div>
+    </section>
+
+    <section class="manual-block">
+      <h2>3. 撮影のしかた</h2>
+      <ol>
+        <li>前面の<strong>電源ボタンを長押し</strong>する</li>
+        <li><strong>起動音</strong>が鳴ったら電源ON</li>
+        <li>上部の<strong>撮影ボタン</strong>を押す → 録画開始</li>
+        <li>もう一度、上部の<strong>撮影ボタン</strong>を押す → 録画停止</li>
+        <li>録画停止を確認し、前面の<strong>電源ボタンを長押し</strong>する</li>
+        <li><strong>終了音</strong>が鳴ったら電源OFF</li>
+      </ol>
+      <div class="photo-placeholder">
+        写真を追加予定<br>
+        カメラ本体・電源ボタン・撮影ボタン
+      </div>
+    </section>
+
+  </div>
+
+  <a class="back-link" href="video.html">← 動画ガイドへ戻る</a>
+</section>
+</main>
+
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
