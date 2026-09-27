@@ -24,22 +24,57 @@
 .placeholder-item strong{display:block;color:var(--ink);margin-bottom:4px}
 .placeholder-item small{color:var(--muted)}
 
-.save-help-link{
-  display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;
-  padding:16px 17px;border:1px solid var(--line);border-radius:18px;
-  background:#f8fbfc;text-decoration:none;color:inherit
+
+/* Map preview + fullscreen viewer */
+.map-preview{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:58vh;
+  object-fit:contain;
+  margin:0 auto;
+  border-radius:16px;
+  cursor:zoom-in;
+  background:#eef3f5;
 }
-.save-help-link strong{display:block;color:var(--ink);font-size:15px;line-height:1.5}
-.save-help-link .small{margin-top:5px;color:var(--muted)}
-
-
-html{scroll-padding-top:132px}
-.section[id],.kana-group{scroll-margin-top:132px}
-.guide-link{position:relative;padding-right:42px;text-decoration:none;color:inherit}
-.guide-link .guide-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:24px;color:#788a93}
-.map-block{padding:18px 0 28px}
-.map-block+ .map-block{border-top:1px solid var(--line)}
-.map-block h2{font-size:22px;margin:0 0 8px;color:var(--ink)}
-.map-block p{margin:0 0 14px;font-size:14px;color:#4c6571}
-.map-image{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px;background:#eef3f5}
-.map-note{font-size:11px;color:var(--muted);margin-top:8px}
+.image-viewer[hidden]{display:none}
+.image-viewer{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:54px 12px 12px;
+  background:rgba(0,0,0,.92);
+}
+.image-viewer img{
+  display:block;
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  cursor:zoom-out;
+}
+.image-viewer-close{
+  position:absolute;
+  top:10px;
+  right:12px;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  color:#fff;
+  font-size:30px;
+  line-height:1;
+}
+body.viewer-open{overflow:hidden}
+@media (min-width:800px){
+  .map-preview{
+    max-width:900px;
+    max-height:68vh;
+  }
+}

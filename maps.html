@@ -80,5 +80,50 @@
   });
 })();
 </script>
+
+<div id="image-viewer" class="image-viewer" hidden aria-modal="true" role="dialog">
+  <button id="image-viewer-close" class="image-viewer-close" type="button" aria-label="閉じる">×</button>
+  <img id="image-viewer-img" src="" alt="">
+</div>
+
+<script id="map-viewer-script">
+(function(){
+  const viewer = document.getElementById("image-viewer");
+  const viewerImg = document.getElementById("image-viewer-img");
+  const closeBtn = document.getElementById("image-viewer-close");
+
+  function openViewer(img){
+    viewerImg.src = img.dataset.full || img.src;
+    viewerImg.alt = img.alt || "";
+    viewer.hidden = false;
+    document.body.classList.add("viewer-open");
+  }
+
+  function closeViewer(){
+    viewer.hidden = true;
+    viewerImg.src = "";
+    document.body.classList.remove("viewer-open");
+  }
+
+  document.querySelectorAll(".map-preview").forEach(function(img){
+    img.addEventListener("click", function(){ openViewer(img); });
+    img.addEventListener("keydown", function(e){
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        openViewer(img);
+      }
+    });
+  });
+
+  closeBtn.addEventListener("click", closeViewer);
+  viewer.addEventListener("click", function(e){
+    if(e.target === viewer || e.target === viewerImg) closeViewer();
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && !viewer.hidden) closeViewer();
+  });
+})();
+</script>
+
 </body>
 </html>
