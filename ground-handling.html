@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>グラハン｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+<style>
+.gh-lead{
+  background:#eef5f7;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+  margin-bottom:16px;
+}
+.gh-lead p{margin:0;line-height:1.8}
+.gh-stack{display:grid;gap:14px}
+.gh-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+}
+.gh-step{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.06em;
+}
+.gh-card h2{
+  margin:2px 0 8px;
+  font-size:21px;
+  color:var(--ink);
+}
+.gh-card h3{
+  margin:16px 0 6px;
+  font-size:15px;
+  color:var(--ink);
+}
+.gh-card p{margin:0;line-height:1.85}
+.gh-card p + p{margin-top:10px}
+.gh-card ul{margin:6px 0 0;padding-left:1.25em}
+.gh-card li{margin:6px 0}
+.gh-flow{
+  margin:12px 0 0;
+  background:#f7fafb;
+  border-radius:14px;
+  padding:12px 14px;
+  font-weight:700;
+  line-height:1.8;
+}
+.gh-key{
+  margin-top:12px;
+  background:#fff8e9;
+  border-radius:14px;
+  padding:12px 14px;
+  font-weight:700;
+}
+.gh-note{
+  margin-top:16px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+.back-link{
+  display:inline-flex;
+  margin-top:18px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">トップ</a>
+    <a href="playlists.html">再生リスト</a>
+    <a href="training.html" class="active">練習ガイド</a>
+    <a href="area.html">エリア管理</a>
+    <a href="video.html">動画ガイド</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>グラハン</h1>
+  <p>安全なテイクオフにつなげるための基本練習です。</p>
+</section>
+
+<main class="main">
+<section class="section">
+
+  <div class="gh-lead">
+    <p><strong>グラハンは、安全にテイクオフするための練習で、静止したグライダーを滑空状態までスムーズに移行させる技術を習得します。</strong></p>
+  </div>
+
+  <div class="gh-stack">
+
+    <section class="gh-card">
+      <div class="gh-step">01</div>
+      <h2>ホールド</h2>
+      <p>まずは、肩・肘・手首の<strong>3点支持</strong>でグライダーをしっかり保持します。手のひらで強く握り込むのではなく、あくまで3点で支えます。</p>
+      <p>この状態でロールとピッチを操作し、左右を水平に保ちながら、ノーズの高さを自由に調整できるようにします。</p>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">02</div>
+      <h2>歩いて揚力を感じる</h2>
+      <p>ホールドがある程度できるようになったら、グライダーの高さを一定に保ち、地面の上を<strong>スライドするように歩きます。</strong></p>
+      <p>歩くことで揚力がたまり、機体が軽くなっていく感覚を確認します。</p>
+      <ul>
+        <li>ノーズを上げると早く軽くなる</li>
+        <li>ノーズを下げるとなかなか軽くならない</li>
+        <li>上下にガタガタ歩くと揚力がたまりにくい</li>
+        <li>風の強さによっても軽くなるタイミングが変わる</li>
+      </ul>
+      <div class="gh-key">グラハンをするたびに、その日の風と揚力のたまり方を感じる。</div>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">03</div>
+      <h2>アタックアングルを決める</h2>
+      <p>ノーズを下げていくと、グライダーにはノーズを上げようとする反発が出ます。さらに下げると、その反発がなくなる位置があります。</p>
+      <p><strong>反発がなくなる直前のアタックアングル</strong>でホールドし、その日の風に合わせた位置を自分で探せるようにします。</p>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">04</div>
+      <h2>走り出し</h2>
+      <p>最初の1歩は急がず、丁寧に出します。</p>
+      <p>グライダーを無理やり空気へ押し当てるのではなく、<strong>空気の上に丁寧に乗せていく感覚</strong>で走り始め、前傾しながら加速します。</p>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">05</div>
+      <h2>持ち替え</h2>
+      <p>ここでいう<strong>「持ち替え」</strong>は、3点支持 → 2点支持 → 1点支持 → 手首を下ろす、までの一連の動作全体です。</p>
+
+      <div class="gh-flow">3点支持（肩・肘・手首） → 2点支持（肘・手首） → 1点支持（手首） → 手首を下ろして持ち替え完了</div>
+
+      <h3>3点 → 2点</h3>
+      <p>肩を急に外すのではなく、アップライトに当たっている位置を少しずつ下げて、肘・手首の2点支持へ移ります。背中を丸め、手首を内側に捻り込み、肘をロックした姿勢を作ります。</p>
+      <p><strong>2点支持でスイングラインが張っていることを確認します。</strong></p>
+
+      <h3>2点 → 1点</h3>
+      <p>スイングラインが張ったら、そこへの荷重を意識しながら肘を下げ、手首の1点支持へ移ります。荷重することで、1点支持でもコントロールできる幅を増やします。</p>
+      <p>最後に手首を下ろして、持ち替え完了です。</p>
+
+      <div class="gh-key">2点支持は重要な橋渡し。スイングラインが張る前に1点支持へ移らない。</div>
+
+      <h3>持ち替え全体の注意</h3>
+      <p>持ち替えのために、コントロールバーを上下へ無理やり動かしません。姿勢の変化によってバーとの位置関係は上下しますが、人間がバーを押し下げたり持ち上げたりするものではありません。</p>
+      <p>また、荷重するときにバーを握って下向きへ引っ張るのではなく、<strong>スイングラインへ荷重する</strong>ことを意識します。</p>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">06</div>
+      <h2>持ち替え後にもう一段階加速</h2>
+      <p>持ち替えが終わったら、そこで終わりではありません。<strong>もう一段階加速します。</strong></p>
+      <p>持ち替えで手首を下ろすときに引きを緩め、その勢いのまま飛び出してしまうと、自分でテイクオフのタイミングを作れていません。</p>
+      <div class="gh-flow">持ち替え完了 → 加速 → 荷重 → 蹴り出し＋当て</div>
+      <p>速度が十分あり、ノーズが上がりすぎていなければ、持ち替えと同時に蹴り出す形でも成立することはあります。ただし基本練習では、持ち替え後の加速を明確に行います。</p>
+      <p><strong>引きと当ては、山飛びを始めてからも繰り返し修正していく技術です。</strong></p>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">練習のコツ</div>
+      <h2>ホールドとグラハンは分けて練習する</h2>
+      <p>ホールドは風がなくても練習できます。一方で、指導者が練習可能と判断した範囲で、少し荒れた風の中でもホールドできるようになると技術向上につながります。</p>
+      <p>グラハンは、ある程度の風が正面から吹いている状態で行います。</p>
+      <p>長時間ホールドして待つのではなく、風が来る兆しを見てホールドするか、風が入ってきてからホールドし、<strong>風が止む前にグラハンへつなげます。</strong></p>
+      <p>ホールド時間は、目安として10秒程度までです。</p>
+    </section>
+
+    <section class="gh-card">
+      <div class="gh-step">意識すること</div>
+      <h2>完璧に決めることだけが目的ではない</h2>
+      <p>完璧なグラハンが決まると気持ちいいですが、それだけが目的ではありません。</p>
+      <ul>
+        <li>風が来るタイミングを見る</li>
+        <li>風の強さに合わせる</li>
+        <li>少し乱れた風に対応する</li>
+        <li>機体を取られても最後まで修正する</li>
+      </ul>
+      <p>グラハンを始めたら、少し崩れただけで簡単に諦めず、最後の最後まで直そうとします。</p>
+      <p>これは、初飛びまでの考え方と同じで、<strong>100点を出すことより最低点を引き上げる練習</strong>です。</p>
+      <div class="gh-key">完璧に決めることより、崩れたときにどこまで立て直せるか。</div>
+    </section>
+
+  </div>
+
+  <p class="gh-note">実際の練習条件、機体選定、操作、テイクオフの実施可否は、当日の状況と現場の指導者の判断を優先してください。</p>
+
+  <a class="back-link" href="training.html">← 練習ガイドへ戻る</a>
+</section>
+</main>
+
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
