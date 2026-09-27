@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>初飛びまでの流れ｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+
+<style>
+.flow-stack{display:grid;gap:14px}
+.flow-step{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:18px;
+  background:#fff;
+}
+.flow-step.finish{background:#eef5f7}
+.step-no{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  letter-spacing:.06em;
+}
+.flow-step h2{margin:2px 0 6px;font-size:21px;color:var(--ink)}
+.flow-step .purpose{margin:0}
+.flow-step details{
+  margin-top:14px;
+  border-top:1px solid var(--line);
+  padding-top:12px;
+}
+.flow-step summary{
+  cursor:pointer;
+  list-style:none;
+  font-weight:700;
+}
+.flow-step summary::-webkit-details-marker{display:none}
+.flow-step summary::after{
+  content:"▼";
+  float:right;
+  font-size:11px;
+  color:var(--muted);
+}
+.flow-step details[open] summary::after{transform:rotate(180deg)}
+.flow-detail{margin-top:14px}
+.flow-detail h3{margin:14px 0 6px;font-size:15px;color:var(--ink)}
+.flow-detail ul{margin:0;padding-left:1.3em}
+.flow-detail li{margin:6px 0}
+.flow-detail p{margin:0;line-height:1.8}
+.goal{
+  font-weight:600;
+  background:#f7fafb;
+  border-radius:14px;
+  padding:12px 14px;
+}
+.small-note{color:var(--muted);font-size:13px}
+.back-link{
+  display:inline-flex;
+  margin-top:18px;
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+
+<div class="site">
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">トップ</a>
+    <a href="playlists.html">再生リスト</a>
+    <a href="training.html" class="active">練習ガイド</a>
+    <a href="area.html">エリア管理</a>
+    <a href="video.html">動画ガイド</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>初飛びまでの流れ</h1>
+  <p>今の練習段階と、次に意識することを確認するためのガイドです。</p>
+</section>
+
+<main class="main">
+<section class="section">
+
+  <div class="flow-stack">
+
+    <section class="flow-step">
+      <div class="step-no">01</div>
+      <h2>330 セーフトー</h2>
+      <p class="purpose">基本操作に慣れ、機体を安定して飛ばす感覚を身につける。</p>
+      <details>
+        <summary>ポイント・次に進む目安を見る</summary>
+        <div class="flow-detail">
+          <h3>ポイント</h3>
+          <ul>
+            <li>少し引く</li>
+            <li>遠くを見る</li>
+          </ul>
+          <h3>次に進む目安</h3>
+          <p class="goal">毎回きれいなフレアーを決められるようになってきたら、330フリーに進めるようになる。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="flow-step">
+      <div class="step-no">02</div>
+      <h2>330 フリー</h2>
+      <p class="purpose">セーフトーの補助なしで、自分で機体を安定させて直進できるようになる。</p>
+      <details>
+        <summary>ポイント・次に進む目安を見る</summary>
+        <div class="flow-detail">
+          <h3>ポイント</h3>
+          <ul>
+            <li>ピッチをおさえる</li>
+            <li>目標を見る</li>
+            <li>傾きを感じとる</li>
+          </ul>
+          <h3>補足</h3>
+          <p>330は直進安定性が高く、穏やかな風の中では、ピッチをおさえられていれば自然とまっすぐ飛びやすい機体です。左右の操作より先に、ホールドで傾けない、持ち替えで傾けない、ピッチをおさえることを意識します。ホールドや持ち替えは、シミュレーターやグラハンでも並行して練習します。</p>
+          <h3>次に進む目安</h3>
+          <p class="goal">目標に向かって飛び、安定してフレアーを決められるようになっている。あわせて、グラハン練習でホールドと持ち替えを習得している。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="flow-step">
+      <div class="step-no">03</div>
+      <h2>225</h2>
+      <p class="purpose">ホールド・持ち替え・レベルキープを身につける。</p>
+      <details>
+        <summary>ポイント・次に進む目安を見る</summary>
+        <div class="flow-detail">
+          <h3>ポイント</h3>
+          <ul>
+            <li>ホールドと持ち替えで傾けない</li>
+            <li>レベルキープを意識する</li>
+          </ul>
+          <h3>補足</h3>
+          <p>225は330より少し速度が速いものの、傾けずに飛び出せればコントロールは効きやすい機体です。滑空性能が上がることでレベルキープが分かりやすくなります。地面からの高さだけでフレアーのタイミングを判断すると早すぎてロケットすることがあるため、グライダーの揚力の変化も感じながらタイミングを合わせます。</p>
+          <h3>次に進む目安</h3>
+          <p class="goal">レベルキープを作って、適切なタイミングできれいなフレアーを決められるようになってきたら、山飛びサイズの機体に進めるようになる。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="flow-step">
+      <div class="step-no">04</div>
+      <h2>145 / 170 / 195 <span class="small-note">（山飛びサイズの機体）</span></h2>
+      <p class="purpose">山飛びで使う機体に慣れる。</p>
+      <details>
+        <summary>ポイント・次に進む目安を見る</summary>
+        <div class="flow-detail">
+          <h3>ポイント</h3>
+          <ul>
+            <li>風に合わせてアタックアングルを自分で決める</li>
+            <li>トーイングロープが緩んだ状態の機体のニュートラルスピードを覚える（少しピッチを下げる）</li>
+            <li>自分でレベルキープを作る</li>
+          </ul>
+          <h3>次に進む目安</h3>
+          <p class="goal">中高度まで上げて、レベルキープを作ってランディングできるようになってきたら、ターン練習に進めるようになる。</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="flow-step">
+      <div class="step-no">05</div>
+      <h2>ターン練習</h2>
+      <p class="purpose">山飛びに必要なターンを習得する。</p>
+      <details>
+        <summary>ポイント・次に進む目安を見る</summary>
+        <div class="flow-detail">
+          <h3>ポイント</h3>
+          <ul>
+            <li>まず安全な高度を確保する</li>
+            <li>ターン前に加速する</li>
+            <li>バンクの強さを調整する</li>
+            <li>ターン後のピッチアップを抑える</li>
+            <li>目標を見る</li>
+          </ul>
+          <h3>誘導で確認すること</h3>
+          <ul>
+            <li>誘導どおりにターンする</li>
+            <li>左右を間違えない</li>
+            <li>目標物を間違えない</li>
+            <li>降りる場所の風向きを意識する</li>
+            <li>誘導に対して適切に反応できる</li>
+          </ul>
+          <h3>補足</h3>
+          <p>左右45°程度のターンができれば、それ以上のターンはそのバンクを維持していく延長として考えます。</p>
+          <h3>次に進む目安</h3>
+          <p class="goal">左右45°程度のターンができ、誘導に合わせて安定して動けるようになってきたら、初飛び目前！！</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="flow-step finish">
+      <div class="step-no">06</div>
+      <h2>初飛び</h2>
+      <p class="purpose">ここまでの練習ができるようになったら、初飛びへ進む段階です。</p>
+    </section>
+
+  </div>
+
+  <p class="small-note" style="margin-top:16px">各段階の進行はあくまで目安です。実際の練習内容や初飛びの判断は、当日の条件と指導者の判断を優先してください。</p>
+
+  <a class="back-link" href="training.html">← 練習ガイドへ戻る</a>
+</section>
+</main>
+
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
