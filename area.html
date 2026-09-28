@@ -174,6 +174,34 @@
       line-height:1.8;
     }
     .photo-set ul{padding-left:1.2em}
+    .warn-box{
+      margin:14px 0 18px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:#fff4e8;
+      border:1px solid #f2d1a8;
+    }
+    .warn-box strong{
+      display:block;
+      margin-bottom:6px;
+      color:#8a4a00;
+      font-size:14px;
+    }
+    .warn-box p, .warn-box ul{
+      margin:0;
+      line-height:1.8;
+    }
+    .warn-box ul{padding-left:1.2em}
+    .warn-title{
+      display:inline-block;
+      margin:2px 0 8px;
+      padding:5px 10px;
+      border-radius:999px;
+      background:#ffe2bf;
+      color:#8a4a00;
+      font-size:12px;
+      font-weight:700;
+    }
   </style>
 
   <div class="page-intro">
@@ -241,19 +269,24 @@
 
         <h3>刃を止める</h3>
         <div class="machine-flow">スロットルをロー → エンジン回転が緩やかになるのを待つ → 赤いレバーをゆっくり手前に引いて停止</div>
-        <p><strong>高速回転のまま刃を止めない。</strong>機械に大きな負担がかかります。</p>
+        <div class="warn-box">
+          <span class="warn-title">ここ大事</span>
+          <p><strong>高速回転のまま刃を止めない。</strong>機械に大きな負担がかかります。</p>
+        </div>
 
         <h3>エンジン停止</h3>
         <p><strong>キーで停止するだけ</strong>です。</p>
 
-        <h3>草刈り時の注意</h3>
-        <ul>
-          <li>刈った草は<strong>右側に排出</strong>されるので、排出した草を再び巻き込まないよう、基本は<strong>左回り</strong>で刈っていきます。</li>
-          <li>雨の後など、地面が<strong>沼状・ぬかるんでいるときは使用しない</strong>。</li>
-          <li><strong>溝・大きな凹凸・斜面</strong>に注意する。</li>
-          <li>刃が停止していても、<strong>セーフトーレーンのワイヤーは絶対に跨がない</strong>。</li>
-          <li>作業前に<strong>ワイヤーの位置を草刈りマップで確認</strong>する。</li>
-        </ul>
+        <div class="warn-box">
+          <strong>草刈り時の注意</strong>
+          <ul>
+            <li>刈った草は<strong>右側に排出</strong>されるので、排出した草を再び巻き込まないよう、基本は<strong>左回り</strong>で刈っていきます。</li>
+            <li>雨の後など、地面が<strong>沼状・ぬかるんでいるときは使用しない</strong>。</li>
+            <li><strong>溝・大きな凹凸・斜面</strong>に注意する。</li>
+            <li>刃が停止していても、<strong>セーフトーレーンのワイヤーは絶対に跨がない</strong>。</li>
+            <li>作業前に<strong>ワイヤーの位置を草刈りマップで確認</strong>する。</li>
+          </ul>
+        </div>
 
       </div>
     </details>
