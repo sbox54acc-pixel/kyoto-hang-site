@@ -66,12 +66,179 @@
 <main class="main">
 
 <section class="section">
-  <div class="page-intro">内容は仮です。今後、Driveの正式資料を確認して順次反映します。</div>
-  <div class="placeholder-list">
-    <div class="placeholder-item"><strong>草刈機マニュアル</strong><small>刈り払い機・おさんぽルンルン号・タチコマ</small></div>
-    <div class="placeholder-item"><strong>草刈り範囲</strong><small>作業範囲と注意箇所</small></div>
-    <div class="placeholder-item"><strong>ランディング整備</strong><small>エリア維持作業</small></div>
+  <style>
+    .machine-grid{display:grid;gap:16px}
+    .machine-card{
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .machine-card summary{
+      list-style:none;
+      cursor:pointer;
+      display:block;
+    }
+    .machine-card summary::-webkit-details-marker{display:none}
+    .machine-photo{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      display:block;
+      background:#eef3f5;
+    }
+    .machine-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 16px 16px;
+    }
+    .machine-head strong{
+      font-size:21px;
+      color:var(--ink);
+    }
+    .machine-head small{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .machine-arrow{
+      flex:0 0 auto;
+      width:30px;height:30px;
+      display:grid;place-items:center;
+      border-radius:999px;
+      background:#f1f6f8;
+      font-size:20px;
+      transition:transform .2s ease;
+    }
+    details[open] .machine-arrow{transform:rotate(90deg)}
+    .machine-body{
+      border-top:1px solid var(--line);
+      padding:16px;
+    }
+    .machine-body h3{
+      margin:0 0 6px;
+      font-size:15px;
+      color:var(--ink);
+    }
+    .machine-body p{
+      margin:0 0 14px;
+      line-height:1.8;
+    }
+    .machine-flow{
+      margin:0 0 16px;
+      padding:12px 14px;
+      background:#f6f9fa;
+      border-radius:14px;
+      line-height:1.8;
+      font-weight:700;
+    }
+    .machine-note{
+      margin-top:14px;
+      padding:12px 14px;
+      border-radius:14px;
+      background:#fff8e8;
+      line-height:1.7;
+    }
+    .role-box{
+      margin:0 0 18px;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#f8fbfc;
+      line-height:1.8;
+    }
+    .role-box strong{color:var(--ink)}
+    .manual-note{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+  </style>
+
+  <div class="page-intro">
+    使う機械の写真をタップすると、基本の操作手順を確認できます。
   </div>
+
+  <div class="role-box">
+    <strong>使い分け</strong><br>
+    広い場所は<strong>タチコマ</strong>、タチコマより小回りが必要な場所は<strong>るんるん</strong>、斜面や物の近くは<strong>刈り払い機</strong>を使います。
+  </div>
+
+  <div class="machine-grid">
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="tachikoma.jpg" alt="タチコマ">
+        <div class="machine-head">
+          <div><strong>タチコマ</strong><small>乗用草刈機｜広い場所を刈る</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+        <h3>始動</h3>
+        <div class="machine-flow">刃が上がっていることを確認 → 出力「ロー」→ 走行レバー「N」→ ブレーキ → キーで始動<br>※必要ならチョーク</div>
+
+        <h3>移動・草刈り</h3>
+        <p>右側のレバーまたはペダルで移動します。最初はブレーキに足を置き、右手のレバーで操作します。左側のレバーで刃を下げ、左手側の操作で刃を回します。</p>
+
+        <h3>停止</h3>
+        <div class="machine-flow">出力を「ロー」→ 刃を止める → キーOFF</div>
+
+        <div class="machine-note"><strong>注意：</strong>セーフトーレーンのワイヤーの上は走行しません。</div>
+      </div>
+    </details>
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="runrun.jpg" alt="るんるん">
+        <div class="machine-head">
+          <div><strong>るんるん</strong><small>手押し式草刈機｜端や小回りが必要な場所</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+        <h3>始動</h3>
+        <div class="machine-flow">ギア「N」→ 出力「ロー」→ 必要ならチョーク → スイッチON → 燃料コックを開く → スターター → チョークを戻す → 出力「ハイ」</div>
+
+        <h3>移動・草刈り</h3>
+        <p>ギアを入れ、黒いレバーで移動、赤いレバーで刃を回します。左右のレバーを使うと片側の車輪がフリーになり、旋回できます。</p>
+
+        <h3>草が重いとき</h3>
+        <div class="machine-flow">まず移動を止める → 刃を上げて負荷を減らす → 回転が戻ってから続ける</div>
+        <p>草丈が高いときや濡れているときは、ゆっくり進みます。</p>
+
+        <h3>終了</h3>
+        <div class="machine-flow">移動・刃を止める → エンジン停止 → 燃料コックを閉じる</div>
+      </div>
+    </details>
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="kariharai.jpg" alt="刈り払い機">
+        <div class="machine-head">
+          <div><strong>刈り払い機</strong><small>斜面・物の近く・大型機械が入りにくい場所</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+        <h3>始動</h3>
+        <div class="machine-flow">混合油を確認 → 燃料を送る → 周囲を確認 → スターターを引く</div>
+
+        <h3>草刈り</h3>
+        <p>装着した状態で安全を確認し、斜面や物の近くなど、大型機械が入りにくい場所を刈ります。</p>
+
+        <h3>終了</h3>
+        <div class="machine-flow">キルスイッチで停止 → 刃が完全に止まったことを確認</div>
+      </div>
+    </details>
+
+  </div>
+
+  <p class="manual-note">このページは京都ハングでの現場確認用の簡易マニュアルです。機体の状態や細かな操作が普段と違う場合は、無理に使用せず確認してください。</p>
 </section>
 
 </main>
