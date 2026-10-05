@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>草刈りマップ｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+</head>
+<body>
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html" class="">トップ</a><a href="playlists.html" class="">再生リスト</a><a href="training.html" class="">練習ガイド</a><a href="area.html" class="active">エリア管理</a><a href="video.html" class="">動画ガイド</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>草刈りマップ</h1>
+  <p>荒神山ランディング周辺で、どこを・何で・どの優先度で刈るかを確認するページです。</p>
+</section>
+<main class="main">
+<section class="section">
+<style>
+  .map-image{width:100%;height:auto;display:block;border-radius:18px;border:1px solid var(--line);background:#eef3f5}
+  .map-note,.danger-box,.anchor-box{margin:14px 0;padding:14px 16px;border-radius:16px;line-height:1.8}
+  .map-note{background:#f6f9fa;border:1px solid var(--line)}
+  .danger-box{background:#fff2e8;border:1px solid #efc49f}
+  .anchor-box{background:#fff9dd;border:1px solid #e8d47a}
+  .legend-grid,.zone-grid{display:grid;gap:12px}
+  .legend-card,.zone-card{border:1px solid var(--line);border-radius:16px;background:#fff;padding:14px 16px}
+  .legend-card h3,.zone-card h3{margin:0 0 6px;color:var(--ink);font-size:16px}
+  .legend-card p,.zone-card p{margin:0;line-height:1.75}
+  .priority{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:800;background:#eef3f5}
+  .priority.high{background:#ffe2d6;color:#8a3210}
+  .priority.mid{background:#fff3c7;color:#735700}
+  .priority.low{background:#eaf2f5;color:#536670}
+  .page-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .page-links a{text-decoration:none;font-weight:700}
+</style>
+
+<div class="page-links">
+  <a href="area.html">← エリア管理へ</a>
+  <a href="mowing-manual.html">草刈機マニュアルを見る →</a>
+</div>
+
+<div class="danger-box">
+  <strong>草刈りは重要な安全管理です。</strong><br>
+  草を放置すると1mを超えることがあり、ランディング時にベースバーへ引っかかるとノーズクラッシュにつながります。
+  パイロットがキールにぶつかり、大きな怪我につながる可能性もあります。
+  台地練習でも飛行速度は同じなので、山飛び前から「降りる場所は刈っておく」という意識を共有してください。
+</div>
+
+<div class="map-note">
+  <strong>最新の色分けマップをここに掲載予定</strong><br>
+  黄色・青・赤・水色の作業範囲と、A〜Jが入った最新版へ差し替えてから画像を掲載します。
+</div>
+
+<h2>色ごとの作業範囲</h2>
+<div class="legend-grid">
+  <div class="legend-card">
+    <h3>黄色：避ける範囲</h3>
+    <p>セーフトーレーン、アンカー、吹き流し。機械では避けます。セーフトーレーンはシンさんが刈ります。アンカー周辺は台地練習生が鎌で刈ってください。</p>
+  </div>
+  <div class="legend-card">
+    <h3>青：タチコマ</h3>
+    <p>広い場所を中心に担当します。A〜Jは、おおむね30分〜1時間で刈れる範囲を目安に分けています。</p>
+  </div>
+  <div class="legend-card">
+    <h3>赤：るんるん</h3>
+    <p>主に用水路沿いのじゃり道と、タチコマでは危険な斜面付近の外側を目印として刈ります。斜面へ落ちないよう注意し、斜面そのものは刈り払い機を使います。</p>
+  </div>
+  <div class="legend-card">
+    <h3>水色：刈り払い機</h3>
+    <p>主に斜面や溝の周辺です。障害物に注意してください。じゃり道の台地側には育てている植物があるため、誤って切らないよう注意します。</p>
+  </div>
+</div>
+
+<div class="danger-box">
+  <strong>ワイヤーは絶対に跨がない。</strong><br>
+  タチコマは刃が止まっている状態でも、セーフトーワイヤーの上を絶対に通らないでください。車高が低く、ワイヤーを引っ掛けて引きずる可能性があります。るんるんもワイヤーを越えないようにします。
+</div>
+
+<h2>タチコマ A〜J</h2>
+<div class="zone-grid">
+  <div class="zone-card"><h3>A <span class="priority low">優先度 低</span></h3><p>ランディングとしての整備優先度は低め。隣のビール敷地との境になるため、草が高いと感じたときや、手が空いているときに刈ります。</p></div>
+  <div class="zone-card"><h3>B・C <span class="priority mid">優先度 普通</span></h3><p>ランディングスキルが低い初心者や、赤白鉄塔・黄色いタンク寄りの風で降りる日に刈ります。台地練習生は、刈っておくとロングして長く飛べます。</p></div>
+  <div class="zone-card"><h3>D <span class="priority low">優先度 低</span></h3><p>台地のターン練習、または逆向きで飛ぶ際のテイクオフに使うときに刈ります。</p></div>
+  <div class="zone-card"><h3>E・F <span class="priority high">優先度 高</span></h3><p>メインランの先なので、なるべく刈った状態を維持します。雨で沼になりやすいため、地面の状態がよく刈れるときに作業しておきます。</p></div>
+  <div class="zone-card"><h3>G <span class="priority mid">優先度 普通</span></h3><p>赤白鉄塔・黄色いタンク方向の風で台地トーイングのテイクオフに使うときや、斜面でグラハンしたいときに刈ります。<strong>溝を切ってある場所があるため、必ず位置を確認してから発進してください。</strong></p></div>
+  <div class="zone-card"><h3>H <span class="priority high">優先度 高</span></h3><p>メインランの一部です。山飛びをする場合は刈っておきます。</p></div>
+  <div class="zone-card"><h3>I <span class="priority low">優先度 低</span></h3><p>あまり草は生えませんが、犬との境目なので高くなってきたら刈ります。小山の麓も刈れる範囲まで刈っておくと、刈り払い機で作業する部分を減らせます。</p></div>
+  <div class="zone-card"><h3>J <span class="priority mid">優先度 普通</span></h3><p>駐車場なので、歩きづらくならないよう刈ります。障害物が少なく範囲も小さいため、<strong>初めてタチコマに乗る人は、なるべくここで操作を練習してください。</strong></p></div>
+</div>
+
+<h2>るんるんで刈る範囲</h2>
+<div class="map-note">
+  主に用水路沿いのじゃり道と、タチコマでは危険な斜面近くを、外側の目印として刈ります。
+  ソーラーパネルのフェンスが切れた田んぼとの境目には、傾斜と高い部分があります。高い部分は慎重にるんるんで刈れますが、<strong>斜面は刈り払い機</strong>を使用してください。
+</div>
+
+<h2>刈り払い機で刈る範囲</h2>
+<div class="map-note">
+  主に斜面や溝の周辺を刈ります。障害物に注意してください。
+  じゃり道の台地側には育てている植物があるため、勢い余って切り倒さないよう注意します。
+</div>
+
+<div class="anchor-box">
+  <strong>台地練習生へ：その日使うアンカー周辺を確認</strong><br>
+  アンカー周りの草は鎌で刈ってください。トーイングロープやプーリーに草が絡まると事故の原因になりかねません。
+  その日使うアンカー周辺の草の状態を確認する習慣をつけてください。
+</div>
+
+<div class="map-note">
+  荒神山に来た人が、それぞれ何か1つだけでも作業する意識を持てば、一人ひとりの負担を小さくできます。
+  操作方法はこのサイトの草刈機マニュアルと紙資料を確認し、安全に作業してください。
+</div>
+
+</section>
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
