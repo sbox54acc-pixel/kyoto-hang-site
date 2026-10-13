@@ -34,53 +34,30 @@
 
 
 <style>
-.manual-stack{display:grid;gap:14px}
-.manual-block{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:18px;
-  background:#fff;
-}
-.manual-block h2{
-  margin:0 0 10px;
-  font-size:21px;
-  color:var(--ink);
-}
-.manual-block ul,
-.manual-block ol{
-  margin:0;
-  padding-left:1.35em;
-}
-.manual-block li{margin:7px 0}
+.manual-stack{display:grid;gap:16px}
+.manual-block{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}
+.manual-block h2{margin:0 0 10px;font-size:21px;color:var(--ink)}
+.manual-block h3{margin:16px 0 8px;font-size:16px;color:var(--ink)}
+.manual-block ul,.manual-block ol{margin:0;padding-left:1.35em}
+.manual-block li{margin:7px 0;line-height:1.7}
 .manual-block strong{color:var(--ink)}
-.photo-placeholder{
-  margin-top:14px;
-  border:1px dashed #b9cbd4;
-  border-radius:16px;
-  min-height:120px;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:18px;
-  background:#f8fbfc;
-  color:var(--muted);
-  font-size:12px;
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.photo-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.manual-photo{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#f8fbfc}
+.manual-photo img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;background:#eef3f5}
+.manual-photo figcaption{padding:8px 10px;font-size:12px;line-height:1.5;color:var(--muted);font-weight:700}
+.step-photo{margin:12px 0 2px}
+.step-photo img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:16px;border:1px solid var(--line);background:#eef3f5}
+.step-photo figcaption{padding:7px 2px 0;color:var(--muted);font-size:12px;font-weight:700}
+.caution{margin-top:12px;padding:12px 14px;border-radius:14px;background:var(--sand);font-size:13px;line-height:1.7}
+.info{margin-top:12px;padding:12px 14px;border-radius:14px;background:#eef7fb;border:1px solid #cfe2eb;font-size:13px;line-height:1.7}
+.quick{margin-bottom:16px;padding:14px 16px;border-radius:16px;background:#f4f8fa;border:1px solid var(--line);line-height:1.8}
+.back-link{display:inline-flex;margin-top:18px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+@media(max-width:680px){
+  .photo-grid,.photo-grid.three{grid-template-columns:1fr 1fr}
+  .manual-block{padding:16px}
 }
-.caution{
-  margin-top:12px;
-  padding:12px 14px;
-  border-radius:14px;
-  background:var(--sand);
-  font-size:13px;
-}
-.back-link{
-  display:inline-flex;
-  margin-top:18px;
-  padding:9px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  font-size:12px;
-}
+@media(max-width:440px){.photo-grid,.photo-grid.three{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -122,87 +99,105 @@
 
 <main class="main">
 <section class="section">
+  <div class="quick">
+    <strong>基本の流れ：</strong>BOXから出す → 取り付け → 電源ON → 撮影 → 録画停止 → 電源OFF → 必要なら動画を取り込む → 充電・BOXへ戻す
+  </div>
+
   <div class="manual-stack">
+    <section class="manual-block">
+      <h2>0. 収納場所・付属品</h2>
+      <p>共用カメラと付属品は、ラベルの付いた<strong>「アクションカメラ」ツールケース</strong>にまとめています。使用後は必ず元に戻してください。</p>
+      <div class="photo-grid">
+        <figure class="manual-photo"><img src="camera-box.jpg" alt="アクションカメラのツールケース"><figcaption>アクションカメラBOX</figcaption></figure>
+        <figure class="manual-photo"><img src="camera-usbc-microusb-cable.jpg" alt="Type-CとMicro USBの接続コード"><figcaption>iPhoneへの有線取り込みで使う Type-C ⇔ Micro USB コード</figcaption></figure>
+      </div>
+    </section>
 
     <section class="manual-block">
-      <h2>1. 撮影前の準備・確認</h2>
+      <h2>1. ボタンを確認</h2>
+      <div class="photo-grid three">
+        <figure class="manual-photo"><img src="camera-power-button.jpg" alt="カメラ前面の電源ボタン"><figcaption>前面：電源ボタン。長押しで電源ON／OFF。</figcaption></figure>
+        <figure class="manual-photo"><img src="camera-ok-button.jpg" alt="カメラ上面の撮影OKボタン"><figcaption>上面：撮影／OKボタン。録画開始・停止や決定に使用。</figcaption></figure>
+        <figure class="manual-photo"><img src="camera-select-buttons.jpg" alt="カメラ側面の選択ボタン"><figcaption>側面：選択ボタン。メニューの項目移動に使用。</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="manual-block">
+      <h2>2. 撮影前の準備・確認</h2>
       <ul>
         <li><strong>バッテリー残量</strong>が十分にあるか確認する</li>
         <li><strong>日付・時刻</strong>がずれていないか確認する</li>
         <li><strong>撮影設定</strong>を確認する</li>
-        <li>取り付け後、撮りたい範囲が<strong>カメラの画角に収まっているか</strong>確認する</li>
+        <li>取り付け後、撮りたい範囲が<strong>画角に収まっているか</strong>確認する</li>
       </ul>
-      <div class="caution">
-        日付表示は基本ON。日時がずれている場合の合わせ方は、今後補助マニュアルとして追加します。
-      </div>
+      <div class="caution">日付表示は基本ON。日時がずれている場合の合わせ方は、必要に応じて補助説明を追加します。</div>
     </section>
 
     <section class="manual-block">
-      <h2>2. グライダーへのセット</h2>
+      <h2>3. グライダーへのセット</h2>
       <ul>
-        <li>カメラは<strong>テール</strong>または<strong>クロスバー</strong>に取り付ける</li>
+        <li>カメラは<strong>クロスバー</strong>または<strong>テール</strong>に取り付ける</li>
         <li>取り付けベルトを巻き付け、しっかり固定する</li>
-        <li>落下防止のため、<strong>サブの紐も結んでおく</strong></li>
+        <li>落下防止のため、<strong>サブの紐も結ぶ</strong></li>
         <li>取り付け後、カメラがぐらつかないか確認する</li>
       </ul>
-      <div class="caution">
-        <strong>テールに取り付ける場合は、特に落下しないよう念入りに確認してください。</strong>
+      <div class="photo-grid">
+        <figure class="manual-photo"><img src="camera-mount-crossbar.jpg" alt="クロスバーへのアクションカメラ取り付け例"><figcaption>クロスバーへの取り付け例</figcaption></figure>
+        <figure class="manual-photo"><img src="camera-mount-tail.jpg" alt="テールへのアクションカメラ取り付け例"><figcaption>テールへの取り付け例</figcaption></figure>
       </div>
-      <div class="photo-placeholder">
-        写真を追加予定<br>
-        テールへの取り付け例 / クロスバーへの取り付け例
-      </div>
+      <div class="caution"><strong>テール取り付け時は特に落下防止を念入りに確認してください。</strong></div>
     </section>
 
     <section class="manual-block">
-      <h2>3. 撮影のしかた</h2>
+      <h2>4. 撮影のしかた</h2>
       <ol>
         <li>前面の<strong>電源ボタンを長押し</strong>する</li>
         <li><strong>起動音</strong>が鳴ったら電源ON</li>
-        <li>上部の<strong>撮影ボタン</strong>を押す → 録画開始</li>
-        <li>もう一度、上部の<strong>撮影ボタン</strong>を押す → 録画停止</li>
+        <li>上面の<strong>撮影／OKボタン</strong>を押す → 録画開始</li>
+        <li>もう一度、上面の<strong>撮影／OKボタン</strong>を押す → 録画停止</li>
         <li>録画停止を確認し、前面の<strong>電源ボタンを長押し</strong>する</li>
         <li><strong>終了音</strong>が鳴ったら電源OFF</li>
       </ol>
-      <div class="photo-placeholder">
-        写真を追加予定<br>
-        カメラ本体・電源ボタン・撮影ボタン
-      </div>
     </section>
 
-  </div>
-
-
     <section class="manual-block">
-      <h2>4. 動画をスマホに取り込む</h2>
+      <h2>5. 動画をiPhoneへ有線で取り込む</h2>
       <ol>
-        <li>カメラとスマホを <strong>MicroUSB to Type-C</strong> ケーブルで接続する</li>
-        <li>カメラ側にモード選択が表示されたら、<strong>外部ストレージとして使う項目</strong>を選ぶ</li>
-        <li>スマホの<strong>「ファイル」アプリ</strong>を開く</li>
-        <li>カメラ内の動画を開き、必要な部分を<strong>2〜3分程度までカット</strong>してからスマホへ保存する</li>
+        <li>カメラとiPhoneを<strong>Type-C ⇔ Micro USBコード</strong>で接続する</li>
+        <li>カメラに選択画面が出たら、側面ボタンで<strong>「USBモード」</strong>を選び、上面のOKボタンで決定する</li>
+        <li>SDカードの画面が表示されたら、iPhoneの<strong>「ファイル」アプリ</strong>を開く</li>
+        <li>「場所」から<strong>UDISK</strong>を開く</li>
+        <li><strong>video</strong>フォルダを開き、動画を確認する</li>
+        <li>必要な部分を<strong>2〜3分程度までカット</strong>してからiPhoneへ保存する</li>
       </ol>
-      <div class="photo-placeholder">
-        写真を追加予定<br>
-        USB接続時のモード選択画面 / スマホの「ファイル」アプリ画面
+      <div class="photo-grid">
+        <figure class="manual-photo"><img src="camera-usb-mode-menu.jpg" alt="有線接続時のモード選択画面"><figcaption>① 接続後：「USBモード」を選択</figcaption></figure>
+        <figure class="manual-photo"><img src="camera-usb-mode-sd.jpg" alt="USBモード選択後のSDカード画面"><figcaption>② USBモード選択後の画面</figcaption></figure>
+        <figure class="manual-photo"><img src="iphone-files-app.jpg" alt="iPhoneのファイルアプリ"><figcaption>③ iPhoneの「ファイル」アプリを開く</figcaption></figure>
+        <figure class="manual-photo"><img src="iphone-udisk.jpg" alt="iPhoneのファイルアプリに表示されたUDISK"><figcaption>④ 「場所」→ UDISK</figcaption></figure>
+        <figure class="manual-photo"><img src="iphone-video-folder.jpg" alt="UDISK内のvideoフォルダ"><figcaption>⑤ UDISK内の「video」を開く</figcaption></figure>
       </div>
-      <div class="caution">
-        動画の保存には時間がかかります。長い動画はその場で無理に取り込まず、カメラを持ち帰ってPCで取り込むのを推奨します。PCでは <strong>MicroUSB to USB</strong> ケーブルを使用します。
-      </div>
+      <div class="caution">動画の保存には時間がかかります。長い動画はその場で無理に取り込まず、カメラを持ち帰ってPCで取り込むのを推奨します。PCでは Micro USB ⇔ USB ケーブルを使用します。</div>
     </section>
 
     <section class="manual-block">
-      <h2>5. 充電・片付け</h2>
+      <h2>6. Wi-Fi接続を使う場合</h2>
+      <p>Wi-Fi接続画面では、接続先の<strong>SSID</strong>と<strong>パスワード</strong>を確認できます。スマホ側から、画面に表示されたSSIDへ接続するときに使います。</p>
+      <figure class="step-photo"><img src="camera-wifi-screen.jpg" alt="アクションカメラのWi-Fi接続画面"><figcaption>Wi-Fi接続画面。画面にSSIDとパスワードが表示されます。</figcaption></figure>
+      <div class="info">動画の取り込みは、手順が分かりやすい<strong>有線接続を基本</strong>として案内しています。</div>
+    </section>
+
+    <section class="manual-block">
+      <h2>7. 充電・片付け</h2>
       <ul>
         <li>使用後は、<strong>倉庫のポータブル電源</strong>で充電する</li>
         <li>用意してある充電ケーブルを使用する</li>
         <li><strong>帰る前にポータブル電源から外す</strong></li>
-        <li>カメラとケーブル類は、用意してある<strong>ツールボックスに戻す</strong></li>
+        <li>カメラ・取り付け部品・ケーブル類を<strong>アクションカメラBOXへ戻す</strong></li>
       </ul>
-      <div class="photo-placeholder">
-        写真を追加予定<br>
-        ポータブル電源 / 使用するケーブル / ツールボックス
-      </div>
+      <figure class="step-photo"><img src="camera-box.jpg" alt="アクションカメラBOX"><figcaption>使用後は付属品も含めてBOXへ戻します。</figcaption></figure>
     </section>
+  </div>
 
   <a class="back-link" href="video.html">← 動画ガイドへ戻る</a>
 </section>
