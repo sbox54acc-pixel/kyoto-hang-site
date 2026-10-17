@@ -247,6 +247,52 @@
       margin:0;
       padding-left:1.2em;
     }
+    .phase-block{
+      margin:0 0 18px;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+    }
+    .phase-block h3{
+      margin:0 0 10px;
+      font-size:17px;
+      color:var(--ink);
+    }
+    .phase-block p{margin:8px 0 0;line-height:1.8}
+    .phase-block ul{margin:8px 0 0;padding-left:1.2em;line-height:1.8}
+    .manual-photo-link{display:block;text-decoration:none}
+    .manual-photo-link img{border-radius:12px}
+    .manual-photo-hint{
+      margin-top:5px;
+      text-align:right;
+      color:var(--muted);
+      font-size:11px;
+    }
+    .paper-photo-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin:10px 0;
+    }
+    .paper-photo-grid.one{grid-template-columns:1fr}
+    .paper-photo-grid.three{grid-template-columns:repeat(3,1fr)}
+    .paper-photo-grid img{
+      width:100%;
+      height:auto;
+      display:block;
+      background:#eef3f5;
+    }
+    .fuel-note{
+      margin:14px 0 18px;
+      padding:14px;
+      border:1px solid #d8c48f;
+      border-radius:16px;
+      background:#fffbea;
+    }
+    @media (max-width:560px){
+      .paper-photo-grid, .paper-photo-grid.three{grid-template-columns:1fr}
+    }
     .must-see{
       display:inline-block;
       margin-left:6px;
@@ -271,9 +317,9 @@
         <li>作業者に伝えたいことがある場合は、<strong>十分離れた前方の見える位置</strong>へ移動し、<strong>手を大きく振って</strong>気付いてもらう。</li>
         <li>気付いた作業者は、<strong>いったん移動を止め、刃を停止し、スロットルを下げてから</strong>コミュニケーションを取る。</li>
         <li><strong>刃が回っている状態では、人に近づいたり会話したりしない。</strong></li>
-        <li>作業時は<strong>手袋・ゴーグル・長袖・長靴</strong>を用意し、必要に応じて<strong>耳栓</strong>も使用する。</li>
+        <li>作業時は<strong>長袖・長ズボン・ゴーグル（またはサングラス）・手袋・長靴</strong>を着用し、必要に応じて<strong>耳栓</strong>も使用する。</li>
         <li><strong>振動障害の予防</strong>のため、長時間続けて作業せず、適宜休憩を入れる。</li>
-        <li>特に<strong>草の高い場所では、蛇や蜂</strong>にも注意する。</li>
+        <li>特に<strong>草の高い場所では、ハチ・マムシなど</strong>にも注意する。</li>
         <li><strong>危ないと感じたら無理をせず、その日の作業を終了する。</strong></li>
       </ul>
     </div>
@@ -288,229 +334,210 @@
 
     <details class="machine-card">
       <summary>
-        <img class="machine-photo" src="tachikoma.jpg" alt="タチコマ">
+        <img class="machine-photo" src="tachikoma-paper.png" alt="タチコマ（乗用草刈機）">
         <div class="machine-head">
-          <div><strong>タチコマ</strong><small>乗用草刈機｜広い場所を刈る</small></div>
+          <div><strong>タチコマ</strong><small>乗用草刈機｜ランディング全般・広い場所</small></div>
           <span class="machine-arrow">›</span>
         </div>
       </summary>
       <div class="machine-body">
 
-        <div class="photo-set">
-          <h3>キー</h3>
-          <img class="machine-photo" src="tachikoma-key.jpg" alt="タチコマのキー">
-          <p>キーボックス内の、<strong>虫入りキーホルダーが付いたキー</strong>を使います。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>右手の操作レバー</h3>
-          <img class="machine-photo" src="tachikoma-right-controls.jpg" alt="タチコマ右手側の操作レバー">
-          <p><strong>左上のスロットル</strong>と、<strong>右側の大きな赤い変速レバー</strong>を使います。下2本のレバーは、<strong>どちらも手前に引いてあればOK</strong>。勝手に触らないようにします。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>足元</h3>
-          <img class="machine-photo" src="tachikoma-foot-controls.jpg" alt="タチコマ足元のアクセルとブレーキ">
-          <p>前後のアクセルとブレーキペダルです。<strong>始動時はブレーキを深く踏みます。</strong></p>
-        </div>
-
-        <div class="photo-set">
-          <h3>左側の草刈り用レバー</h3>
-          <img class="machine-photo" src="tachikoma-left-controls.jpg" alt="タチコマ左側の草刈り用レバー">
-          <p>草刈りで使う左側のレバーです。<strong>始動時はどちらも手前</strong>に来ていることを確認します。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>チョーク</h3>
-          <img class="machine-photo" src="tachikoma-choke.jpg" alt="タチコマのチョーク">
-          <p><strong>写真のつまみがチョーク</strong>です。エンジンが全くかかる気配がないときは、一度チョークを<strong>閉じた状態</strong>で始動を試します。<strong>エンジンがかかった、またはかかりそうな反応が出たらチョークを開けます。</strong>閉じたまま何度も始動を続けないでください。</p>
-        </div>
-
-        <h3>始動</h3>
-        <div class="machine-flow">右手と左手のレバー位置を確認 → 変速レバーをN → スロットルを低速側 → ブレーキを深く踏む → 必要ならチョーク → キーで始動 → チョークを使った場合は戻す → <strong>スロットルをハイ</strong></div>
-
-        <h3>移動</h3>
-        <p>移動や草刈りをするときは、基本的に<strong>スロットルをハイ</strong>に合わせておきます。</p>
-        <p>最初は<strong>足をブレーキに乗せたまま、右手の変速レバーで前後操作</strong>するのがおすすめです。</p>
-        <p>障害物が少ない広い場所では、<strong>フットペダルのアクセル</strong>を使う方が楽な場合があります。</p>
-
-        <h3>草刈り開始</h3>
-        <p><strong>必ず停車した状態</strong>で刃を下ろして回転を始めます。</p>
-        <div class="machine-flow">左側の刈高レバーを80mm〜60mmくらいに合わせる → 赤いレバーを前に倒す → 刃の回転開始</div>
-        <p>刃を低くしすぎると、地面が緩い場所や凹凸で<strong>刃が地面に当たる</strong>ことがあるので注意します。</p>
-
-        <h3>刃を止める</h3>
-        <div class="machine-flow">スロットルをロー → エンジン回転が緩やかになるのを待つ → 赤いレバーをゆっくり手前に引いて停止</div>
-        <div class="warn-box">
-          <span class="warn-title">ここ大事</span>
-          <p><strong>高速回転のまま刃を止めない。</strong>機械に大きな負担がかかります。</p>
-        </div>
-
-        <h3>エンジン停止</h3>
-        <p><strong>キーで停止するだけ</strong>です。</p>
-
-        <div class="warn-box">
-          <strong>草刈り時の注意</strong>
+        <div class="phase-block">
+          <h3>準備</h3>
+          <div class="paper-photo-grid">
+            <a class="manual-photo-link" href="tachikoma-key-choke-paper.png" target="_blank"><img src="tachikoma-key-choke-paper.png" alt="タチコマのキーとチョーク"></a>
+            <a class="manual-photo-link" href="tachikoma-right-paper.png" target="_blank"><img src="tachikoma-right-paper.png" alt="タチコマ右手側の操作部"></a>
+            <a class="manual-photo-link" href="tachikoma-left-paper.png" target="_blank"><img src="tachikoma-left-paper.png" alt="タチコマ左手側の操作部"></a>
+            <a class="manual-photo-link" href="tachikoma-foot-paper.png" target="_blank"><img src="tachikoma-foot-paper.png" alt="タチコマ足元の操作部"></a>
+          </div>
+          <div class="manual-photo-hint">画像をタップすると拡大できます</div>
           <ul>
-            <li>刈った草は<strong>右側に排出</strong>されるので、排出した草を再び巻き込まないよう、基本は<strong>左回り</strong>で刈っていきます。</li>
-            <li>雨の後など、地面が<strong>沼状・ぬかるんでいるときは使用しない</strong>。</li>
-            <li><strong>溝・大きな凹凸・斜面</strong>に注意する。</li>
-            <li>刃が停止していても、<strong>セーフトーレーンのワイヤーは絶対に跨がない</strong>。</li>
-            <li>作業前に<strong>ワイヤーの位置を草刈りマップで確認</strong>する。</li>
+            <li>キーボックスのキーを使用する。</li>
+            <li>右手側の<strong>アクセルレバーが中央（ニュートラル）</strong>にあることを確認する。</li>
+            <li>右手側の<strong>スロットルはLow</strong>にする。手前2つのレバーは触らない。</li>
+            <li>左手側のレバーは<strong>両方手前</strong>にあることを確認する。</li>
           </ul>
         </div>
 
-      </div>
-    </details>
-
-    <details class="machine-card">
-      <summary>
-        <img class="machine-photo" src="runrun.jpg" alt="るんるん">
-        <div class="machine-head">
-          <div><strong>るんるん</strong><small>自走式草刈機｜端や小回りが必要な場所</small></div>
-          <span class="machine-arrow">›</span>
-        </div>
-      </summary>
-      <div class="machine-body">
-
-        <div class="photo-set">
-          <h3>停止ボタン・スロットル</h3>
-          <img class="machine-photo" src="runrun-stop-throttle.jpg" alt="るんるんの停止ボタンとスロットル">
-          <p>赤い停止ボタンを捻って<strong>「運転」</strong>にし、スロットルが<strong>ロー</strong>になっていることを確認します。</p>
+        <div class="phase-block">
+          <h3>始動</h3>
+          <div class="machine-flow">ブレーキを強く踏む → キーをひねる → 必要ならチョーク → エンジン始動 → スロットルをHigh</div>
+          <p>エンジンがかかりにくいときは、<strong>チョークを引いて</strong>キーをひねります。エンジンがかかった、またはかかりそうなら<strong>チョークを戻します</strong>。</p>
         </div>
 
-        <div class="photo-set">
-          <h3>ギア</h3>
-          <img class="machine-photo" src="runrun-gear.jpg" alt="るんるんのギア">
-          <p>始動前は<strong>ニュートラル</strong>。数字と数字の間にある<strong>N</strong>に合わせます。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>黒・赤ハンドル</h3>
-          <div class="photo-pair">
-            <figure><img class="machine-photo" src="runrun-black-handle.jpg" alt="るんるんの黒い移動ハンドル"><figcaption>黒：移動</figcaption></figure>
-            <figure><img class="machine-photo" src="runrun-red-handle.jpg" alt="るんるんの赤い刃回転ハンドル"><figcaption>赤：刃の回転</figcaption></figure>
-          </div>
-          <p>始動前は、<strong>左手側の黒い移動ハンドル</strong>と<strong>右手側の赤い刃回転ハンドル</strong>が、どちらも下がっていることを確認します。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>ガソリンコック</h3>
-          <div class="photo-pair">
-            <figure><img class="machine-photo" src="runrun-fuel-closed.jpg" alt="ガソリンコック閉"><figcaption>横向き＝閉</figcaption></figure>
-            <figure><img class="machine-photo" src="runrun-fuel-open.jpg" alt="ガソリンコック開"><figcaption>縦向き＝開</figcaption></figure>
-          </div>
-          <p>始動前に、ガソリンコックを<strong>横向きの「閉」から、縦向きの「開」</strong>にします。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>チョーク</h3>
-          <img class="machine-photo" src="runrun-choke.jpg" alt="るんるんのチョーク">
-          <p>写真の<strong>針金のような部分がチョーク</strong>です。エンジンが全くかかる気配がないときは、一度チョークを<strong>閉じた状態</strong>で始動を試します。<strong>エンジンがかかった、またはかかりそうな反応が出たらチョークを開けます。</strong>閉じたまま何度も始動を続けないでください。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>スターター</h3>
-          <img class="machine-photo" src="runrun-starter.jpg" alt="るんるんのスターター">
-          <p><strong>スターターを引っ張る</strong>とエンジンが始動します。</p>
-        </div>
-
-        <h3>始動手順</h3>
-        <div class="machine-flow">停止ボタンを「運転」 → スロットルはロー → ギアをN → 黒・赤ハンドルが下がっていることを確認 → ガソリンコックを開く → 必要ならチョーク → スターターを引っ張る → <strong>始動したらスロットルをハイ</strong></div>
-
-        <div class="photo-set">
+        <div class="phase-block">
           <h3>移動</h3>
-          <img class="machine-photo" src="runrun-black-handle.jpg" alt="るんるんの黒い移動ハンドル">
-          <p>移動や草刈りをするときは、基本的に<strong>スロットルをハイ</strong>に合わせておきます。</p>
-          <p>ギアに入れ、<strong>左手側の黒いハンドルを上に引き起こす</strong>と移動します。最初は<strong>1速</strong>に入れて操作に慣れます。</p>
-          <p>左右の操作ハンドルについているレバーを握ると、その側が<strong>駆動やブレーキから切り離されます</strong>。片側だけ握れば握った側へ曲がり、左右両方を握れば自分の力で押し引きして方向転換できます。</p>
+          <p>足元の<strong>アクセルペダル</strong>、または右手側の<strong>アクセルレバー</strong>で前進・後退できます。2つは連動しています。</p>
+          <p>最初はいつでも止まれるよう<strong>ブレーキペダルに足を置き</strong>、右手のアクセルレバーで前進・後退の練習をします。</p>
+          <p>小回りはきかないため、<strong>旋回半径</strong>を意識します。刃が止まっていても<strong>ワイヤーの上は絶対にまたがない</strong>。</p>
         </div>
 
-        <div class="photo-set">
-          <h3>刃を回す・止める</h3>
-          <img class="machine-photo" src="runrun-red-handle.jpg" alt="るんるんの赤い刃回転ハンドル">
-          <p><strong>右手側の赤いハンドルを上に引き起こす</strong>と刃が回転します。ハンドルを<strong>下げると停止</strong>します。</p>
-        </div>
-
-        <div class="warn-box">
-          <span class="warn-title">操作時の重要事項</span>
-          <p><strong>刃の回転を始めるとき、またはギアをチェンジするときは、必ず黒い移動ハンドルを下げて停止した状態で行います。</strong></p>
-        </div>
-
-        <h3>草の抵抗で刃の回転が落ちたとき</h3>
-        <div class="machine-flow">移動を停止 → 刃は回転させたまま → るんるんの前方を持ち上げる → 回転速度が戻るのを待つ</div>
-        <p>草丈が高いときや濡れているときは、無理に進まずゆっくり刈ります。</p>
-
-        <div class="warn-box">
-          <strong>安全上の注意</strong>
+        <div class="phase-block">
+          <h3>草刈り</h3>
           <ul>
-            <li><strong>大きな石は避ける。事前に取り除く。</strong></li>
-            <li>刃が回転しているときは、<strong>るんるんの前方に立たない</strong>。</li>
-            <li>石などが<strong>強い勢いで飛んでくる可能性</strong>があります。</li>
+            <li>停車時に、左手側の<strong>黒いレバー</strong>を親指でボタンを押しながら前に倒し、刃の高さを決める。基本は<strong>80mm〜60mm</strong>くらい。</li>
+            <li>停車時に、左手側の<strong>赤いレバーを前に倒す</strong>と刃が回転する。刃の操作はどちらも停車時に行う。</li>
+            <li>アクセルを操作して移動しながら刈る。</li>
+            <li>刈った草は右側に排出されるため、再び巻き込まないよう<strong>基本は左回り</strong>で刈る。</li>
           </ul>
         </div>
 
-        <h3>エンジン停止</h3>
-        <div class="photo-set">
-          <img class="machine-photo" src="runrun-stop-throttle.jpg" alt="るんるんの停止ボタン">
-          <p>「運転」に合わせていた<strong>停止ボタンを押すだけ</strong>でエンジンが停止します。</p>
+        <div class="phase-block">
+          <h3>停止</h3>
+          <div class="machine-flow">停車 → スロットルをLow → 回転数が落ちるのを待つ → 赤レバーをゆっくり戻して刃を停止 → 刃が止まったら黒レバーを戻す → キーでエンジン停止 → キーをボックスへ戻す</div>
+          <div class="warn-box"><p><strong>高速回転のまま刃を止めない。</strong>機械に負担がかかります。</p></div>
         </div>
 
         <div class="warn-box">
-          <span class="warn-title">停止後はすぐ確認</span>
-          <p>エンジンを停止したら、<strong>すみやかにガソリンコックを横向きの「閉」</strong>にします。開けたままだと、現状は<strong>燃料が漏れやすくなっています</strong>。</p>
+          <strong>注意点</strong>
+          <ul>
+            <li>はじきそうな石や岩に注意し、必要なら刃と移動を止めて取り除く。</li>
+            <li>雨の後など、<strong>地面が緩いときは使用しない</strong>。</li>
+            <li>草を刈るときは<strong>左回り</strong>。</li>
+            <li><strong>ワイヤーは絶対にまたがない。</strong>位置は草刈りマップで確認する。</li>
+          </ul>
         </div>
-
       </div>
     </details>
 
     <details class="machine-card">
       <summary>
-        <img class="machine-photo" src="kariharai.jpg" alt="手刈り（刈払機）">
+        <img class="machine-photo" src="runrun-paper.png" alt="るんるん（自走式草刈機）">
         <div class="machine-head">
-          <div><strong>手刈り（刈払機）</strong><small>斜面・物の近く・大型機械が入りにくい場所</small></div>
+          <div><strong>るんるん</strong><small>自走式草刈機｜砂利道・台地の淵・小回りが必要な場所</small></div>
           <span class="machine-arrow">›</span>
         </div>
       </summary>
       <div class="machine-body">
 
-        <div class="photo-set">
-          <h3>始動前：ベルトとキルスイッチ</h3>
-          <img class="machine-photo" src="kariharai-kill-switch.jpg" alt="手刈り（刈払機）のキルスイッチ">
-          <p><strong>エンジンをかける前に、必ずベルトの長さを調整</strong>しておきます。あわせて、停止するときにすぐ使えるよう<strong>キルスイッチの位置</strong>も確認します。</p>
-        </div>
-
-        <div class="photo-set">
-          <h3>始動：プライマリーポンプとチョーク</h3>
-          <img class="machine-photo" src="kariharai-primer-pump.jpg" alt="手刈り（刈払機）のプライマリーポンプとチョーク">
-          <p>燃料は<strong>混合油</strong>を使用します。始動前に燃料を確認し、<strong>プライマリーポンプを押して燃料を送ってから</strong>スターターを引きます。</p>
-          <p><strong>写真上部の「開 ↔ 閉」表示の下にあるレバーがチョーク</strong>です。エンジンが全くかかる気配がないときは、一度チョークを<strong>閉じた状態</strong>で始動を試します。<strong>エンジンがかかった、またはかかりそうな反応が出たらチョークを開けます。</strong>閉じたまま何度も始動を続けないでください。</p>
-          <div class="machine-flow">混合油を確認 → プライマリーポンプで燃料を送る → 必要ならチョークを閉じる → 周囲確認 → スターター → かかった／かかりそうならチョークを開ける</div>
-        </div>
-
-        <div class="photo-set">
-          <h3>回転数と刃の操作</h3>
-          <img class="machine-photo" src="kariharai-throttle.jpg" alt="手刈り（刈払機）のスロットルと操作レバー">
-          <p><strong>親指側のレバー</strong>で低速・高速を調整し、<strong>裏側のレバーを握る</strong>と刃が回ります。</p>
-          <p>親指側でちょうどいい回転数に合わせて、<strong>裏側のレバーを握り切った状態で刈れるようにしておく</strong>と操作しやすくなります。</p>
-        </div>
-
-        <div class="warn-box">
-          <strong>安全上の注意</strong>
+        <div class="phase-block">
+          <h3>準備</h3>
+          <div class="paper-photo-grid">
+            <a class="manual-photo-link" href="runrun-gear-paper.png" target="_blank"><img src="runrun-gear-paper.png" alt="るんるんのギア"></a>
+            <a class="manual-photo-link" href="runrun-stop-throttle-paper.png" target="_blank"><img src="runrun-stop-throttle-paper.png" alt="るんるんの停止ボタンとスロットル"></a>
+            <a class="manual-photo-link" href="runrun-handles-paper.png" target="_blank"><img src="runrun-handles-paper.png" alt="るんるんの黒と赤のハンドル"></a>
+            <a class="manual-photo-link" href="runrun-fuel-cock-paper.png" target="_blank"><img src="runrun-fuel-cock-paper.png" alt="るんるんのガソリンコック"></a>
+          </div>
+          <div class="manual-photo-hint">画像をタップすると拡大できます</div>
           <ul>
-            <li>草は基本的に<strong>右から左へ</strong>刈り払う。</li>
-            <li>刃の右側や先端を石・杭・木などの硬い物に当てると<strong>キックバック</strong>が起きることがあるため注意する。</li>
-            <li><strong>大きな石や障害物は作業前に取り除く</strong>。</li>
-            <li>刃を高く振り上げず、周囲と足元を確認しながら作業する。</li>
+            <li>ギアが<strong>ニュートラル（数字と数字の間）</strong>にある。</li>
+            <li>黒と赤のハンドルが下がっている。</li>
+            <li>スロットルは<strong>Low</strong>になっている。</li>
+            <li>回転ハンドルで刃の高さを調整しておく。</li>
           </ul>
         </div>
 
-        <h3>停止</h3>
-        <div class="photo-set">
-          <img class="machine-photo" src="kariharai-kill-switch.jpg" alt="手刈り（刈払機）のキルスイッチ">
-          <p><strong>キルスイッチでエンジンを停止</strong>し、刃が完全に止まったことを確認します。</p>
+        <div class="phase-block">
+          <h3>始動</h3>
+          <div class="paper-photo-grid">
+            <a class="manual-photo-link" href="runrun-choke-paper.png" target="_blank"><img src="runrun-choke-paper.png" alt="るんるんのチョーク"></a>
+            <a class="manual-photo-link" href="runrun-starter-paper.png" target="_blank"><img src="runrun-starter-paper.png" alt="るんるんのスターター"></a>
+          </div>
+          <div class="machine-flow">停止ボタンを「運転」 → ガソリンコックを開く → スターターを引く → 必要ならチョーク → エンジン始動 → スロットルをHigh</div>
+          <p>エンジンがかかりにくいときは、<strong>チョークを引いて</strong>スターターを引きます。エンジンがかかった、またはかかりそうなら<strong>チョークを開けます</strong>。</p>
         </div>
 
+        <div class="phase-block">
+          <h3>移動</h3>
+          <p><strong>静止した状態</strong>でギアを1・2・3に合わせます。動いた状態ではギアを切り替えません。</p>
+          <p>左側の<strong>黒いハンドルを上げると進み、下げると止まります</strong>。左のレバーを握ると左へ、右のレバーを握ると右へ曲がります。</p>
+          <p>左右のレバーを同時に握るとギアから解放され、人力で押したり引いたりして移動できます。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>草刈り</h3>
+          <ul>
+            <li>草の高さや湿り具合に合わせてギアを決める。</li>
+            <li><strong>静止した状態</strong>で赤いハンドルを上げ、刃を回転させる。</li>
+            <li>黒いハンドルを上げ、移動しながら刈る。</li>
+          </ul>
+          <p>背の高い草や湿った草をしばらく刈ると、刃の回転数が落ちて<strong>キュルキュルという音</strong>が聞こえることがあります。</p>
+          <div class="machine-flow">黒ハンドルを下げて停止 → 赤ハンドルは上げたまま → 両手で操作ハンドルを下に押して刃部分を持ち上げる → エンジン音・振動が回復したら再開</div>
+        </div>
+
+        <div class="phase-block">
+          <h3>停止</h3>
+          <div class="machine-flow">赤と黒のハンドルを下げる → 停止ボタンを押す → ガソリンコックを縦向き（開）から横向き（閉）へ</div>
+          <div class="warn-box"><p><strong>ガソリンコックを閉め忘れない。</strong>開けたままだと燃料が漏れます。</p></div>
+        </div>
+
+        <div class="warn-box">
+          <strong>注意点</strong>
+          <ul>
+            <li>異変があったら速やかに赤と黒のハンドルを下げ、停止ボタンを押す。</li>
+            <li>前方に小石をはじくため、作業中のすぐ前には行かない。</li>
+            <li>刃に当たりそうな岩は、刃と移動を止めて取り除く。</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="karibarai-paper.png" alt="手刈り（刈払機）">
+        <div class="machine-head">
+          <div><strong>手刈り（刈払機）</strong><small>斜面・溝付近・大型機械が入りにくい場所</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+
+        <div class="phase-block">
+          <h3>準備</h3>
+          <a class="manual-photo-link" href="karibarai-kill-paper.png" target="_blank"><img class="machine-photo" src="karibarai-kill-paper.png" alt="手刈りのキルスイッチ"></a>
+          <div class="manual-photo-hint">画像をタップすると拡大できます</div>
+          <ul>
+            <li>ベルトの長さを調整する。</li>
+            <li>停止時にすぐ使えるよう<strong>キルスイッチの位置</strong>を確認する。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>始動</h3>
+          <a class="manual-photo-link" href="karibarai-choke-pump-paper.png" target="_blank"><img class="machine-photo" src="karibarai-choke-pump-paper.png" alt="手刈りのチョークとポンプ"></a>
+          <div class="machine-flow">ポンプを数回押して燃料を送る → スターターを引く → 必要ならチョークを閉じる → かかった／かかりそうならチョークを開ける</div>
+          <p>燃料は<strong>混合油</strong>を使用します。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>草刈り</h3>
+          <a class="manual-photo-link" href="karibarai-throttle-paper.png" target="_blank"><img class="machine-photo" src="karibarai-throttle-paper.png" alt="手刈りの出力レバーとアクセルレバー"></a>
+          <ul>
+            <li>親指側の<strong>出力レバー</strong>で回転数を調整する。</li>
+            <li>裏側の<strong>アクセルレバー</strong>を握って刃を回転させる。</li>
+            <li>腰に当てて左右に動かし、<strong>右から左へ</strong>刃を当てて刈る。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>停止</h3>
+          <p><strong>キルスイッチを押して</strong>エンジンを止めます。刃の回転が緩まったら、刃を水平にして、優しく地面の草むらに当てて静止させます。</p>
+        </div>
+
+        <div class="fuel-note">
+          <h3>混合油の作り方</h3>
+          <div class="paper-photo-grid three">
+            <a class="manual-photo-link" href="fuel-mix-tank-paper.png" target="_blank"><img src="fuel-mix-tank-paper.png" alt="混合タンク"></a>
+            <a class="manual-photo-link" href="fuel-mix-scale-paper.png" target="_blank"><img src="fuel-mix-scale-paper.png" alt="混合タンクの目盛り"></a>
+            <a class="manual-photo-link" href="fuel-can-paper.png" target="_blank"><img src="fuel-can-paper.png" alt="携行缶"></a>
+          </div>
+          <ul>
+            <li>ガソリンと<strong>2サイクル用エンジンオイル</strong>を混ぜて作る。るんるん用オイルと間違えない。</li>
+            <li>ガソリンは携行缶から使用する。<strong>エア抜きをしてから</strong>開ける。</li>
+            <li>混合タンクでは、大きなタンクにガソリンを入れ、細長いタンクにオイルを<strong>ガソリンと同じ目盛り</strong>まで入れて混ぜる。</li>
+            <li>紙マニュアルの目安：<strong>ガソリン：オイル＝25〜50：1</strong>。</li>
+          </ul>
+        </div>
+
+        <div class="warn-box">
+          <strong>注意点</strong>
+          <ul>
+            <li>岩やアンカーに刃を当てない。</li>
+            <li>小石をはじいて飛ばすため、人や車から十分距離を取る。</li>
+            <li>回転中、刃の右側が固定された物に触れると<strong>キックバック</strong>が起こる。</li>
+            <li>振動障害対策として、<strong>30分くらいを目安</strong>に作業し、長時間続けない。</li>
+          </ul>
+        </div>
       </div>
     </details>
 
