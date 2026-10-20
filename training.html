@@ -32,6 +32,22 @@
 #access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
 </style>
 
+<style>
+.training-menu{display:grid;gap:12px}
+.training-primary{display:grid;gap:12px}
+.training-card{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.training-card strong{font-size:17px;color:var(--ink)}
+.training-card.main{padding:22px 18px;background:#f4f9fb}
+.training-card.main strong{font-size:19px}
+.training-arrow{font-size:25px;color:var(--muted);line-height:1}
+.training-sub{margin-top:6px}
+.reference-box{margin-top:6px;padding:14px 16px;border-radius:16px;background:#f7fafb}
+.reference-title{margin:0 0 10px;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em}
+.reference-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0}
+.reference-row+.reference-row{border-top:1px solid var(--line)}
+.reference-row strong{font-size:15px}
+.book-tag{flex:none;padding:5px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;color:var(--muted)}
+</style>
 </head>
 <body>
 
@@ -66,12 +82,19 @@
 <main class="main">
 
 <section class="section">
-  <div class="placeholder-list">
-    <a class="placeholder-item guide-link" href="first-flight.html"><strong>初飛びまでの流れ</strong><span class="guide-arrow">›</span></a>
-    <a class="placeholder-item guide-link" href="maps.html"><strong>荒神山 練習・ランディングマップ</strong><span class="guide-arrow">›</span></a>
-    <div class="placeholder-item"><strong>グライダーのセットアップ</strong><small>教本 p18〜</small></div>
-    <a class="placeholder-item guide-link" href="ground-handling.html"><strong>グラハン</strong><span class="guide-arrow">›</span></a>
-    <div class="placeholder-item"><strong>湖岸練習</strong><small>教本 p52〜</small></div>
+  <div class="training-menu">
+    <div class="training-primary">
+      <a class="training-card main" href="first-flight.html"><strong>初飛びまでの流れ</strong><span class="training-arrow">›</span></a>
+      <a class="training-card main" href="maps.html"><strong>荒神山 練習・ランディングマップ</strong><span class="training-arrow">›</span></a>
+    </div>
+
+    <a class="training-card training-sub" href="ground-handling.html"><strong>グラハン</strong><span class="training-arrow">›</span></a>
+
+    <div class="reference-box">
+      <div class="reference-title">教本参照</div>
+      <div class="reference-row"><strong>グライダーのセットアップ</strong><span class="book-tag">p18〜</span></div>
+      <div class="reference-row"><strong>湖岸練習</strong><span class="book-tag">p52〜</span></div>
+    </div>
   </div>
 </section>
 
