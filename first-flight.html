@@ -34,74 +34,20 @@
 
 
 <style>
-.flow-stack{display:grid;gap:14px}
-.flow-step{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:18px;
-  background:#fff;
-}
+.flow-stack{display:grid;gap:16px}
+.flow-step{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}
+.flow-step h2{margin:0 0 14px;font-size:22px;color:var(--ink)}
+.flow-step h3{margin:16px 0 7px;font-size:15px;color:var(--ink)}
+.flow-step p{margin:0;line-height:1.8}
+.flow-step ul{margin:0;padding-left:1.3em}
+.flow-step li{margin:6px 0}
 .flow-step.finish{background:#eef5f7}
-.step-no{
-  font-size:12px;
-  color:var(--muted);
-  font-weight:700;
-  letter-spacing:.06em;
-}
-.flow-step h2{margin:2px 0 6px;font-size:21px;color:var(--ink)}
-.flow-step .purpose{margin:0}
-.flow-step details{
-  margin-top:14px;
-  border-top:1px solid var(--line);
-  padding-top:12px;
-}
-.flow-step summary{
-  cursor:pointer;
-  list-style:none;
-  font-weight:700;
-}
-.flow-step summary::-webkit-details-marker{display:none}
-.flow-step summary::after{
-  content:"▼";
-  float:right;
-  font-size:11px;
-  color:var(--muted);
-}
-.flow-step details[open] summary::after{transform:rotate(180deg)}
-.flow-detail{margin-top:14px}
-.flow-detail h3{margin:14px 0 6px;font-size:15px;color:var(--ink)}
-.flow-detail ul{margin:0;padding-left:1.3em}
-.flow-detail li{margin:6px 0}
-.flow-detail p{margin:0;line-height:1.8}
-.goal{
-  font-weight:600;
-  background:#f7fafb;
-  border-radius:14px;
-  padding:12px 14px;
-}
+.note-box{margin-top:16px;padding:15px 16px;border-radius:16px;background:#edf7fb;border:1px solid #cfe5ee}
+.note-box h3{margin:0 0 7px;color:#285f78}
+.note-box p{margin:0;line-height:1.8}
+.book{margin-top:8px!important;color:var(--muted);font-size:13px}
 .small-note{color:var(--muted);font-size:13px}
-.back-link{
-  display:inline-flex;
-  margin-top:18px;
-  padding:9px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  font-size:12px;
-}
-
-.stage-link{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  margin-top:12px;
-  padding:8px 11px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  font-size:12px;
-  font-weight:700;
-  background:#f7fafb;
-}
-
+.back-link{display:inline-flex;margin-top:18px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px}
 </style>
 
 </head>
@@ -143,128 +89,123 @@
 
 <main class="main">
 <section class="section">
-
-  <a class="back-link" href="glider-features.html" style="margin:0 0 16px">各グライダーの特徴 →</a>
-
   <div class="flow-stack">
 
     <section class="flow-step">
-      <div class="step-no">01</div>
-      <h2>330 セーフトー</h2>
-      <p class="purpose">基本操作に慣れ、機体を安定して飛ばす感覚を身につける。</p>
-      <details>
-        <summary>ポイント・次に進む目安を見る</summary>
-        <div class="flow-detail">
-          <h3>ポイント</h3>
-          <ul>
-            <li>少し引く</li>
-            <li>遠くを見る</li>
-          </ul>
-          <h3>次に進む目安</h3>
-          <p class="goal">毎回きれいなフレアーを決められるようになってきたら、330フリーに進めるようになる。</p>
-        </div>
-      </details>
+      <h2>トーイングについて</h2>
+      <ul>
+        <li>グラハン時より、アタックアングルを少し高めにホールドしてテイクオフする</li>
+        <li>225以降は、飛ぶ側も見る側もピッチを意識する</li>
+      </ul>
+      <p class="book">教本 p54〜</p>
     </section>
 
     <section class="flow-step">
-      <div class="step-no">02</div>
-      <h2>330 フリー</h2>
-      <p class="purpose">セーフトーの補助なしで、自分で機体を安定させて直進できるようになる。</p>
-      <details>
-        <summary>ポイント・次に進む目安を見る</summary>
-        <div class="flow-detail">
-          <h3>ポイント</h3>
-          <ul>
-            <li>ピッチをおさえる</li>
-            <li>目標を見る</li>
-            <li>傾きを感じとる</li>
-          </ul>
-          <h3>次に進む目安</h3>
-          <p class="goal">目標に向かって飛び、安定してフレアーを決められるようになり、グラハン練習でホールドと持ち替えを習得できてきたら、225に進めるようになる。</p>
-        </div>
-      </details>
-</section>
+      <h2>330</h2>
+      <h3>特徴</h3>
+      <ul>
+        <li>大型で直進安定性が高い</li>
+        <li>傾くと修正しづらい</li>
+        <li>テールをついてホールドする</li>
+      </ul>
+      <h3>練習すること</h3>
+      <ul>
+        <li>コントロールしやすい姿勢を身につける</li>
+        <li>テイクオフからフレアーまでの流れに慣れる</li>
+      </ul>
+      <h3>ポイント</h3>
+      <ul>
+        <li>軽く引く</li>
+        <li>遠くを見る</li>
+      </ul>
+      <h3>並行して練習</h3>
+      <ul>
+        <li>姿勢はシミュレーターも使って修正する<br><span class="small-note">教本 p47〜</span></li>
+        <li>持ち替えはグラハンでも並行して練習する<br><span class="small-note">教本 p43〜、p66〜</span></li>
+      </ul>
 
-    <a class="stage-link" href="ground-handling.html">グラハンの練習方法を見る →</a>
+      <div class="note-box">
+        <h3>姿勢について</h3>
+        <p>ハンググライダーは体重移動でコントロールするので、正しい姿勢が取れるかがコントロールの精度を決めるほど重要です。<br>お互いに動画を撮って確認し、常に修正を心がけましょう。</p>
+      </div>
+
+      <h3>330フリー</h3>
+      <p>姿勢と、テイクオフからフレアーまでの流れが無意識的にできるようになったら、フリーで確認します。</p>
+      <ul>
+        <li>風が穏やかな時にしかできない</li>
+        <li>セーフトーの時からフリーを意識して飛ぶ</li>
+      </ul>
+    </section>
 
     <section class="flow-step">
-      <div class="step-no">03</div>
       <h2>225</h2>
-      <p class="purpose">ホールド・持ち替え・レベルキープを身につける。</p>
-      <details>
-        <summary>ポイント・次に進む目安を見る</summary>
-        <div class="flow-detail">
-          <h3>ポイント</h3>
-          <ul>
-            <li>ホールドと持ち替えで傾けない</li>
-            <li>レベルキープを意識する</li>
-          </ul>
-          <h3>次に進む目安</h3>
-          <p class="goal">レベルキープを作って、適切なタイミングできれいなフレアーを決められるようになってきたら、山飛びサイズの機体に進めるようになる。</p>
-        </div>
-      </details>
+      <h3>特徴</h3>
+      <ul>
+        <li>滑空性能が上がり、レベルキープがある</li>
+        <li>直進安定性は高く、細かいコントロールはそこまで求められない</li>
+        <li>330より少し速度が上がる</li>
+        <li>テールを持ち上げてホールドする</li>
+      </ul>
+      <h3>ポイント</h3>
+      <ul>
+        <li><strong>テイクオフで傾けない</strong><br>練習生同士で声かけやサポートを行う<br><span class="small-note">教本 p70〜</span></li>
+        <li><strong>レベルキープを作る</strong><br>フレアーのタイミングが早いとロケットする<br><span class="small-note">教本 p72〜</span></li>
+      </ul>
+
+      <div class="note-box">
+        <h3>サポートについて</h3>
+        <p>225を練習する時点で、グラハンが完璧な人はまずいません。<br>ピッチの高さや左右の傾きを声かけするほか、コントロールバーが大きくてホールドできない場合や、風が不安定な場合は、サイドワイヤーを持ってテイクオフをサポートしてもらって構いません。<br><br>ただしサポートする側は、完全にサポートするのではなく、その人にどこまで手助けが必要なのかを各自で考えて行動してください。</p>
+      </div>
+
+      <div class="note-box">
+        <h3>無線機について</h3>
+        <p>フリーで飛べるようになったら、個人の無線機を使ってください。<br>設定についてはこちらから。</p>
+      </div>
     </section>
 
     <section class="flow-step">
-      <div class="step-no">04</div>
-      <h2>145 / 170 / 195 <span class="small-note">（山飛びサイズの機体）</span></h2>
-      <p class="purpose">山飛びで使う機体に慣れる。</p>
-      <details>
-        <summary>ポイント・次に進む目安を見る</summary>
-        <div class="flow-detail">
-          <h3>ポイント</h3>
-          <ul>
-            <li>風に合わせてアタックアングルを自分で決める</li>
-            <li>トーイングロープが緩んだ状態の機体のニュートラルスピードを覚える（少しピッチを下げる）</li>
-            <li>自分でレベルキープを作る</li>
-          </ul>
-          <h3>次に進む目安</h3>
-          <p class="goal">中高度まで上げて、レベルキープを作ってランディングできるようになってきたら、ターン練習に進めるようになる。</p>
-        </div>
-      </details>
+      <h2>山飛びサイズ（145 / 170 / 195）</h2>
+      <h3>特徴</h3>
+      <ul>
+        <li>コントロールが効きやすい分、取られやすい</li>
+        <li>速度が速い</li>
+      </ul>
+      <h3>ポイント</h3>
+      <ul>
+        <li>細かくコントロールし、蛇行を減らす</li>
+        <li>常に先を予測して練習する</li>
+      </ul>
+      <div class="note-box">
+        <h3>山飛びに向けて</h3>
+        <p>セットアップをはじめ、山飛びに向けた知識や意識を持つことが、この時期の練習において最も重要。</p>
+      </div>
     </section>
 
     <section class="flow-step">
-      <div class="step-no">05</div>
       <h2>ターン練習</h2>
-      <p class="purpose">山飛びに必要なターンを習得する。</p>
-      <details>
-        <summary>ポイント・次に進む目安を見る</summary>
-        <div class="flow-detail">
-          <h3>ポイント</h3>
-          <ul>
-            <li>まず安全な高度を確保する</li>
-            <li>ターン前に加速する</li>
-            <li>バンクの強さを調整する</li>
-            <li>ターン後のピッチアップを抑える</li>
-            <li>目標を見る</li>
-          </ul>
-          <h3>誘導で確認すること</h3>
-          <ul>
-            <li>誘導どおりにターンする</li>
-            <li>左右を間違えない</li>
-            <li>目標物を間違えない</li>
-            <li>降りる場所の風向きを意識する</li>
-            <li>誘導に対して適切に反応できる</li>
-          </ul>
-          <h3>補足</h3>
-          <p>左右45°程度のターンができれば、それ以上のターンはそのバンクを維持していく延長として考えます。</p>
-          <h3>次に進む目安</h3>
-          <p class="goal">左右45°程度のターンができ、誘導に合わせて安定して動けるようになってきたら、初飛び目前！！</p>
-        </div>
-      </details>
+      <p>直線飛行が安定し、中高度まで上げられるようになったらターン練習をする。</p>
+      <h3>ポイント</h3>
+      <ul>
+        <li>目標とルートを意識して飛ぶ</li>
+        <li>ターン前に加速する</li>
+        <li>ターン後のピッチアップを抑える</li>
+      </ul>
+      <p class="book">教本 p76〜</p>
+
+      <div class="note-box">
+        <h3>誘導について</h3>
+        <p>初飛びは無線の誘導に従って降りてきます。<br>ターン練習の段階から、無線の誘導に素早く従う意識を持っておきましょう。<br><br>また、無線が聞こえないなどのトラブルがあった場合は、足をバタバタして伝えることも覚えておきましょう。</p>
+      </div>
     </section>
 
     <section class="flow-step finish">
-      <div class="step-no">06</div>
       <h2>初飛び</h2>
-      <p class="purpose">ここまでの練習ができるようになったら、初飛びへ進む段階です。</p>
+      <p>ここまでの練習ができるようになったら、初飛びへ進む段階です。</p>
     </section>
 
   </div>
 
   <p class="small-note" style="margin-top:16px">各段階の進行はあくまで目安です。実際の練習内容や初飛びの判断は、当日の条件と指導者の判断を優先してください。</p>
-
   <a class="back-link" href="training.html">← 練習ガイドへ戻る</a>
 </section>
 </main>
