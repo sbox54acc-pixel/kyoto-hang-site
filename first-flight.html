@@ -36,7 +36,12 @@
 <style>
 .flow-stack{display:grid;gap:16px}
 .flow-step{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}
-.flow-step h2{margin:0 0 14px;font-size:22px;color:var(--ink)}
+.flow-step h2{margin:0;font-size:22px;color:var(--ink)}
+.flow-step summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between}
+.flow-step summary::-webkit-details-marker{display:none}
+.flow-step summary::after{content:"▼";font-size:12px;color:var(--muted);margin-left:12px}
+.flow-step[open] summary::after{transform:rotate(180deg)}
+.step-content{margin-top:14px}
 .flow-step h3{margin:16px 0 7px;font-size:15px;color:var(--ink)}
 .flow-step p{margin:0;line-height:1.8}
 .flow-step ul{margin:0;padding-left:1.3em}
@@ -100,8 +105,9 @@
       <p class="book">教本 p54〜</p>
     </section>
 
-    <section class="flow-step">
-      <h2>330</h2>
+    <details class="flow-step">
+      <summary><h2>330</h2></summary>
+      <div class="step-content">
       <h3>特徴</h3>
       <ul>
         <li>大型で直進安定性が高い</li>
@@ -135,10 +141,12 @@
         <li>風が穏やかな時にしかできない</li>
         <li>セーフトーの時からフリーを意識して飛ぶ</li>
       </ul>
-    </section>
+    </div>
+    </details>
 
-    <section class="flow-step">
-      <h2>225</h2>
+    <details class="flow-step">
+      <summary><h2>225</h2></summary>
+      <div class="step-content">
       <h3>特徴</h3>
       <ul>
         <li>滑空性能が上がり、レベルキープがある</li>
@@ -161,10 +169,12 @@
         <h3>無線機について</h3>
         <p>フリーで飛べるようになったら、個人の無線機を使ってください。<br>設定についてはこちらから。</p>
       </div>
-    </section>
+    </div>
+    </details>
 
-    <section class="flow-step">
-      <h2>山飛びサイズ（145 / 170 / 195）</h2>
+    <details class="flow-step">
+      <summary><h2>山飛びサイズ（145 / 170 / 195）</h2></summary>
+      <div class="step-content">
       <h3>特徴</h3>
       <ul>
         <li>コントロールが効きやすい分、取られやすい</li>
@@ -179,10 +189,12 @@
         <h3>山飛びに向けて</h3>
         <p>セットアップをはじめ、山飛びに向けた知識や意識を持つことが、この時期の練習において最も重要。</p>
       </div>
-    </section>
+    </div>
+    </details>
 
-    <section class="flow-step">
-      <h2>ターン練習</h2>
+    <details class="flow-step">
+      <summary><h2>ターン練習</h2></summary>
+      <div class="step-content">
       <p>直線飛行が安定し、中高度まで上げられるようになったらターン練習をする。</p>
       <h3>ポイント</h3>
       <ul>
@@ -196,7 +208,8 @@
         <h3>誘導について</h3>
         <p>初飛びは無線の誘導に従って降りてきます。<br>ターン練習の段階から、無線の誘導に素早く従う意識を持っておきましょう。<br><br>また、無線が聞こえないなどのトラブルがあった場合は、足をバタバタして伝えることも覚えておきましょう。</p>
       </div>
-    </section>
+    </div>
+    </details>
 
     <section class="flow-step finish">
       <h2>初飛び</h2>
