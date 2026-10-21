@@ -151,3 +151,15 @@ body{background:#EEF3EB}
   border:none!important;
   box-shadow:none!important;
 }
+
+/* Semantic information colors */
+:root{
+  --info-surface:#E9EFF0;
+  --supplement-surface:#EAF4F6;
+  --caution-surface:#F6F1DF;
+  --danger-surface:#F8E8E5;
+}
+.page-intro,.reference-box,.role-box,.guide-card,.phase-block,.photo-set{background:var(--info-surface)}
+.supplement,.supplement-box,.support-box{background:var(--supplement-surface)!important;border:none!important;box-shadow:none!important}
+.caution,.caution-box,.warning,.warning-box{background:var(--caution-surface)!important;border:none!important;box-shadow:none!important}
+.danger,.danger-box,.important,.important-box{background:var(--danger-surface)!important;border:none!important;box-shadow:none!important}
