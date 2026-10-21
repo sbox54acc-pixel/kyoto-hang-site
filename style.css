@@ -86,3 +86,5 @@ body.viewer-open{overflow:hidden}
 .nav a.active,.active{background:var(--main)!important;color:#fff;border-color:var(--main)}
 .page-intro{background:#F2F5F2}
 .placeholder-item,.tile,.person{background:#fff}
+
+.card.no-icon{grid-template-columns:1fr auto}
