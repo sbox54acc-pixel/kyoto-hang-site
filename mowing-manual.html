@@ -293,6 +293,16 @@
     @media (max-width:560px){
       .paper-photo-grid, .paper-photo-grid.three{grid-template-columns:1fr}
     }
+    .detail-collapse{
+      display:block;
+      margin:18px 0 0 auto;
+      padding:4px 8px;
+      border:0;
+      background:transparent;
+      color:var(--ink);
+      font:700 22px/1 sans-serif;
+      cursor:pointer;
+    }
     .must-see{
       display:inline-block;
       margin-left:6px;
@@ -322,6 +332,7 @@
         <li>特に<strong>草の高い場所では、ハチ・マムシなど</strong>にも注意する。</li>
         <li><strong>危ないと感じたら無理をせず、その日の作業を終了する。</strong></li>
       </ul>
+      <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
     </div>
   </details>
 
@@ -397,6 +408,7 @@
             <li><strong>ワイヤーは絶対にまたがない。</strong>位置は草刈りマップで確認する。</li>
           </ul>
         </div>
+        <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
       </div>
     </details>
 
@@ -469,6 +481,7 @@
             <li>刃に当たりそうな岩は、刃と移動を止めて取り除く。</li>
           </ul>
         </div>
+        <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
       </div>
     </details>
 
@@ -538,6 +551,7 @@
             <li>振動障害対策として、<strong>30分くらいを目安</strong>に作業し、長時間続けない。</li>
           </ul>
         </div>
+        <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
       </div>
     </details>
 
@@ -577,6 +591,14 @@
     }
   });
 })();
+</script>
+<script>
+document.querySelectorAll(".detail-collapse").forEach(function(button){
+  button.addEventListener("click",function(){
+    const details=button.closest("details");
+    if(details){details.open=false;details.scrollIntoView({behavior:"smooth",block:"start"});}
+  });
+});
 </script>
 
 </body>
