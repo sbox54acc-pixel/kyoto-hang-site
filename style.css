@@ -89,5 +89,6 @@ body.viewer-open{overflow:hidden}
 
 .card.no-icon{grid-template-columns:1fr auto}
 
-/* Hang-glider icon needs more visual area inside top card */
+/* Hang-glider icon: increase vertical presence consistently */
+.hang-glider-icon{transform:scaleY(1.2);transform-origin:center}
 .card[href="training.html"] .icon img{width:52px;height:52px}
