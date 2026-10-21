@@ -128,3 +128,13 @@ body.viewer-open{overflow:hidden}
 .nav-card-arrow{font-size:30px;line-height:1;color:var(--ink);text-align:right}
 .nav-card .hang-glider-icon{width:72px;height:72px}
 @media(max-width:520px){.nav-card{min-height:112px;padding:18px;grid-template-columns:64px 1fr 24px;gap:14px}.nav-card-icon{width:60px;height:60px}.nav-card-icon img{width:58px;height:58px}.nav-card-text strong{font-size:18px}.nav-card-text small{font-size:12px;margin-top:5px}.nav-card .hang-glider-icon{width:64px;height:64px}}
+
+/* Unified surface hierarchy */
+body{background:#EEF3EB}
+.site{background:#F7F8F6}
+.main{background:#F7F8F6}
+.header{background:rgba(247,248,246,.96)}
+.hero{background:#E6EFE8;border-color:#D2DED5}
+.page-intro,.reference-box,.role-box,.guide-card,.phase-block,.photo-set{background:#EAF4F6}
+.nav-card{background:#fff;border-color:#D2DDD9;box-shadow:0 2px 8px rgba(36,91,98,.05)}
+.placeholder-item,.tile,.person{background:#EAF4F6}
