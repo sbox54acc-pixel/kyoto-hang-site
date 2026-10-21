@@ -88,3 +88,6 @@ body.viewer-open{overflow:hidden}
 .placeholder-item,.tile,.person{background:#fff}
 
 .card.no-icon{grid-template-columns:1fr auto}
+
+/* Hang-glider icon needs more visual area inside top card */
+.card[href="training.html"] .icon img{width:52px;height:52px}
