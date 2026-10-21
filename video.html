@@ -46,6 +46,13 @@
 .guide-card p{margin:0;line-height:1.8}
 .guide-card ul{margin:8px 0 0;padding-left:1.35em}
 .guide-card li{margin:7px 0}
+details.guide-fold{padding:0;overflow:hidden}
+.guide-fold summary{list-style:none;cursor:pointer;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:21px;font-weight:700;color:var(--ink)}
+.guide-fold summary::-webkit-details-marker{display:none}
+.fold-mark{font-size:24px;font-weight:400;color:var(--muted);transition:transform .2s}
+.guide-fold[open] .fold-mark{transform:rotate(180deg)}
+.guide-body{padding:0 18px 18px}
+.fold-up{display:block;margin:18px auto 0;border:0;background:transparent;color:var(--ink);font-size:30px;line-height:1;padding:4px 18px;cursor:pointer}
 .guide-note{
   margin-top:12px;
   padding:12px 14px;
@@ -91,8 +98,9 @@
 <section class="section">
   <div class="guide-stack">
 
-    <section class="guide-card">
-      <h2>なぜ動画を撮るのか</h2>
+    <details class="guide-card guide-fold">
+      <summary><span>なぜ動画を撮るのか</span><span class="fold-mark">⌄</span></summary>
+      <div class="guide-body">
       <p>
         ハンググライダーの技術は、意識しなくても自然にできるくらいまで身につけていくものです。
         ただ、慣れてくるほど基本動作がおざなりになったり、自分では気づかない癖が出てきたりします。
@@ -101,10 +109,13 @@
         だからこそ、自分のフライトを動画で客観的に見返し、基本動作が崩れていないか確認することが大切です。
         動画は上達のためだけでなく、<strong>安全のために自分の飛び方を定期的に見直す</strong>ためにも使います。
       </p>
-    </section>
+      <button class="fold-up" type="button" aria-label="閉じる">↑</button>
+      </div>
+    </details>
 
-    <section class="guide-card">
-      <h2>山飛びで動画を見るポイント</h2>
+    <details class="guide-card guide-fold">
+      <summary><span>山飛びで動画を見るポイント</span><span class="fold-mark">⌄</span></summary>
+      <div class="guide-body">
 
       <h3>テイクオフ</h3>
       <ul>
@@ -130,7 +141,9 @@
       <div class="guide-note">
         動画を見返すための確認ポイントです。実際の飛行判断や具体的な操作は、機体・気象・技能段階によって変わるため、現場の指導者と当日の条件を優先してください。
       </div>
-    </section>
+      <button class="fold-up" type="button" aria-label="閉じる">↑</button>
+      </div>
+    </details>
 
   </div>
 
@@ -171,6 +184,14 @@
     }
   });
 })();
+</script>
+<script>
+document.querySelectorAll(".fold-up").forEach(function(button){
+  button.addEventListener("click",function(){
+    const details=button.closest("details");
+    if(details){details.open=false;details.scrollIntoView({behavior:"smooth",block:"start"});}
+  });
+});
 </script>
 
 </body>
