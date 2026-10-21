@@ -145,3 +145,9 @@ body{background:#EEF3EB}
 .site,.main{background:#F7F8F6}
 .nav-card,.person,.placeholder-item,.tile{background:#fff}
 .page-intro,.reference-box,.role-box,.guide-card,.phase-block,.photo-set{background:var(--info-surface)}
+
+/* Non-interactive information surfaces: fill only, no button-like outline */
+.page-intro,.reference-box,.role-box,.guide-card,.phase-block,.photo-set{
+  border:none!important;
+  box-shadow:none!important;
+}
