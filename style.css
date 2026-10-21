@@ -138,3 +138,10 @@ body{background:#EEF3EB}
 .page-intro,.reference-box,.role-box,.guide-card,.phase-block,.photo-set{background:#EAF4F6}
 .nav-card{background:#fff;border-color:#D2DDD9;box-shadow:0 2px 8px rgba(36,91,98,.05)}
 .placeholder-item,.tile,.person{background:#EAF4F6}
+
+/* Correct surface roles: links/buttons stay white; informational blocks use one pale fill */
+:root{--info-surface:#F1F5F6}
+body{background:#EEF3EB}
+.site,.main{background:#F7F8F6}
+.nav-card,.person,.placeholder-item,.tile{background:#fff}
+.page-intro,.reference-box,.role-box,.guide-card,.phase-block,.photo-set{background:var(--info-surface)}
