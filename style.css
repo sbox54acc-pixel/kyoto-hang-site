@@ -181,3 +181,7 @@ body{background:#EEF3EB}
 .hero{background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important;margin:0!important;padding:14px 18px 0!important}
 .hero h1{margin:0 0 2px!important}
 .hero p{margin:0!important}
+
+/* Six navigation items: two balanced rows on mobile */
+.header .nav{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+@media(max-width:600px){.header .nav{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
