@@ -52,14 +52,14 @@
 <style>
 .aircraft-intro{line-height:1.8;margin:0 0 14px}
 .aircraft-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:16px;background:#fff}
-.aircraft-matrix{width:100%;min-width:425px;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.65;text-align:left}
+.aircraft-matrix{width:100%;min-width:730px;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.65;text-align:left}
 .aircraft-matrix th,.aircraft-matrix td{border-bottom:1px solid var(--line);padding:12px 13px;vertical-align:top}
 .aircraft-matrix thead th{font-size:15px;background:var(--info-surface);font-weight:700}
-.aircraft-matrix tbody th{min-width:142px;width:36%;font-weight:600;color:var(--ink);background:#fff}
+.aircraft-matrix tbody th{min-width:105px;width:105px;font-weight:600;color:var(--ink);background:#fff}
 .aircraft-matrix thead th:first-child{position:sticky;left:0;z-index:2}
 .aircraft-matrix tbody th{position:sticky;left:0;z-index:1}
 .aircraft-matrix tr:last-child th,.aircraft-matrix tr:last-child td{border-bottom:0}
-.aircraft-matrix td{min-width:120px}
+.aircraft-matrix td{min-width:110px}.aircraft-matrix td small{display:inline-block;color:var(--muted);font-size:11px;margin:2px 0 4px}
 .aircraft-note{color:var(--muted);font-size:13px;line-height:1.8;margin-top:14px}
 .aircraft-back{display:inline-block;margin-top:18px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:13px}
 </style>
@@ -97,23 +97,20 @@
 </section>
 <main class="main">
 <section class="section">
-  <p class="aircraft-intro">京都ハングで使用する講習機を、機体サイズと練習内容で整理した一覧です。表にある名前は機体ごとの呼び名です。</p>
-  <div class="aircraft-scroll" tabindex="0" role="region" aria-label="講習機の一覧表（横スクロール可能）">
+  <p class="aircraft-intro">京都ハングの講習機を、サイズ別・練習内容別に整理しています。</p>
+  <div class="aircraft-scroll" tabindex="0" role="region" aria-label="講習機の名前一覧（横スクロール可能）">
     <table class="aircraft-matrix">
-      <thead><tr><th scope="col">練習内容</th><th scope="col">145（140）</th><th scope="col">170</th></tr></thead>
-      <tbody><tr><th scope="row">グラハン</th><td>—</td><td>ゆういちろう</td></tr>
-<tr><th scope="row">ショート</th><td>—</td><td>ゆういちろう</td></tr>
-<tr><th scope="row">ロング</th><td>—</td><td>吉村・カズ・まちゃ</td></tr>
-<tr><th scope="row">低・中高度</th><td>あまなつ</td><td>—</td></tr>
-<tr><th scope="row">低高度ターン</th><td>—</td><td>首藤</td></tr>
-<tr><th scope="row">高く上げる練習</th><td>さこた・えみ</td><td>—</td></tr>
-<tr><th scope="row">初飛び前の中高度ターン</th><td>—</td><td>山飛びレンタル機（個体名は未指定）</td></tr>
-<tr><th scope="row">山飛び（レンタル）</th><td>—</td><td>石田</td></tr>
-<tr><th scope="row">山飛び</th><td>—</td><td>えいすけ・こめだ</td></tr></tbody>
+      <thead>
+        <tr><th scope="col">サイズ</th><th scope="col">グラハン・ショート</th><th scope="col">ロング</th><th scope="col">高度練習</th><th scope="col">ターン</th><th scope="col">山飛び</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">145（140）</th><td>—</td><td>—</td><td>あまなつ <small>中高度</small><br>さこた・えみ <small>高く上げる練習</small></td><td>—</td><td>—</td></tr>
+        <tr><th scope="row">170</th><td>ゆういちろう</td><td>吉村・カズ・まちゃ</td><td>—</td><td>首藤</td><td>石田 <small>レンタル</small><br>えいすけ・こめだ</td></tr>
+      </tbody>
     </table>
   </div>
-  <p class="aircraft-note">「—」は情報未確認の欄です。使用できないという意味ではありません。その他のサイズ・機体は確認できたものから追加します。</p>
-  <p class="aircraft-note">機体の選定・使用可否は当日の条件と現場の指導者の判断を優先してください。</p>
+  <p class="aircraft-note">初飛び前の中高度ターン練習には山飛びレンタル機を使用（個体名は未確認）。「—」は未確認で、使用不可という意味ではありません。</p>
+  <p class="aircraft-note">機体の選定・使用可否は現場の指導者の判断を優先してください。</p>
   <a class="aircraft-back" href="training.html">← 練習ガイドへ戻る</a>
 </section>
 </main>
