@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>講習機の名前と用途｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+<style>
+.training-menu{display:grid;gap:12px}
+.training-primary{display:grid;gap:12px}
+.training-card{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.training-card strong{font-size:17px;color:var(--ink)}
+.training-card.main{padding:22px 18px;background:#fff}
+.training-card.main strong{font-size:19px}
+.training-arrow{font-size:25px;color:var(--muted);line-height:1}
+.training-sub{margin-top:6px}
+.reference-box{margin-top:6px;padding:14px 16px;border-radius:16px;background:var(--info-surface);border:0}
+.reference-title{margin:0 0 10px;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em}
+.reference-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0}
+.reference-row+.reference-row{border-top:1px solid var(--line)}
+.reference-row strong{font-size:15px}
+.book-tag{flex:none;padding:5px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;color:var(--muted)}
+.practice-video-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:7px 12px;border-radius:999px;background:#fff;color:var(--main);font-size:12px;font-weight:700;text-decoration:none;border:1px solid var(--line)}
+</style>
+<style>
+.aircraft-intro{line-height:1.8;margin:0 0 14px}
+.aircraft-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:16px;background:#fff}
+.aircraft-matrix{width:100%;min-width:425px;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.65;text-align:left}
+.aircraft-matrix th,.aircraft-matrix td{border-bottom:1px solid var(--line);padding:12px 13px;vertical-align:top}
+.aircraft-matrix thead th{font-size:15px;background:var(--info-surface);font-weight:700}
+.aircraft-matrix tbody th{min-width:142px;width:36%;font-weight:600;color:var(--ink);background:#fff}
+.aircraft-matrix thead th:first-child{position:sticky;left:0;z-index:2}
+.aircraft-matrix tbody th{position:sticky;left:0;z-index:1}
+.aircraft-matrix tr:last-child th,.aircraft-matrix tr:last-child td{border-bottom:0}
+.aircraft-matrix td{min-width:120px}
+.aircraft-note{color:var(--muted);font-size:13px;line-height:1.8;margin-top:14px}
+.aircraft-back{display:inline-block;margin-top:18px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:13px}
+</style>
+</head>
+<body>
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+
+<header class="header">
+  <div class="head">
+    <div class="brand">京都ハング ライブラリ</div>
+    <div class="sub">練習動画とマニュアルをすぐ探せるサイト</div>
+  </div>
+  <nav class="nav">
+    <a href="index.html" class="">トップ</a><a href="playlists.html" class="">再生リスト</a><a href="training.html" class="active">練習ガイド</a><a href="area.html" class="">エリア管理</a><a href="video.html" class="">動画ガイド</a>
+  <a href="feedback.html" class="">提案フォーム</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>講習機の名前と用途</h1>
+  <p>機体サイズと練習内容から、講習機の名前を確認できます。</p>
+</section>
+<main class="main">
+<section class="section">
+  <p class="aircraft-intro">京都ハングで使用する講習機を、機体サイズと練習内容で整理した一覧です。表にある名前は機体ごとの呼び名です。</p>
+  <div class="aircraft-scroll" tabindex="0" role="region" aria-label="講習機の一覧表（横スクロール可能）">
+    <table class="aircraft-matrix">
+      <thead><tr><th scope="col">練習内容</th><th scope="col">145（140）</th><th scope="col">170</th></tr></thead>
+      <tbody><tr><th scope="row">グラハン</th><td>—</td><td>ゆういちろう</td></tr>
+<tr><th scope="row">ショート</th><td>—</td><td>ゆういちろう</td></tr>
+<tr><th scope="row">ロング</th><td>—</td><td>吉村・カズ・まちゃ</td></tr>
+<tr><th scope="row">低・中高度</th><td>あまなつ</td><td>—</td></tr>
+<tr><th scope="row">低高度ターン</th><td>—</td><td>首藤</td></tr>
+<tr><th scope="row">高く上げる練習</th><td>さこた・えみ</td><td>—</td></tr>
+<tr><th scope="row">初飛び前の中高度ターン</th><td>—</td><td>山飛びレンタル機（個体名は未指定）</td></tr>
+<tr><th scope="row">山飛び（レンタル）</th><td>—</td><td>石田</td></tr>
+<tr><th scope="row">山飛び</th><td>—</td><td>えいすけ・こめだ</td></tr></tbody>
+    </table>
+  </div>
+  <p class="aircraft-note">「—」は情報未確認の欄です。使用できないという意味ではありません。その他のサイズ・機体は確認できたものから追加します。</p>
+  <p class="aircraft-note">機体の選定・使用可否は当日の条件と現場の指導者の判断を優先してください。</p>
+  <a class="aircraft-back" href="training.html">← 練習ガイドへ戻る</a>
+</section>
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
