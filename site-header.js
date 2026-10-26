@@ -71,4 +71,12 @@
   } else {
     render();
   }
+  // Cloudflare Web Analytics (all pages load this shared script).
+  // This tracks page usage without altering page titles or noindex directives.
+  const analytics = document.createElement("script");
+  analytics.type = "module";
+  analytics.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  analytics.setAttribute("data-cf-beacon", '{"token":"40c061d02ec04e1f8d9ef7ba183302f8"}');
+  document.head.appendChild(analytics);
+
 })();
