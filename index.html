@@ -48,14 +48,6 @@
 .site-map-link-detail{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:3px}
 .site-map-links a::after{content:"›";font-size:19px;line-height:1;flex:none;color:var(--muted)}
 .site-map-links a:hover,.site-map-group h2 a:hover{color:var(--main);text-decoration:underline}
-.site-map-subheading{font-size:13px;line-height:1.5;color:var(--muted);font-weight:700;margin:16px 0 5px;padding-top:13px;border-top:1px solid var(--line)}
-.site-map-setup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.site-map-setup-group{background:var(--info-surface);border-radius:12px;padding:12px}
-.site-map-setup-group h4{font-size:14px;color:var(--ink);margin:0 0 7px}
-.site-map-setup-group ul{list-style:none;margin:0;padding:0}
-.site-map-setup-group li+li{border-top:1px solid var(--line)}
-.site-map-setup-group a{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:8px 0;font-size:14px;line-height:1.5}
-.site-map-setup-group a::after{content:"›";font-size:18px;color:var(--muted);flex:none}
 .site-map-note{margin:7px 0 2px;font-size:13px;color:var(--muted)}
 @media(min-width:650px){
   .site-map{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -64,7 +56,6 @@
   .site-map-group{padding:20px}
 }
 @media(max-width:420px){
-  .site-map-setup{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -113,31 +104,11 @@
       <h2><a href="training.html">練習ガイド</a></h2>
       <ul class="site-map-links">
         <li><a href="first-flight.html">初飛びまでの流れ</a></li>
-        <li><a href="training-aircraft.html">講習機の名前と用途</a></li>
         <li><a href="ground-handling.html">グラハン</a></li>
         <li><a href="maps.html">荒神山 練習・ランディングマップ</a></li>
       </ul>
       <h3 class="site-map-subheading">機体の組み立て・ばらし</h3>
-      <div class="site-map-setup">
-        <div class="site-map-setup-group">
-          <h4>330</h4>
-          <ul>
-            <li><a href="330-setup.html">伏せ組み</a></li>
-            <li><a href="330-setdown.html">伏せばらし</a></li>
-          </ul>
-        </div>
-        <div class="site-map-setup-group">
-          <h4>170</h4>
-          <ul>
-            <li><a href="170-standing-setup.html">立て組み</a></li>
-            <li><a href="170-standing-setdown.html">立てばらし</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="site-map-group">
-      <h2><a href="area.html">エリア管理</a></h2>
+      <dia href="area.html">エリア管理</a></h2>
       <ul class="site-map-links">
         <li><a href="mowing-manual.html">草刈機マニュアル</a></li>
         <li><a href="mowing-map.html">草刈りマップ</a></li>
