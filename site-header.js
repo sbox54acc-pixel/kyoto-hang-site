@@ -21,6 +21,7 @@
     "ground-handling.html": "training.html",
     "maps.html": "training.html",
     "training-aircraft.html": "training.html",
+    "skyflow-sizes.html": "training.html",
     "330-setup.html": "training.html",
     "330-setdown.html": "training.html",
     "170-setup.html": "training.html",
