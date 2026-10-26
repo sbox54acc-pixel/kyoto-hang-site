@@ -1,2 +1,5 @@
+# HTML pages use noindex meta tags to stay out of search results.
+# Crawlers must be able to read those tags; blocking them can defeat noindex.
+# For this GitHub Pages project, this file is below the host root and not the active robots.txt.
 User-agent: *
-Disallow: /
+Allow: /
