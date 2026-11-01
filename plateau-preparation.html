@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>台地練習の前にすること｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+<script src="site-header.js" defer></script>
+
+<style id="access-guard-style">
+#access-guard{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#f5f8fa}
+#access-guard[hidden]{display:none}
+#access-card{width:min(100%,420px);background:#fff;border:1px solid #dce6eb;border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;border-radius:12px;outline:none}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;background:#173747;color:#fff;font-size:16px;font-weight:700}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+<style>
+/* This draft follows the shared Kyoto Hang layout and site color tokens. */
+.prep-intro{margin:4px 0 16px;font-size:14px;line-height:1.8;color:var(--muted)}
+.prep-draft{display:inline-block;padding:4px 9px;margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--muted);background:var(--info-surface);border-radius:7px}
+.prep-principle{padding:17px 18px;margin:0 0 18px;background:var(--supplement-surface);border-radius:17px}
+.prep-principle strong{display:block;font-size:17px;color:var(--ink);margin-bottom:6px}
+.prep-principle p{margin:0;line-height:1.85;font-size:14px}
+.prep-jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 22px}
+.prep-jump a{display:flex;align-items:center;justify-content:center;min-height:40px;padding:7px 8px;text-align:center;font-size:12px;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:12px;color:var(--ink)}
+.prep-jump a:focus-visible,.prep-resources a:focus-visible{outline:3px solid var(--sub);outline-offset:2px}
+.prep-grid{display:grid;gap:15px}
+.prep-step{scroll-margin-top:150px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 8px rgba(36,91,98,.035)}
+.prep-step-header{display:flex;gap:13px;align-items:flex-start;margin-bottom:13px}
+.prep-step-no{display:grid;place-items:center;flex:0 0 35px;height:35px;border-radius:12px;background:var(--green);color:var(--ink);font-size:14px;font-weight:800;font-variant-numeric:tabular-nums}
+.prep-step h2{font-size:19px;color:var(--ink);line-height:1.4;margin:3px 0 0}
+.prep-actions{list-style:none;margin:0 0 0 48px;padding:0}
+.prep-actions li{position:relative;padding:0 0 0 16px;margin:0 0 11px;font-size:14px;line-height:1.75}
+.prep-actions li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.prep-actions li:last-child{margin-bottom:0}
+.prep-resources{margin:17px 0 0 48px;padding-top:13px;border-top:1px solid var(--line)}
+.prep-resources h3{font-size:12px;letter-spacing:.04em;color:var(--muted);margin:0 0 9px}
+.prep-link-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.prep-resources a,.prep-pending{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:45px;padding:10px 12px;border-radius:11px;font-size:13px;line-height:1.4}
+.prep-resources a{color:var(--ink);font-weight:700;background:var(--info-surface)}
+.prep-resources a::after{content:"→";font-size:18px;flex:0 0 auto}
+.prep-resources a:active{opacity:.7}
+.prep-pending{background:#f4f5f4;color:var(--muted);border:1px dashed var(--line)}
+.prep-pending::after{content:"準備中";white-space:nowrap;font-size:11px}
+.prep-caution{margin:15px 0 0 48px;padding:12px 14px;border-radius:12px;background:var(--caution-surface);font-size:13px;line-height:1.8}
+.prep-caution strong{color:#735e20}
+.prep-footnote{font-size:12px;color:var(--muted);line-height:1.8;margin:18px 0 0}
+.prep-back{display:inline-flex;margin-top:18px;padding:9px 13px;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:13px;font-weight:700;color:var(--ink)}
+@media(max-width:580px){
+  .prep-jump{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .prep-step{padding:17px 15px}
+  .prep-step-no{flex-basis:32px;height:32px}
+  .prep-step-header{gap:10px}
+  .prep-step h2{font-size:17px}
+  .prep-actions{margin-left:0}
+  .prep-resources,.prep-caution{margin-left:0}
+  .prep-link-list{grid-template-columns:1fr}
+  .prep-intro{font-size:13px}
+}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<div class="site">
+<header class="header" id="site-header"></header>
+<section class="hero">
+  <p class="prep-draft">公開前の確認用</p>
+  <h1>台地練習の前にすること</h1>
+  <p>荒神山で練習を始める前に、確認しておきたい準備。</p>
+</section>
+<main class="main">
+<section class="section">
+  <div class="prep-principle">
+    <strong>自分が作業するだけで終わらない。</strong>
+    <p>やり方を知らない人がいそうなら、必ず教える。教えた後は、理解できているかも確認する。</p>
+  </div>
+  <p class="prep-intro">準備する内容を6つに分けています。作業の順番は、その日の状況に応じて調整してください。</p>
+  <nav class="prep-jump" aria-label="準備項目へ移動">
+    <a href="#wind">01 風の確認</a>
+    <a href="#equipment">02 機体・リターン</a>
+    <a href="#setup">03 セットアップ</a>
+    <a href="#preflight">04 機体チェック</a>
+    <a href="#towrope">05 トーイングロープ</a>
+    <a href="#ground">06 場所の整備</a>
+  </nav>
+
+  <div class="prep-grid">
+    <section class="prep-step" id="wind" aria-labelledby="wind-title">
+      <div class="prep-step-header"><span class="prep-step-no">01</span><h2 id="wind-title">風を確認する</h2></div>
+      <ul class="prep-actions">
+        <li>天気予報を見て、1日の風の移り変わりを予測する。</li>
+        <li>実際の風向きと強さを見て、今日やる練習を考える。</li>
+      </ul>
+      <div class="prep-resources"><h3>関連資料</h3><div class="prep-link-list">
+        <span class="prep-pending">天気予報の見方</span>
+      </div></div>
+    </section>
+
+    <section class="prep-step" id="equipment" aria-labelledby="equipment-title">
+      <div class="prep-step-header"><span class="prep-step-no">02</span><h2 id="equipment-title">使う機体とリターンを確認する</h2></div>
+      <ul class="prep-actions">
+        <li>自分のレベル、その日の風、一緒に練習するメンバーを考えて、広げる機体を選び、シンさんに確認する。</li>
+        <li>風向きに合わせて、ロープを張るリターンの位置を確認する。</li>
+      </ul>
+      <div class="prep-resources"><h3>関連資料</h3><div class="prep-link-list">
+        <a href="training-aircraft.html">講習機の名前と用途</a>
+        <a href="maps.html">台地練習 リターン位置マップ</a>
+      </div></div>
+    </section>
+
+    <section class="prep-step" id="setup" aria-labelledby="setup-title">
+      <div class="prep-step-header"><span class="prep-step-no">03</span><h2 id="setup-title">グライダーをセットアップする</h2></div>
+      <ul class="prep-actions">
+        <li>使う機体に合った方法でセットアップする。</li>
+      </ul>
+      <div class="prep-resources"><h3>セットアップ・ブレイクダウン</h3><div class="prep-link-list">
+        <a href="330-setup.html">330 伏せ組み</a>
+        <a href="170-setup.html">170 立て組み</a>
+        <a href="330-setdown.html">330 伏せばらし</a>
+        <a href="170-setdown.html">170 立てばらし</a>
+      </div></div>
+    </section>
+
+    <section class="prep-step" id="preflight" aria-labelledby="preflight-title">
+      <div class="prep-step-header"><span class="prep-step-no">04</span><h2 id="preflight-title">機体をチェックする</h2></div>
+      <ul class="prep-actions"><li>セットアップした機体のプレフライトチェックを行う。</li></ul>
+      <div class="prep-resources"><h3>関連資料</h3><div class="prep-link-list">
+        <span class="prep-pending">プレフライトチェック</span>
+      </div></div>
+    </section>
+
+    <section class="prep-step" id="towrope" aria-labelledby="towrope-title">
+      <div class="prep-step-header"><span class="prep-step-no">05</span><h2 id="towrope-title">トーイングロープを張る</h2></div>
+      <ul class="prep-actions">
+        <li>ロープの設置方法が分からない人がいたら、作業を教え、理解を確認する。</li>
+        <li>設置したロープとプーリーの状態は、使用前に指導者と確認する。</li>
+      </ul>
+      <p class="prep-caution"><strong>注意：</strong>プーリーを使わず、アンカーへ直接ロープをかけない。具体的な取り付け方法・チェック項目は、シンさんに確認してからマニュアルに掲載する。</p>
+      <div class="prep-resources"><h3>関連資料</h3><div class="prep-link-list">
+        <span class="prep-pending">トーイングロープの張り方</span>
+      </div></div>
+    </section>
+
+    <section class="prep-step" id="ground" aria-labelledby="ground-title">
+      <div class="prep-step-header"><span class="prep-step-no">06</span><h2 id="ground-title">使う場所を整える</h2></div>
+      <ul class="prep-actions">
+        <li>テイクオフが荒れていたら、ジョレンで地面をならす。</li>
+        <li>飛ぶルートの草が高かったら、草刈りをする。</li>
+        <li>滑車に草が巻き込まれないよう、リターン周辺の草を刈る。</li>
+        <li>フラッグに絡まった草を取り、壊れたフラッグを交換する。ランディング周辺など必要な場所には、自分でフラッグを立てる。</li>
+      </ul>
+      <div class="prep-resources"><h3>関連資料</h3><div class="prep-link-list">
+        <a href="mowing-manual.html">草刈機マニュアル</a>
+        <a href="mowing-map.html">草刈りマップ</a>
+      </div></div>
+    </section>
+  </div>
+
+  <p class="prep-footnote">実際の練習内容、機体・設備の使用、作業の安全確認は、当日の状況とシンさんの判断を優先してください。トーイング設備の詳細な設置方法は確認後に追加します。</p>
+  <a class="prep-back" href="training.html">← 練習ガイドへ戻る</a>
+</section>
+</main>
+<footer class="footer"><a href="feedback.html" style="display:inline-block;margin-bottom:8px;text-decoration:underline;text-underline-offset:3px">ご意見・お問い合わせ</a><div>京都ハング ライブラリ</div></footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){guard.hidden=true;return;}
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
