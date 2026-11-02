@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>プレフライトチェック｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+<script src="site-header.js" defer></script>
+<style id="access-guard-style">
+#access-guard{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#f5f8fa}
+#access-guard[hidden]{display:none}
+#access-card{width:min(100%,420px);background:#fff;border:1px solid #dce6eb;border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;border-radius:12px;outline:none}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;background:#173747;color:#fff;font-size:16px;font-weight:700}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+<style>
+.check-intro{background:var(--supplement-surface);padding:18px;border-radius:18px;margin-bottom:14px;line-height:1.8;font-size:14px}
+.check-intro strong{display:block;color:var(--ink);font-size:17px;margin-bottom:6px}
+.check-intro p{margin:0}
+.check-note{background:var(--caution-surface);border-radius:15px;padding:14px 16px;font-size:13px;line-height:1.8;margin-bottom:20px}
+.check-jump{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:18px}
+.check-jump a{padding:10px 8px;text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--ink);font-weight:700}
+.check-stack{display:grid;gap:14px}
+.check-card{scroll-margin-top:160px;border:1px solid var(--line);background:#fff;border-radius:20px;padding:19px}
+.check-head{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.check-number{flex:0 0 36px;width:36px;height:36px;border-radius:11px;background:var(--green);display:grid;place-items:center;font-size:14px;font-weight:800;color:var(--ink)}
+.check-head h2{margin:0!important;font-size:19px!important}
+.check-items{list-style:none;padding:0;margin:0}
+.check-items li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #edf1ef;font-size:14px;line-height:1.75}
+.check-items li:last-child{border:0;padding-bottom:0}
+.check-square{flex:0 0 17px;height:17px;border-radius:5px;border:1.6px solid #93a9a1;margin-top:4px}
+.check-back{display:inline-block;margin-top:20px;padding:10px 13px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12px}
+@media(max-width:520px){.check-card{padding:15px}.check-head h2{font-size:17px!important}}
+</style>
+</head>
+<body>
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+<header class="header" id="site-header"></header>
+<section class="hero"><h1>プレフライトチェック</h1><p>グライダーの各部を確認するためのチェック項目。</p></section>
+<main class="main"><section class="section">
+<div class="check-intro">
+<strong>各部名称を覚えて、見落としを防ぐ</strong>
+<p>まずチェックを始める位置を決め、グライダーの周りを一周しながら、各パーツの接続部分を中心に確認します。各部の名称を覚えることでチェック項目も頭に入り、ミスを減らすことにつながります。</p>
+</div>
+<div class="check-note"><strong>内容確認中：</strong>このページはスクールで使うチェック項目を整理した下書きです。機体によって構造や確認項目が異なるため、該当機体の正式なマニュアルとシンさんの指示を優先してください。異常や不明点がある場合は飛行せず、指導者に確認してください。</div>
+<nav class="check-jump" aria-label="確認する場所"><a href="#part-1">コントロールバー付近</a><a href="#part-2">グライダーの前側</a><a href="#part-3">グライダーの後ろ側</a><a href="#part-4">全体の状態</a></nav>
+<div class="check-stack"><section class="check-card" id="part-1">
+<div class="check-head"><span class="check-number">01</span><h2>コントロールバー付近</h2></div>
+<ul class="check-items"><li><span class="check-square" aria-hidden="true"></span><span>ベースバーとアップライトを繋ぐピン</span></li><li><span class="check-square" aria-hidden="true"></span><span>ピンがベースバーの穴を通っているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>アップライトとキールを繋ぐリングピン</span></li><li><span class="check-square" aria-hidden="true"></span><span>ワイヤーがキンクしていないか</span></li><li><span class="check-square" aria-hidden="true"></span><span>テンションワイヤーがキンクしていないか</span></li></ul>
+</section>
+<section class="check-card" id="part-2">
+<div class="check-head"><span class="check-number">02</span><h2>グライダーの前側</h2></div>
+<ul class="check-items"><li><span class="check-square" aria-hidden="true"></span><span>ノーズバテンが入っているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>ノーズコーンが綺麗に止めてあるか</span></li><li><span class="check-square" aria-hidden="true"></span><span>スパーが凹んでいないか</span></li><li><span class="check-square" aria-hidden="true"></span><span>バテンがスパーの上まで入っているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>サイドワイヤーがキンクしていないか</span></li><li><span class="check-square" aria-hidden="true"></span><span>セールがクロスバーに引っ掛かっていないか</span></li><li><span class="check-square" aria-hidden="true"></span><span>フロントスパーとリアスパーを繋ぐリングピン</span></li><li><span class="check-square" aria-hidden="true"></span><span>ウォッシュアウトリミッターが奥まではまっているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>スパーを止めるベルトが緩んだりズレていないか</span></li></ul>
+</section>
+<section class="check-card" id="part-3">
+<div class="check-head"><span class="check-number">03</span><h2>グライダーの後ろ側</h2></div>
+<ul class="check-items"><li><span class="check-square" aria-hidden="true"></span><span>翼端バテンがきちんと止まっているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>バテンエンドがきちんと止まっているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>ウォッシュアウトリミッターがバテンを支えているか</span></li><li><span class="check-square" aria-hidden="true"></span><span>ラフラインがねじれていないか</span></li><li><span class="check-square" aria-hidden="true"></span><span>テンションワイヤーがねじれていないか</span></li></ul>
+</section>
+<section class="check-card" id="part-4">
+<div class="check-head"><span class="check-number">04</span><h2>全体の状態</h2></div>
+<ul class="check-items"><li><span class="check-square" aria-hidden="true"></span><span>セールやワイヤーやピンが傷んでいないか</span></li></ul>
+</section></div>
+<p style="margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.8">この一覧は機種ごとの正式な確認手順を代替するものではありません。実機とマニュアルに基づいて内容を確定します。</p>
+<a class="check-back" href="plateau-preparation.html">← 台地練習の前にすることへ戻る</a>
+</section></main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){guard.hidden=true;return;}
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
