@@ -22,6 +22,7 @@
     "maps.html": "training.html",
     "training-aircraft.html": "training.html",
     "plateau-preparation.html": "training.html",
+    "preflight-check.html": "training.html",
     "skyflow-sizes.html": "training.html",
     "330-setup.html": "training.html",
     "330-setdown.html": "training.html",
