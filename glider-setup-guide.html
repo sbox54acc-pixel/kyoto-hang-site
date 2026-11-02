@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>グライダーのセットアップ・ブレイクダウン｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="style.css">
+<script src="site-header.js" defer></script>
+<style id="access-guard-style">
+#access-guard{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#f5f8fa}
+#access-guard[hidden]{display:none}
+#access-card{width:min(100%,420px);background:#fff;border:1px solid #dce6eb;border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;border-radius:12px;outline:none}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;background:#173747;color:#fff;font-size:16px;font-weight:700}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+<style>
+.setup-guide{display:grid;gap:16px}
+.setup-intro{font-size:14px;line-height:1.8;color:var(--muted);margin:0 0 2px}
+.setup-glider{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
+.setup-glider-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.setup-glider-number{width:60px;height:60px;flex:0 0 60px;display:grid;place-items:center;border-radius:17px;background:var(--green);font-size:23px;color:var(--ink);font-weight:800;line-height:1}
+.setup-glider:nth-of-type(2) .setup-glider-number{background:var(--supplement-surface)}
+.setup-glider h2{font-size:20px!important;margin:0!important;line-height:1.4}
+.setup-glider-head p{font-size:12px;margin:2px 0 0;color:var(--muted)}
+.setup-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.setup-action{min-width:0;min-height:104px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:6px;border:1px solid var(--line);border-radius:15px;background:#fff;padding:15px 14px;color:var(--ink);box-shadow:0 2px 7px rgba(36,91,98,.04)}
+.setup-action .action-type{font-size:11px;color:var(--muted)}
+.setup-action .action-name{display:flex;justify-content:space-between;gap:8px;width:100%;align-items:center;font-size:17px;font-weight:700;line-height:1.45}
+.setup-action .action-name span:last-child{font-size:22px;font-weight:400}
+.setup-action:hover,.setup-action:focus-visible{border-color:var(--sub);background:var(--supplement-surface)}
+.setup-action:focus-visible{outline:3px solid var(--sub);outline-offset:2px}
+.setup-message{margin-top:18px;border-radius:15px;background:var(--info-surface);padding:15px 16px;font-size:13px;line-height:1.8}
+.setup-message strong{display:block;color:var(--ink);margin:0 0 5px}
+.setup-message p{margin:0}
+.setup-back{display:inline-flex;margin-top:17px;border:1px solid var(--line);background:#fff;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:700;color:var(--ink)}
+@media(max-width:480px){.setup-glider{padding:16px}.setup-glider-number{width:54px;height:54px;flex-basis:54px}.setup-glider h2{font-size:19px!important}.setup-actions{gap:8px}.setup-action{padding:12px;min-height:100px}.setup-action .action-name{font-size:15px}}
+</style>
+</head>
+<body>
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+<header class="header" id="site-header"></header>
+<section class="hero">
+  <h1>グライダーのセットアップ・ブレイクダウン</h1>
+  <p>機体ごとの組み立て・片づけの手順を確認します。</p>
+</section>
+<main class="main">
+<section class="section">
+  <p class="setup-intro">使用する機体を選び、セットアップ（組み立て）またはブレイクダウン（ばらし）のページを開いてください。</p>
+  <div class="setup-guide">
+    <section class="setup-glider" aria-labelledby="glider-330">
+      <div class="setup-glider-head"><div class="setup-glider-number">330</div><div><h2 id="glider-330">330</h2><p>伏せ組み・伏せばらし</p></div></div>
+      <div class="setup-actions">
+        <a class="setup-action" href="330-setup.html"><span class="action-type">組み立て</span><span class="action-name"><span>伏せ組み</span><span aria-hidden="true">→</span></span></a>
+        <a class="setup-action" href="330-setdown.html"><span class="action-type">ばらし</span><span class="action-name"><span>伏せばらし</span><span aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+    <section class="setup-glider" aria-labelledby="glider-170">
+      <div class="setup-glider-head"><div class="setup-glider-number">170</div><div><h2 id="glider-170">170</h2><p>立て組み・立てばらし</p></div></div>
+      <div class="setup-actions">
+        <a class="setup-action" href="170-setup.html"><span class="action-type">組み立て</span><span class="action-name"><span>立て組み</span><span aria-hidden="true">→</span></span></a>
+        <a class="setup-action" href="170-setdown.html"><span class="action-type">ばらし</span><span class="action-name"><span>立てばらし</span><span aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+  </div>
+  <div class="setup-message"><strong>作業前の確認</strong><p>掲載中の手順は330・170のものです。実際のセットアップ・ブレイクダウンは、使用する機体の正式なマニュアルとシンさんの指示を優先してください。分からないことがあれば作業前に確認しましょう。</p></div>
+  <a class="setup-back" href="plateau-preparation.html">← 台地練習の前にすることへ戻る</a>
+</section>
+</main>
+<footer class="footer"><a href="feedback.html" style="display:inline-block;margin-bottom:8px;text-decoration:underline;text-underline-offset:3px">ご意見・お問い合わせ</a><div>京都ハング ライブラリ</div></footer>
+</div>
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){guard.hidden=true;return;}
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
