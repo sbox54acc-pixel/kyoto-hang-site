@@ -64,6 +64,13 @@
 .compact-link-card{min-height:0;margin-top:10px;padding:14px 16px;grid-template-columns:1fr 24px;border-radius:16px}
 .compact-link-card .nav-card-text strong{font-size:15px}
 .compact-link-card .nav-card-arrow{font-size:22px}
+.step-video-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;width:100%;padding-right:0}
+.step-video-links a{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:40px;padding:8px 12px;border:1px solid #cfe5ee;border-radius:12px;background:var(--info-surface);color:var(--ink);font-size:13px;font-weight:700;text-decoration:none}
+.step-video-links a:hover,.step-video-links a:focus-visible{border-color:var(--sub);text-decoration:underline}
+.flow-step summary.has-video-links{flex-wrap:wrap;position:relative}
+.flow-step summary.has-video-links::after{position:absolute;right:0;top:7px;margin-left:0}
+.flow-step summary.has-video-links .step-heading{padding-right:28px}
+@media(max-width:480px){.step-video-links a{font-size:12px;min-height:40px;padding:8px 10px}}
 </style>
 
 </head>
@@ -105,7 +112,7 @@
     </section>
 
     <details class="flow-step">
-      <summary><span class="step-heading"><img class="step-thumb" src="IMG_4703.jpeg" alt=""><h2>330</h2></span></summary>
+      <summary class="has-video-links"><span class="step-heading"><img class="step-thumb" src="IMG_4703.jpeg" alt=""><h2>330</h2></span><span class="step-video-links"><a href="https://youtube.com/playlist?list=PLTxQEfrD2lg4" target="_blank" rel="noopener noreferrer" aria-label="330セーフトーの練習動画を見る">▶ 330セーフトーの動画 ↗</a><a href="https://youtube.com/playlist?list=PLaP5pmeuuVaY" target="_blank" rel="noopener noreferrer" aria-label="330フリーの練習動画を見る">▶ 330フリーの動画 ↗</a></span></summary>
       <div class="step-content">
       <h3>特徴</h3>
       <ul>
@@ -145,7 +152,7 @@
     </details>
 
     <details class="flow-step">
-      <summary><span class="step-heading"><img class="step-thumb" src="IMG_4705.jpeg" alt=""><h2>225</h2></span></summary>
+      <summary class="has-video-links"><span class="step-heading"><img class="step-thumb" src="IMG_4705.jpeg" alt=""><h2>225</h2></span><span class="step-video-links"><a href="https://youtube.com/playlist?list=PLEBB0nG51O8M" target="_blank" rel="noopener noreferrer" aria-label="225フリーの練習動画を見る">▶ 225フリーの動画 ↗</a></span></summary>
       <div class="step-content">
       <h3>特徴</h3>
       <ul>
@@ -175,7 +182,7 @@
     </details>
 
     <details class="flow-step">
-      <summary><span class="step-heading"><img class="step-thumb" src="IMG_4704.jpeg" alt=""><h2>山飛びサイズ<br><span class="size-label">(145/170/195)</span></h2></span></summary>
+      <summary class="has-video-links"><span class="step-heading"><img class="step-thumb" src="IMG_4704.jpeg" alt=""><h2>山飛びサイズ<br><span class="size-label">(145/170/195)</span></h2></span><span class="step-video-links"><a href="https://youtube.com/playlist?list=PLXTwh_Ut_qzE" target="_blank" rel="noopener noreferrer" aria-label="1XXフリーの練習動画を見る">▶ 1XXフリーの動画 ↗</a><a href="https://youtube.com/playlist?list=PLG5uKtZY_wTk" target="_blank" rel="noopener noreferrer" aria-label="1XXターンの練習動画を見る">▶ 1XXターンの動画 ↗</a></span></summary>
       <div class="step-content">
       <h3>特徴</h3>
       <ul>
@@ -276,6 +283,12 @@
 })();
 </script>
 
+<script>
+document.querySelectorAll(".step-video-links a").forEach(function(link){
+  link.addEventListener("click",function(event){event.stopPropagation();});
+  link.addEventListener("keydown",function(event){event.stopPropagation();});
+});
+</script>
 <script>document.querySelectorAll(".close-step").forEach(function(b){b.addEventListener("click",function(){var d=b.closest("details");d.open=false;d.scrollIntoView({behavior:"smooth",block:"start"});});});</script>
 </body>
 </html>
