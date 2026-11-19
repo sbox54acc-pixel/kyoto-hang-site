@@ -65,14 +65,15 @@
 .compact-link-card{min-height:0;margin-top:10px;padding:14px 16px;grid-template-columns:1fr 24px;border-radius:16px}
 .compact-link-card .nav-card-text strong{font-size:15px}
 .compact-link-card .nav-card-arrow{font-size:22px}
-.step-video-links{position:absolute;left:252px;right:32px;top:67px;display:flex;flex-wrap:wrap;gap:8px;width:auto;z-index:3}
+.step-video-links{position:static;display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;max-width:100%}
 .step-video-links a{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:40px;padding:8px 12px;border:1px solid #cfe5ee;border-radius:12px;background:var(--info-surface);color:var(--ink);font-size:13px;font-weight:700;text-decoration:none}
 .step-video-links a:hover,.step-video-links a:focus-visible{border-color:var(--sub);text-decoration:underline}
-.flow-step:has(>summary.has-video-links){position:relative}
-.flow-step summary.has-video-links{position:relative;min-height:164px}
-.flow-step summary.has-video-links::after{position:absolute;right:0;top:7px;margin-left:0}
+.flow-step summary.has-video-links{min-height:164px}
 .flow-step summary.has-video-links .step-heading{padding-right:28px}
-@media(max-width:480px){.flow-step summary.has-video-links{min-height:132px}.step-video-links{left:204px;right:12px;top:60px}.step-video-links a{font-size:12px;min-height:40px;padding:8px 10px}}
+@media(max-width:480px){
+ .flow-step summary.has-video-links{min-height:132px}
+ .step-video-links a{font-size:12px;min-height:40px;padding:8px 10px}
+}
 </style>
 
 </head>
