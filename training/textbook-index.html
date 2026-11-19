@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>教本 用語索引｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/site-header.js" defer></script>
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+<style>
+.index-intro{font-size:14px;color:var(--muted);margin:0 0 17px;line-height:1.8}
+.index-controls{border:1px solid var(--line);border-radius:18px;padding:15px;background:#fff;display:grid;gap:12px}
+.index-search-wrap{display:flex;align-items:center;border:1px solid #cbdad8;border-radius:12px;background:#fff;gap:8px;padding:0 12px}
+.index-search-wrap:focus-within{border-color:var(--ink);box-shadow:0 0 0 2px #245b6215}
+.index-search-icon{font-size:20px;color:var(--muted);flex:none}
+.index-search{width:100%;min-width:0;font:inherit;font-size:16px;border:none;outline:none;padding:12px 0;background:transparent;color:var(--text)}
+.index-clear{border:0;background:none;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;padding:5px}
+.index-clear[hidden]{display:none}
+.index-label{font-size:12px;font-weight:700;color:var(--muted)}
+.index-category{width:100%;padding:10px 12px;font:inherit;font-size:14px;color:var(--text);border:1px solid var(--line);border-radius:12px;background:#fff}
+.index-summary{margin:15px 0 10px;color:var(--muted);font-size:13px}
+.index-group{margin:15px 0 23px}
+.index-group-title{font-size:17px!important;color:var(--ink);margin:0 0 8px!important;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.index-list{display:grid;gap:8px}
+.index-entry{border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px 15px}
+.index-entry-name{font-size:16px;font-weight:700;color:var(--ink);overflow-wrap:anywhere;margin:0}
+.index-reading{font-size:12px;color:var(--muted);margin:2px 0 8px;overflow-wrap:anywhere}
+.index-page-row{display:flex;gap:7px;align-items:baseline;flex-wrap:wrap;font-size:13px}
+.index-page-label{color:var(--muted);font-size:12px}
+.index-page{display:inline-block;border-radius:8px;padding:3px 7px;background:var(--info-surface);font-size:12px;font-variant-numeric:tabular-nums}
+.index-category-name{font-size:12px;color:var(--muted);margin-top:8px}
+.index-empty{padding:30px 15px;text-align:center;color:var(--muted);font-size:14px}
+.index-caption{font-size:12px;color:var(--muted);line-height:1.7;margin:16px 0}
+@media(min-width:680px){.index-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+
+<div class="site">
+<header class="header" id="site-header"></header>
+<section class="hero">
+  <h1>教本 用語索引</h1>
+  <p>用語や読み仮名から、教本の掲載ページを探す</p>
+</section>
+<main class="main">
+<section class="section">
+  <p class="index-intro">漢字・カタカナ・ひらがなで検索できます。用語の一部分だけでも検索可能です。検索しないときは分野別に表示します。</p>
+  <div class="index-controls">
+    <label class="index-label" for="term-search">用語・読み仮名で検索</label>
+    <div class="index-search-wrap">
+      <span class="index-search-icon" aria-hidden="true">⌕</span>
+      <input class="index-search" id="term-search" type="search" placeholder="例：迎え角、あたっく、さーまる" autocomplete="off" spellcheck="false">
+      <button id="search-clear" class="index-clear" type="button" aria-label="検索をクリア" hidden>×</button>
+    </div>
+    <label class="index-label" for="category-select">分野</label>
+    <select id="category-select" class="index-category"><option value="">すべての分野</option></select>
+  </div>
+  <p class="index-summary" id="result-summary" role="status" aria-live="polite"></p>
+  <div id="result-list"></div>
+  <p class="index-caption">教本の掲載ページを示す索引です。本文の解説ではありません。ページ番号はスプレッドシートに記録された値を使用しています。</p>
+</section>
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+<script id="index-data" type="application/json">[{"term":"各部名称","reading":"かくぶめいしょう","category":"機体・構造","ab":"18","np":"","p":""},{"term":"フライングワイヤー","reading":"ふらいんぐわいやー","category":"機体・構造","ab":"25","np":"","p":""},{"term":"ランディングワイヤー","reading":"らんでぃんぐわいやー","category":"機体・構造","ab":"25","np":"","p":""},{"term":"バテンシェイプ","reading":"ばてんしぇいぷ","category":"機体・構造","ab":"61","np":"","p":""},{"term":"山飛び用機体","reading":"やまとびようきたい","category":"機体・構造","ab":"81","np":"","p":""},{"term":"シングルサーフェイス機","reading":"しんぐるさーふぇいすき","category":"機体・構造","ab":"","np":"","p":"174"},{"term":"ダブルサーフェイス機","reading":"だぶるさーふぇいすき","category":"機体・構造","ab":"","np":"","p":"174"},{"term":"キングポストレス機","reading":"きんぐぽすとれすき","category":"機体・構造","ab":"","np":"","p":"174"},{"term":"リジッド機","reading":"りじっどき","category":"機体・構造","ab":"","np":"","p":"174"},{"term":"リーディングエッジ","reading":"りーでぃんぐえっじ","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"トレーリングエッジ","reading":"とれーりんぐえっじ","category":"機体・構造","ab":"","np":"","p":"146、147"},{"term":"リブ","reading":"りぶ","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"翼型","reading":"よくがた","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"翼弦","reading":"よくげん","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"キャンバー","reading":"きゃんばー","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"翼厚","reading":"よくあつ","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"後退角","reading":"こうたいかく","category":"機体・構造","ab":"","np":"","p":"145"},{"term":"ねじり下げ（ウォッシュアウト）","reading":"ねじりさげうぉっしゅあうと","category":"機体・構造","ab":"","np":"","p":"145、158"},{"term":"ウォッシュアウトリミッター","reading":"うぉっしゅあうとりみったー","category":"機体・構造","ab":"","np":"","p":"146"},{"term":"ラフライン","reading":"らふらいん","category":"機体・構造","ab":"","np":"","p":"146"},{"term":"リフレックス","reading":"りふれっくす","category":"機体・構造","ab":"","np":"","p":"146、172"},{"term":"アンダーバテン","reading":"あんだーばてん","category":"機体・構造","ab":"","np":"","p":"146"},{"term":"バテンチャート","reading":"ばてんちゃーと","category":"機体・構造","ab":"","np":"","p":"172"},{"term":"アスペクト比","reading":"あすぺくとひ","category":"機体・構造","ab":"","np":"","p":"175"},{"term":"中心線","reading":"ちゅうしんせん","category":"機体・構造","ab":"","np":"","p":"147"},{"term":"CG","reading":"しーじー","category":"機体・構造","ab":"81、86","np":"113","p":"143、175"},{"term":"投影面積","reading":"とうえいめんせき","category":"機体・構造","ab":"77","np":"","p":"145"},{"term":"翼面荷重","reading":"よくめんかじゅう","category":"機体・構造","ab":"77","np":"","p":""},{"term":"VG","reading":"ぶいじー","category":"機体・構造","ab":"","np":"","p":"143、158"},{"term":"セットアップ・ブレイクダウン","reading":"せっとあっぷぶれいくだうん","category":"準備・点検","ab":"18、40、60","np":"96、135","p":""},{"term":"プレフライトチェック","reading":"ぷれふらいとちぇっく","category":"準備・点検","ab":"26、40、60","np":"96、100、135","p":"173"},{"term":"ハングチェック","reading":"はんぐちぇっく","category":"準備・点検","ab":"36、40","np":"97","p":""},{"term":"クロスチェック","reading":"くろすちぇっく","category":"準備・点検","ab":"37","np":"101","p":""},{"term":"フックアウト","reading":"ふっくあうと","category":"準備・点検","ab":"39","np":"94、101","p":""},{"term":"スカイフローターハーネス","reading":"すかいふろーたーはーねす","category":"装備・計器","ab":"34、38","np":"","p":""},{"term":"寝ハーネス（プローンハーネス）","reading":"ねはーねすぷろーんはーねす","category":"装備・計器","ab":"","np":"91","p":""},{"term":"練習時の服装","reading":"れんしゅうじのふくそう","category":"装備・計器","ab":"37","np":"","p":""},{"term":"スプレッダーバー","reading":"すぷれっだーばー","category":"装備・計器","ab":"39","np":"","p":""},{"term":"パラシュート","reading":"ぱらしゅーと","category":"装備・計器","ab":"82","np":"94","p":""},{"term":"リパック","reading":"りぱっく","category":"装備・計器","ab":"83","np":"","p":"176"},{"term":"無線機","reading":"むせんき","category":"装備・計器","ab":"84","np":"","p":""},{"term":"スピードメーター","reading":"すぴーどめーたー","category":"装備・計器","ab":"86","np":"","p":""},{"term":"バリオ","reading":"ばりお","category":"装備・計器","ab":"","np":"","p":"155"},{"term":"セーフティホイール","reading":"せーふてぃほいーる","category":"装備・計器","ab":"","np":"134","p":""},{"term":"アタックアングル（迎え角）","reading":"あたっくあんぐるむかえかく","category":"飛行原理・性能","ab":"30、32、53","np":"","p":"147"},{"term":"揚力","reading":"ようりょく","category":"飛行原理・性能","ab":"30、64","np":"","p":"147"},{"term":"揚力計算","reading":"ようりょくけいさん","category":"飛行原理・性能","ab":"","np":"","p":"148"},{"term":"抗力","reading":"こうりょく","category":"飛行原理・性能","ab":"","np":"","p":"147"},{"term":"重力","reading":"じゅうりょく","category":"飛行原理・性能","ab":"","np":"","p":"147"},{"term":"失速","reading":"しっそく","category":"飛行原理・性能","ab":"32","np":"","p":"143、150"},{"term":"最大失速速度","reading":"さいだいしっそくそくど","category":"飛行原理・性能","ab":"","np":"","p":"148"},{"term":"地面効果","reading":"じめんこうか","category":"飛行原理・性能","ab":"73","np":"132","p":""},{"term":"対気速度","reading":"たいきそくど","category":"飛行原理・性能","ab":"32","np":"","p":""},{"term":"対地速度","reading":"たいちそくど","category":"飛行原理・性能","ab":"32","np":"","p":""},{"term":"最小沈下速度","reading":"さいしょうちんかそくど","category":"飛行原理・性能","ab":"","np":"113","p":"143、148、164"},{"term":"最良滑空速度","reading":"さいりょうかっくうそくど","category":"飛行原理・性能","ab":"","np":"113","p":"148、164"},{"term":"滑空比","reading":"かっくうひ","category":"飛行原理・性能","ab":"","np":"113","p":"160、177"},{"term":"ポーラーカーブ","reading":"ぽーらーかーぶ","category":"飛行原理・性能","ab":"","np":"113","p":"148、177"},{"term":"バープレッシャー","reading":"ばーぷれっしゃー","category":"飛行原理・性能","ab":"","np":"","p":"143"},{"term":"運用限界","reading":"うんようげんかい","category":"飛行原理・性能","ab":"85","np":"","p":"206"},{"term":"ホールド","reading":"ほーるど","category":"飛行操作・姿勢","ab":"41","np":"110","p":""},{"term":"ロール","reading":"ろーる","category":"飛行操作・姿勢","ab":"48、66、70、76","np":"","p":""},{"term":"ピッチ","reading":"ぴっち","category":"飛行操作・姿勢","ab":"48、66、73","np":"130","p":""},{"term":"ヨー","reading":"よー","category":"飛行操作・姿勢","ab":"48","np":"","p":""},{"term":"ヨーイング","reading":"よーいんぐ","category":"飛行操作・姿勢","ab":"","np":"","p":"144、205"},{"term":"アドバースヨー","reading":"あどばーすよー","category":"飛行操作・姿勢","ab":"","np":"","p":"150"},{"term":"加重","reading":"かじゅう","category":"飛行操作・姿勢","ab":"64","np":"","p":""},{"term":"スタンディングフォーム","reading":"すたんでぃんぐふぉーむ","category":"飛行操作・姿勢","ab":"69","np":"130","p":""},{"term":"ニュートラル","reading":"にゅーとらる","category":"飛行操作・姿勢","ab":"69、72、86","np":"112、132","p":"143"},{"term":"トリムスピード","reading":"とりむすぴーど","category":"飛行操作・姿勢","ab":"70、81","np":"112","p":"143、175"},{"term":"ロケット","reading":"ろけっと","category":"飛行操作・姿勢","ab":"72","np":"","p":""},{"term":"レベルキープ","reading":"れべるきーぷ","category":"飛行操作・姿勢","ab":"73","np":"130","p":""},{"term":"直線飛行","reading":"ちょくせんひこう","category":"飛行操作・姿勢","ab":"56、69","np":"","p":""},{"term":"ターン（旋回）","reading":"たーんせんかい","category":"飛行操作・姿勢","ab":"76","np":"121","p":""},{"term":"バンク","reading":"ばんく","category":"飛行操作・姿勢","ab":"76","np":"122、126","p":"145"},{"term":"ピッチアップ","reading":"ぴっちあっぷ","category":"飛行操作・姿勢","ab":"77","np":"121","p":""},{"term":"サブ（セカンダリー）","reading":"さぶせかんだりー","category":"飛行操作・姿勢","ab":"86","np":"","p":""},{"term":"偏流飛行","reading":"へんりゅうひこう","category":"飛行操作・姿勢","ab":"","np":"117","p":""},{"term":"クロスウィンド","reading":"くろすうぃんど","category":"飛行操作・姿勢","ab":"","np":"117","p":""},{"term":"マヌーバー","reading":"まぬーばー","category":"飛行操作・姿勢","ab":"","np":"","p":"143"},{"term":"スパイラル","reading":"すぱいらる","category":"飛行操作・姿勢","ab":"","np":"","p":"145"},{"term":"スピン","reading":"すぴん","category":"飛行操作・姿勢","ab":"","np":"","p":"145"},{"term":"タンブリング","reading":"たんぶりんぐ","category":"飛行操作・姿勢","ab":"","np":"","p":"146"},{"term":"タッキング","reading":"たっきんぐ","category":"飛行操作・姿勢","ab":"","np":"","p":"146"},{"term":"シミュレーター","reading":"しみゅれーたー","category":"離陸・練習","ab":"42、47、51、70、74","np":"92","p":"175"},{"term":"グラウンドハンドリング","reading":"ぐらうんどはんどりんぐ","category":"離陸・練習","ab":"43、50、66","np":"","p":""},{"term":"湖岸練習","reading":"こがんれんしゅう","category":"離陸・練習","ab":"52","np":"","p":""},{"term":"ロープトレーニング","reading":"ろーぷとれーにんぐ","category":"離陸・練習","ab":"52","np":"","p":""},{"term":"トーイング","reading":"とーいんぐ","category":"離陸・練習","ab":"54","np":"","p":""},{"term":"蹴り出し","reading":"けりだし","category":"離陸・練習","ab":"64","np":"","p":""},{"term":"テイクオフ","reading":"ていくおふ","category":"離陸・練習","ab":"43、66","np":"110","p":"161"},{"term":"サポート","reading":"さぽーと","category":"離陸・練習","ab":"53、70","np":"","p":"161"},{"term":"高高度","reading":"こうこうど","category":"離陸・練習","ab":"81","np":"","p":""},{"term":"アウトラン","reading":"あうとらん","category":"離陸・練習","ab":"","np":"106","p":""},{"term":"ランディング","reading":"らんでぃんぐ","category":"着陸・アプローチ","ab":"44、56、72","np":"133","p":"163"},{"term":"フレアー","reading":"ふれあー","category":"着陸・アプローチ","ab":"44、56、72、74","np":"133","p":"163"},{"term":"ボディランディング","reading":"ぼでぃらんでぃんぐ","category":"着陸・アプローチ","ab":"56、72","np":"133","p":"164"},{"term":"ランディングアプローチ","reading":"らんでぃんぐあぷろーち","category":"着陸・アプローチ","ab":"85、87","np":"113、119、123、126","p":""},{"term":"ファイナルアプローチ","reading":"ふぁいなるあぷろーち","category":"着陸・アプローチ","ab":"","np":"123、126、130","p":"164"},{"term":"ファイナルターン","reading":"ふぁいなるたーん","category":"着陸・アプローチ","ab":"","np":"123、130","p":""},{"term":"ターゲット","reading":"たーげっと","category":"着陸・アプローチ","ab":"","np":"123","p":""},{"term":"場周（ボックス）","reading":"じょうしゅうぼっくす","category":"着陸・アプローチ","ab":"","np":"126","p":"165"},{"term":"ダウンウィンドレグ","reading":"だうんうぃんどれぐ","category":"着陸・アプローチ","ab":"","np":"126","p":""},{"term":"ベースレグ","reading":"べーすれぐ","category":"着陸・アプローチ","ab":"","np":"126、129、130","p":""},{"term":"グライドパス","reading":"ぐらいどぱす","category":"着陸・アプローチ","ab":"","np":"113、123、132","p":""},{"term":"8の字","reading":"はちのじ","category":"着陸・アプローチ","ab":"","np":"123","p":"165"},{"term":"アウトランディング","reading":"あうとらんでぃんぐ","category":"着陸・アプローチ","ab":"","np":"","p":"142"},{"term":"グラウンドループ","reading":"ぐらうんどるーぷ","category":"着陸・アプローチ","ab":"73","np":"","p":""},{"term":"ソアリング","reading":"そありんぐ","category":"ソアリング・気流","ab":"","np":"116","p":"151、200"},{"term":"リッジ","reading":"りっじ","category":"ソアリング・気流","ab":"","np":"108","p":"141、151、161"},{"term":"サーマル","reading":"さーまる","category":"ソアリング・気流","ab":"","np":"115","p":"140、151、157、200"},{"term":"リフト","reading":"りふと","category":"ソアリング・気流","ab":"","np":"105","p":"141、153"},{"term":"シンク","reading":"しんく","category":"ソアリング・気流","ab":"","np":"105","p":"141"},{"term":"アーベントテルミック","reading":"あーべんとてるみっく","category":"ソアリング・気流","ab":"","np":"","p":"155"},{"term":"吸い上げ","reading":"すいあげ","category":"ソアリング・気流","ab":"","np":"","p":"159"},{"term":"ローター","reading":"ろーたー","category":"ソアリング・気流","ab":"64","np":"105","p":"141、162"},{"term":"ウィンドグラジェント","reading":"うぃんどぐらじぇんと","category":"ソアリング・気流","ab":"","np":"","p":"142"},{"term":"吹き抜け（収束帯）","reading":"ふきぬけしゅうそくたい","category":"ソアリング・気流","ab":"","np":"","p":"141"},{"term":"ベンチュリ効果","reading":"べんちゅりこうか","category":"ソアリング・気流","ab":"","np":"","p":"141"},{"term":"コンバージェンス","reading":"こんばーじぇんす","category":"ソアリング・気流","ab":"","np":"","p":"201"},{"term":"ガーグル","reading":"がーぐる","category":"ソアリング・気流","ab":"","np":"","p":"203"},{"term":"気象","reading":"きしょう","category":"気象・予報","ab":"","np":"","p":"167"},{"term":"天気予報","reading":"てんきよほう","category":"気象・予報","ab":"62","np":"","p":"166"},{"term":"天気図","reading":"てんきず","category":"気象・予報","ab":"","np":"","p":"169"},{"term":"アメダス","reading":"あめだす","category":"気象・予報","ab":"","np":"","p":"167"},{"term":"雨雲レーダー","reading":"あまぐもれーだー","category":"気象・予報","ab":"","np":"","p":"167"},{"term":"エマグラム","reading":"えまぐらむ","category":"気象・予報","ab":"","np":"","p":"167"},{"term":"高気圧","reading":"こうきあつ","category":"気象・予報","ab":"","np":"103","p":""},{"term":"低気圧","reading":"ていきあつ","category":"気象・予報","ab":"","np":"103","p":""},{"term":"温暖前線","reading":"おんだんぜんせん","category":"気象・予報","ab":"","np":"103","p":""},{"term":"寒冷前線","reading":"かんれいぜんせん","category":"気象・予報","ab":"","np":"103","p":"171"},{"term":"停滞前線","reading":"ていたいぜんせん","category":"気象・予報","ab":"","np":"103","p":""},{"term":"閉塞前線","reading":"へいそくぜんせん","category":"気象・予報","ab":"","np":"103","p":""},{"term":"逆転層","reading":"ぎゃくてんそう","category":"気象・予報","ab":"","np":"","p":"169"},{"term":"ダウンバースト","reading":"だうんばーすと","category":"気象・予報","ab":"","np":"","p":"171"},{"term":"吹流し","reading":"ふきながし","category":"気象・予報","ab":"31","np":"","p":""},{"term":"風向","reading":"ふうこう","category":"気象・予報","ab":"31","np":"","p":""},{"term":"風速","reading":"ふうそく","category":"気象・予報","ab":"31","np":"","p":""},{"term":"局地風","reading":"きょくちふう","category":"気象・予報","ab":"","np":"","p":"140"},{"term":"海風","reading":"うみかぜ","category":"気象・予報","ab":"","np":"","p":"140"},{"term":"陸風","reading":"りくかぜ","category":"気象・予報","ab":"","np":"","p":"140"},{"term":"谷風","reading":"たにかぜ","category":"気象・予報","ab":"","np":"","p":"140"},{"term":"山風","reading":"やまかぜ","category":"気象・予報","ab":"","np":"","p":"140"},{"term":"タフト","reading":"たふと","category":"気象・予報","ab":"","np":"113","p":""},{"term":"フライトプラン","reading":"ふらいとぷらん","category":"飛行計画・ルール","ab":"62、79","np":"103、135","p":"139"},{"term":"フライトログ","reading":"ふらいとろぐ","category":"飛行計画・ルール","ab":"85","np":"","p":""},{"term":"エリアルール","reading":"えりあるーる","category":"飛行計画・ルール","ab":"87","np":"","p":""},{"term":"トラフィックルール","reading":"とらふぃっくるーる","category":"飛行計画・ルール","ab":"","np":"108","p":"153"},{"term":"同時侵入","reading":"どうじしんにゅう","category":"飛行計画・ルール","ab":"","np":"","p":"165"},{"term":"飛行禁止空域","reading":"ひこうきんしくういき","category":"飛行計画・ルール","ab":"","np":"","p":"179、203"},{"term":"ビジター","reading":"びじたー","category":"飛行計画・ルール","ab":"","np":"","p":"178"},{"term":"クロスカントリー","reading":"くろすかんとりー","category":"飛行計画・ルール","ab":"","np":"","p":"180"},{"term":"地平線","reading":"ちへいせん","category":"飛行計画・ルール","ab":"","np":"113","p":""},{"term":"パラグライダー","reading":"ぱらぐらいだー","category":"飛行計画・ルール","ab":"","np":"109","p":""},{"term":"ノーズクラッシュ","reading":"のーずくらっしゅ","category":"安全・事故対応","ab":"38","np":"","p":""},{"term":"クラッシュ","reading":"くらっしゅ","category":"安全・事故対応","ab":"","np":"","p":"164"},{"term":"山沈","reading":"やまちん","category":"安全・事故対応","ab":"","np":"","p":"141、186"},{"term":"ハインリッヒの法則","reading":"はいんりっひのほうそく","category":"安全・事故対応","ab":"","np":"99","p":""},{"term":"ヒヤリハット","reading":"ひやりはっと","category":"安全・事故対応","ab":"","np":"99","p":""},{"term":"安全マージン","reading":"あんぜんまーじん","category":"安全・事故対応","ab":"","np":"","p":"183"},{"term":"救急救命法","reading":"きゅうきゅうきゅうめいほう","category":"安全・事故対応","ab":"","np":"","p":"184"},{"term":"応急処置","reading":"おうきゅうしょち","category":"安全・事故対応","ab":"","np":"","p":"184"},{"term":"正常性バイアス","reading":"せいじょうせいばいあす","category":"安全・事故対応","ab":"","np":"","p":"188"},{"term":"中級者症候群","reading":"ちゅうきゅうしゃしょうこうぐん","category":"安全・事故対応","ab":"","np":"","p":"189"}]</script>
+<script>
+(function(){
+"use strict";
+const data=JSON.parse(document.getElementById("index-data").textContent);
+const search=document.getElementById("term-search");
+const select=document.getElementById("category-select");
+const clear=document.getElementById("search-clear");
+const list=document.getElementById("result-list");
+const summary=document.getElementById("result-summary");
+const categories=[...new Set(data.map(item=>item.category))];
+categories.forEach(cat=>{const option=document.createElement("option");option.value=cat;option.textContent=cat;select.appendChild(option)});
+function normalize(value){
+ return String(value).normalize("NFKC").toLowerCase()
+ .replace(/[\u30a1-\u30f6]/g,character=>String.fromCharCode(character.charCodeAt(0)-96))
+ .replace(/[\s　（）()・\-ー]/g,"");
+}
+function make(tag,className,text){
+ const el=document.createElement(tag);
+ if(className)el.className=className;
+ if(text!==undefined)el.textContent=text;
+ return el;
+}
+function createEntry(item,includeCategory){
+ const card=make("article","index-entry");
+ card.appendChild(make("h3","index-entry-name",item.term));
+ card.appendChild(make("p","index-reading",item.reading));
+ const row=make("div","index-page-row");
+ row.appendChild(make("span","index-page-label","教本"));
+ for(const [key,label] of [["ab","A/B"],["np","NP"],["p","P"]]){
+   if(!item[key])continue;
+   row.appendChild(make("span","index-page",label+"：p."+item[key]));
+ }
+ card.appendChild(row);
+ if(includeCategory)card.appendChild(make("div","index-category-name",item.category));
+ return card;
+}
+function render(){
+ const q=normalize(search.value);
+ const cat=select.value;
+ clear.hidden=!search.value;
+ const filtered=data.filter(item=>(!cat||item.category===cat)&&(!q||normalize(item.term+item.reading).includes(q)));
+ summary.textContent=filtered.length+"件／全"+data.length+"項目";
+ list.replaceChildren();
+ if(!filtered.length){list.appendChild(make("p","index-empty","一致する用語がありません。"));return;}
+ if(q){
+   const result=make("div","index-list");
+   filtered.forEach(item=>result.appendChild(createEntry(item,true)));
+   list.appendChild(result);
+ }else{
+   const visible=cat?[cat]:categories;
+   visible.forEach(group=>{
+     const groupData=filtered.filter(item=>item.category===group);
+     if(!groupData.length)return;
+     const section=make("section","index-group");
+     section.appendChild(make("h2","index-group-title",group+"（"+groupData.length+"）"));
+     const entries=make("div","index-list");
+     groupData.forEach(item=>entries.appendChild(createEntry(item,false)));
+     section.appendChild(entries);
+     list.appendChild(section);
+   });
+ }
+}
+search.addEventListener("input",render);
+select.addEventListener("change",render);
+clear.addEventListener("click",()=>{search.value="";search.focus();render()});
+render();
+})();
+</script>
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
