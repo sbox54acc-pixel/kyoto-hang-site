@@ -53,10 +53,10 @@
 <style>
 .aircraft-intro{line-height:1.8;margin:0 0 14px}
 .aircraft-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:16px;background:#fff}
-.aircraft-matrix{width:100%;min-width:730px;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.65;text-align:left}
+.aircraft-matrix{width:100%;min-width:580px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.65;text-align:left}
 .aircraft-matrix th,.aircraft-matrix td{border-bottom:1px solid var(--line);padding:12px 13px;vertical-align:top}
 .aircraft-matrix thead th{font-size:15px;background:var(--info-surface);font-weight:700}
-.aircraft-matrix tbody th{min-width:105px;width:105px;font-weight:600;color:var(--ink);background:#fff}
+.aircraft-matrix tbody th{width:104px;font-weight:600;color:var(--ink);background:#fff}
 .aircraft-matrix thead th:first-child{position:sticky;left:0;z-index:2}
 .aircraft-matrix tbody th{position:sticky;left:0;z-index:1}
 .aircraft-matrix tr:last-child th,.aircraft-matrix tr:last-child td{border-bottom:0}
@@ -102,13 +102,14 @@
   </div>
   <div class="aircraft-scroll" tabindex="0" role="region" aria-label="講習機の振り分け表（横スクロール可能）">
     <table class="aircraft-matrix">
+      <colgroup><col style="width:104px"><col><col><col></colgroup>
       <thead>
         <tr><th scope="col">練習段階</th><th scope="col">140</th><th scope="col">170</th><th scope="col">195</th></tr>
       </thead>
       <tbody>
-        <tr><th scope="row">グラハン〜トーイングショート</th><td>えみ<br>佐古田<br>あまなつ</td><td>カズ<br>谷口<br>ゆういちろう<br>まちゃ</td><td>25493</td></tr>
-        <tr><th scope="row">ロング〜浅いターン練習</th><td>高ナオ</td><td>吉村<br>首藤</td><td>—</td></tr>
-        <tr><th scope="row">高高度・山飛びレンタル機</th><td>—</td><td>えいすけ<br>石田<br>たかと<br>米田</td><td>オパ</td></tr>
+        <tr><th scope="row">グラハン<br>ショート</th><td>えみ<br>佐古田<br>あまなつ</td><td>カズ<br>谷口<br>ゆういちろう<br>まちゃ</td><td>25493</td></tr>
+        <tr><th scope="row">ロング<br>浅いターン</th><td>高ナオ</td><td>吉村<br>首藤</td><td>—</td></tr>
+        <tr><th scope="row">高高度<br>山飛びレンタル</th><td>—</td><td>えいすけ<br>石田<br>たかと<br>米田</td><td>オパ</td></tr>
       </tbody>
     </table>
   </div>
