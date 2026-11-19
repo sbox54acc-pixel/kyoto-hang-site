@@ -6,6 +6,7 @@
 (function () {
   "use strict";
 
+  const siteRoot = new URL("../", document.currentScript.src).pathname;
   const links = [
     ["index.html", "トップ"],
     ["video/playlists.html", "再生リスト"],
@@ -55,7 +56,6 @@
 
     const nav = createElement("nav", "nav");
     nav.setAttribute("aria-label", "サイト共通メニュー");
-    const siteRoot = new URL("../", document.currentScript.src).pathname;
     const page = decodeURIComponent(location.pathname.startsWith(siteRoot) ? (location.pathname.slice(siteRoot.length) || "index.html") : "index.html");
     const active = sectionOf[page] || page;
 
