@@ -35,7 +35,13 @@
 .weather-links a{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:45px;border:1px solid var(--line);background:#fff;padding:10px 12px;border-radius:11px;color:var(--ink);font-size:13px;font-weight:700}
 .weather-links a span{font-size:14px;color:var(--muted)}
 .weather-links .weather-main-link{grid-column:1/-1;background:var(--info-surface);border-color:transparent}
-.weather-links a:focus-visible{outline:3px solid var(--sub);outline-offset:2px}
+.weather-chart-links{display:grid;gap:8px;margin-top:16px;padding:14px;border-radius:13px;background:var(--info-surface)}
+.weather-chart-links strong{font-size:13px;color:var(--ink)}
+.weather-chart-links a{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.weather-chart-links a:last-child{border-bottom:0}
+.weather-app-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px;font-size:12px;color:var(--muted)}
+.weather-app-links a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.weather-chart-links a:focus-visible,.weather-app-links a:focus-visible,.weather-links a:focus-visible{outline:3px solid var(--sub);outline-offset:2px}
 .weather-notice{font-size:12px;color:#725b26;margin:12px 0 0;line-height:1.7}
 .weather-caution{margin-top:18px;border-radius:15px;background:var(--caution-surface);padding:13px 16px;font-size:13px;line-height:1.8}
 .weather-back{display:inline-flex;margin-top:19px;padding:10px 13px;border-radius:999px;border:1px solid var(--line);font-size:12px;background:#fff;color:var(--ink)}
@@ -67,8 +73,14 @@
   <p class="weather-desc">彦根市石寺町付近のピンポイント予報で、練習日の風向・風速の変化を確認します。日本周辺の週間の予想天気図も見られるので、高気圧・低気圧・前線の動きも確認できます。</p>
   <div class="weather-links">
     <a class="weather-main-link" href="https://weathernews.jp/onebox/35.23882/136.17839/" target="_blank" rel="noopener noreferrer">Webサイトを開く<span aria-hidden="true">↗</span></a>
-    <a href="https://weathernews.jp/onebox/chart/" target="_blank" rel="noopener noreferrer">週間の予想天気図<span aria-hidden="true">↗</span></a>
-    <a href="https://www.jma.go.jp/bosai/weather_map/" target="_blank" rel="noopener noreferrer">日本の予想天気図（24・48時間）<span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="weather-chart-links">
+    <strong>天気図を見る</strong>
+    <a href="https://weathernews.jp/onebox/chart/" target="_blank" rel="noopener noreferrer">ウェザーニュース｜週間の予想天気図<span aria-hidden="true">↗</span></a>
+    <a href="https://www.jma.go.jp/bosai/weather_map/" target="_blank" rel="noopener noreferrer">気象庁｜日本の予想天気図<span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="weather-app-links">
+    <span>アプリ</span>
     <a href="https://apps.apple.com/jp/app/id302955766" target="_blank" rel="noopener noreferrer">App Store<span aria-hidden="true">↗</span></a>
     <a href="https://play.google.com/store/apps/details?id=wni.WeathernewsTouch.jp" target="_blank" rel="noopener noreferrer">Google Play<span aria-hidden="true">↗</span></a>
   </div>
