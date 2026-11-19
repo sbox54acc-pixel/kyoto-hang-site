@@ -64,11 +64,18 @@
 <section class="hero"><h1>天気予報の見方</h1><p>練習前に確認する気象情報サイト・アプリ。</p></section>
 <main class="main"><section class="section">
 <div class="weather-summary"><strong>風の変化を予測するために</strong><p>練習前に天気予報を確認し、風向きと強さが1日の中でどう変わるか考えましょう。予報と実際の風を比較することも大切です。</p></div>
-<div class="weather-guide"><p>予報を見る：ウェザーニュース・Yahoo!天気<br>広域の風と予測モデルを見る：Windy.com<br>観測された風を確かめる：アメダス</p></div>
+<div class="weather-guide"><p>予想天気図を見る：気象庁<br>時間ごとの予報を見る：ウェザーニュース・Yahoo!天気<br>広域の風と予測モデルを見る：Windy.com<br>観測された風を確かめる：アメダス</p></div>
 <div class="weather-stack">
+<section class="weather-card" id="forecast-map">
+  <div class="weather-name"><span class="weather-num">01</span><div><h2>気象庁｜日本の予想天気図</h2><p class="weather-purpose">日本周辺の気圧配置・前線の予想を確認</p></div></div>
+  <p class="weather-desc">予想天気図で、高気圧・低気圧や前線の位置と動きを確認します。</p>
+  <div class="weather-links">
+    <a class="weather-main-link" href="https://www.jma.go.jp/bosai/weather_map/" target="_blank" rel="noopener noreferrer">予想天気図を開く<span aria-hidden="true">↗</span></a>
+  </div>
+</section>
 <section class="weather-card" id="service-1">
-  <div class="weather-name"><span class="weather-num">01</span><div><h2>ウェザーニュース｜彦根市石寺町</h2><p class="weather-purpose">時間ごとの風予報と週間の予想天気図を確認</p></div></div>
-  <p class="weather-desc">彦根市石寺町付近のピンポイント予報で、練習日の風向・風速の変化を確認します。日本周辺の週間の予想天気図も見られるので、高気圧・低気圧・前線の動きも確認できます。</p>
+  <div class="weather-name"><span class="weather-num">02</span><div><h2>ウェザーニュース｜彦根市石寺町</h2><p class="weather-purpose">時間ごとの風予報と週間の予想天気図を確認</p></div></div>
+  <p class="weather-desc">彦根市石寺町付近のピンポイント予報で、練習日の風向・風速の変化を確認します。ウェザーニュースでは週間の予想天気図も確認できます。</p>
   <div class="weather-links">
     <a class="weather-main-link" href="https://weathernews.jp/onebox/35.23882/136.17839/" target="_blank" rel="noopener noreferrer">Webサイトを開く<span aria-hidden="true">↗</span></a>
     <a href="https://apps.apple.com/jp/app/id302955766" target="_blank" rel="noopener noreferrer">App Store<span aria-hidden="true">↗</span></a>
@@ -77,12 +84,11 @@
   <div class="weather-chart-links">
     <strong>天気図を見る</strong>
     <a href="https://weathernews.jp/onebox/chart/" target="_blank" rel="noopener noreferrer">ウェザーニュース｜週間の予想天気図<span aria-hidden="true">↗</span></a>
-    <a href="https://www.jma.go.jp/bosai/weather_map/" target="_blank" rel="noopener noreferrer">気象庁｜日本の予想天気図<span aria-hidden="true">↗</span></a>
   </div>
   
 </section>
 <section class="weather-card" id="service-2">
-  <div class="weather-name"><span class="weather-num">02</span><div><h2>Yahoo!天気｜彦根市</h2><p class="weather-purpose">時間ごとの予報と風レーダーを確認</p></div></div>
+  <div class="weather-name"><span class="weather-num">03</span><div><h2>Yahoo!天気｜彦根市</h2><p class="weather-purpose">時間ごとの予報と風レーダーを確認</p></div></div>
   <p class="weather-desc">彦根市の天気・風向・風速や、雨雲・風レーダーを確認できます。別の予報との比較にも使えます。</p>
   <div class="weather-links">
     <a class="weather-main-link" href="https://weather.yahoo.co.jp/weather/jp/25/6020/25202.html" target="_blank" rel="noopener noreferrer">Webサイトを開く<span aria-hidden="true">↗</span></a>
@@ -92,7 +98,7 @@
   
 </section>
 <section class="weather-card" id="service-3">
-  <div class="weather-name"><span class="weather-num">03</span><div><h2>Windy.com｜荒神山</h2><p class="weather-purpose">風の流れを地図上で確認</p></div></div>
+  <div class="weather-name"><span class="weather-num">04</span><div><h2>Windy.com｜荒神山</h2><p class="weather-purpose">風の流れを地図上で確認</p></div></div>
   <p class="weather-desc">荒神山付近を中心に、風の流れと時間変化を地図で確認できます。気象モデルの違いにも注目します。</p>
   <div class="weather-links">
     <a class="weather-main-link" href="https://www.windy.com/?wind,35.23359,136.19779,12" target="_blank" rel="noopener noreferrer">Webサイトを開く<span aria-hidden="true">↗</span></a>
@@ -102,7 +108,7 @@
   
 </section>
 <section class="weather-card" id="service-4">
-  <div class="weather-name"><span class="weather-num">04</span><div><h2>アメダス（彦根・気象庁）</h2><p class="weather-purpose">実際に観測された風を確認</p></div></div>
+  <div class="weather-name"><span class="weather-num">05</span><div><h2>アメダス（彦根・気象庁）</h2><p class="weather-purpose">実際に観測された風を確認</p></div></div>
   <p class="weather-desc">彦根観測所の風向・風速など、実際の観測データを確認できます。予測ではなく実況値です。荒神山の現地の風とは異なる場合があります。</p>
   <div class="weather-links">
     <a class="weather-main-link" href="https://www.jma.go.jp/bosai/amedas/#area_type=offices&amp;area_code=250000&amp;amdno=60131&amp;format=table1h" target="_blank" rel="noopener noreferrer">Webサイトを開く<span aria-hidden="true">↗</span></a>
