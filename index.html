@@ -49,6 +49,10 @@
 .site-map-link-detail{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:3px}
 .site-map-links a::after{content:"›";font-size:19px;line-height:1;flex:none;color:var(--muted)}
 .site-map-links a:hover,.site-map-group h2 a:hover{color:var(--main);text-decoration:underline}
+.site-map-children{list-style:none;margin:0 0 8px 14px;padding:0 0 0 13px;border-left:2px solid var(--line)}
+.site-map-children li a{font-size:13px;padding:8px 2px;color:var(--muted);border-top:1px solid #edf1ef}
+.site-map-parent>a{font-weight:700;color:var(--ink)}
+.site-map-children li a:hover{color:var(--main)}
 .site-map-note{margin:7px 0 2px;font-size:13px;color:var(--muted)}
 @media(min-width:650px){
   .site-map{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -100,19 +104,25 @@
         <li><a href="training/first-flight.html">初飛びまでの流れ</a></li>
         <li><a href="training/ground-handling.html">グラハン</a></li>
         <li><a href="area/landing-map.html">荒神山 練習・ランディングマップ</a></li>
-        <li><a href="training/plateau-preparation.html">台地練習の前にすること</a></li>
-        <li><a href="manuals/glider-setup-guide.html">セットアップ・ブレイクダウン</a></li>
-        <li><a href="training/training-gliders.html">講習機の名前と用途</a></li>
+        <li class="site-map-parent"><a href="training/plateau-preparation.html">台地練習の前にすること</a>
+          <ul class="site-map-children">
+            <li><a href="training/weather-guide.html">天気予報の見方</a></li>
+            <li><a href="training/training-gliders.html">講習機の名前と用途</a></li>
+            <li><a href="manuals/preflight-check.html">プレフライトチェック</a></li>
+            <li><a href="manuals/harness-size.html">ハーネスのサイズの見方</a></li>
+            <li><a href="manuals/radio-vxd1s.html">無線機の設定マニュアル（VX-D1S）</a></li>
+            <li><a href="training/tow-rope-setup.html">トーイングロープの張り方</a></li>
+          </ul>
+        </li>
+        <li class="site-map-parent"><a href="manuals/glider-setup-guide.html">セットアップ・ブレイクダウン</a>
+          <ul class="site-map-children">
+            <li><a href="manuals/330-setup.html">330 伏せ組み</a></li>
+            <li><a href="manuals/330-setdown.html">330 伏せばらし</a></li>
+            <li><a href="manuals/170-setup.html">170 立て組み</a></li>
+            <li><a href="manuals/170-setdown.html">170 立てばらし</a></li>
+          </ul>
+        </li>
         <li><a href="training/skyfloater-sizes.html">スカイフローターのサイズ</a></li>
-        <li><a href="training/weather-guide.html">天気予報の見方</a></li>
-        <li><a href="manuals/330-setup.html">330 伏せ組み</a></li>
-        <li><a href="manuals/330-setdown.html">330 伏せばらし</a></li>
-        <li><a href="manuals/170-setup.html">170 立て組み</a></li>
-        <li><a href="manuals/170-setdown.html">170 立てばらし</a></li>
-        <li><a href="manuals/preflight-check.html">プレフライトチェック</a></li>
-        <li><a href="manuals/harness-size.html">ハーネスのサイズの見方</a></li>
-        <li><a href="training/tow-rope-setup.html">トーイングロープの張り方</a></li>
-        <li><a href="manuals/radio-vxd1s.html">無線機の設定マニュアル（VX-D1S）</a></li>
       </ul>
     </section>
 
