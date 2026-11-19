@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>共用アクションカメラ｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/site-header.js" defer></script>
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+
+<style>
+.manual-stack{display:grid;gap:16px}
+.manual-block{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}
+.manual-block h2{margin:0 0 10px;font-size:21px;color:var(--ink)}
+.manual-block h3{margin:16px 0 8px;font-size:16px;color:var(--ink)}
+.manual-block ul,.manual-block ol{margin:0;padding-left:1.35em}
+.manual-block li{margin:7px 0;line-height:1.7}
+.manual-block strong{color:var(--ink)}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.photo-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.manual-photo{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#f8fbfc}
+.manual-photo img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;background:#eef3f5}
+.manual-photo figcaption{padding:8px 10px;font-size:12px;line-height:1.5;color:var(--muted);font-weight:700}
+.step-photo{margin:12px 0 2px}
+.step-photo img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:16px;border:1px solid var(--line);background:#eef3f5}
+.step-photo figcaption{padding:7px 2px 0;color:var(--muted);font-size:12px;font-weight:700}
+.caution{margin-top:12px;padding:12px 14px;border-radius:14px;background:var(--sand);font-size:13px;line-height:1.7}
+.info{margin-top:12px;padding:12px 14px;border-radius:14px;background:#eef7fb;border:1px solid #cfe2eb;font-size:13px;line-height:1.7}
+.quick{margin-bottom:16px;padding:14px 16px;border-radius:16px;background:#f4f8fa;border:1px solid var(--line);line-height:1.8}
+.back-link{display:inline-flex;margin-top:18px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px}
+@media(max-width:680px){
+  .photo-grid,.photo-grid.three{grid-template-columns:1fr 1fr}
+  .manual-block{padding:16px}
+}
+@media(max-width:440px){.photo-grid,.photo-grid.three{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+
+<div class="site">
+<header class="header" id="site-header"></header>
+
+<section class="hero">
+  <h1>共用アクションカメラ</h1>
+  <p>MOVIO M1034K 4K｜準備・取り付け・撮影・動画の取り込み・片付けまでをまとめています。</p>
+</section>
+
+<main class="main">
+<section class="section">
+  <div class="quick">
+    <strong>基本の流れ：</strong>BOXから出す → 取り付け → 電源ON → 撮影 → 録画停止 → 電源OFF → 必要なら動画を取り込む → 充電・BOXへ戻す
+  </div>
+
+  <div class="manual-stack">
+    <section class="manual-block">
+      <h2>0. 収納場所・付属品</h2>
+      <p>共用カメラと付属品は、ラベルの付いた<strong>「アクションカメラ」ツールケース</strong>にまとめています。使用後は必ず元に戻してください。</p>
+      <div class="photo-grid">
+        <figure class="manual-photo"><img src="../images/camera-box.jpg" alt="アクションカメラのツールケース"><figcaption>アクションカメラBOX</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/camera-usbc-microusb-cable.jpg" alt="Type-CとMicro USBの接続コード"><figcaption>iPhoneへの有線取り込みで使う Type-C ⇔ Micro USB コード</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="manual-block">
+      <h2>1. ボタンを確認</h2>
+      <div class="photo-grid three">
+        <figure class="manual-photo"><img src="../images/camera-power-button.jpg" alt="カメラ前面の電源ボタン"><figcaption>前面：電源ボタン。長押しで電源ON／OFF。</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/camera-ok-button.jpg" alt="カメラ上面の撮影OKボタン"><figcaption>上面：撮影／OKボタン。録画開始・停止や決定に使用。</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/camera-select-buttons.jpg" alt="カメラ側面の選択ボタン"><figcaption>側面：選択ボタン。メニューの項目移動に使用。</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="manual-block">
+      <h2>2. 撮影前の準備・確認</h2>
+      <ul>
+        <li><strong>バッテリー残量</strong>が十分にあるか確認する</li>
+        <li><strong>日付・時刻</strong>がずれていないか確認する</li>
+        <li><strong>撮影設定</strong>を確認する</li>
+        <li>取り付け後、撮りたい範囲が<strong>画角に収まっているか</strong>確認する</li>
+      </ul>
+      <div class="caution">日付表示は基本ON。日時がずれている場合の合わせ方は、必要に応じて補助説明を追加します。</div>
+    </section>
+
+    <section class="manual-block">
+      <h2>3. グライダーへのセット</h2>
+      <ul>
+        <li>カメラは<strong>クロスバー</strong>または<strong>テール</strong>に取り付ける</li>
+        <li>取り付けベルトを巻き付け、しっかり固定する</li>
+        <li>落下防止のため、<strong>サブの紐も結ぶ</strong></li>
+        <li>取り付け後、カメラがぐらつかないか確認する</li>
+      </ul>
+      <div class="photo-grid">
+        <figure class="manual-photo"><img src="../images/camera-mount-crossbar.jpg" alt="クロスバーへのアクションカメラ取り付け例"><figcaption>クロスバーへの取り付け例</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/camera-mount-tail.jpg" alt="テールへのアクションカメラ取り付け例"><figcaption>テールへの取り付け例</figcaption></figure>
+      </div>
+      <div class="caution"><strong>テール取り付け時は特に落下防止を念入りに確認してください。</strong></div>
+    </section>
+
+    <section class="manual-block">
+      <h2>4. 撮影のしかた</h2>
+      <ol>
+        <li>前面の<strong>電源ボタンを長押し</strong>する</li>
+        <li><strong>起動音</strong>が鳴ったら電源ON</li>
+        <li>上面の<strong>撮影／OKボタン</strong>を押す → 録画開始</li>
+        <li>もう一度、上面の<strong>撮影／OKボタン</strong>を押す → 録画停止</li>
+        <li>録画停止を確認し、前面の<strong>電源ボタンを長押し</strong>する</li>
+        <li><strong>終了音</strong>が鳴ったら電源OFF</li>
+      </ol>
+    </section>
+
+    <section class="manual-block">
+      <h2>5. 動画をiPhoneへ有線で取り込む</h2>
+      <ol>
+        <li>カメラとiPhoneを<strong>Type-C ⇔ Micro USBコード</strong>で接続する</li>
+        <li>カメラに選択画面が出たら、側面ボタンで<strong>「USBモード」</strong>を選び、上面のOKボタンで決定する</li>
+        <li>SDカードの画面が表示されたら、iPhoneの<strong>「ファイル」アプリ</strong>を開く</li>
+        <li>「場所」から<strong>UDISK</strong>を開く</li>
+        <li><strong>video</strong>フォルダを開き、動画を確認する</li>
+        <li>必要な部分を<strong>2〜3分程度までカット</strong>してからiPhoneへ保存する</li>
+      </ol>
+      <div class="photo-grid">
+        <figure class="manual-photo"><img src="../images/camera-usb-mode-menu.jpg" alt="有線接続時のモード選択画面"><figcaption>① 接続後：「USBモード」を選択</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/camera-usb-mode-sd.jpg" alt="USBモード選択後のSDカード画面"><figcaption>② USBモード選択後の画面</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/iphone-files-app.jpg" alt="iPhoneのファイルアプリ"><figcaption>③ iPhoneの「ファイル」アプリを開く</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/iphone-udisk.jpg" alt="iPhoneのファイルアプリに表示されたUDISK"><figcaption>④ 「場所」→ UDISK</figcaption></figure>
+        <figure class="manual-photo"><img src="../images/iphone-video-folder.jpg" alt="UDISK内のvideoフォルダ"><figcaption>⑤ UDISK内の「video」を開く</figcaption></figure>
+      </div>
+      <div class="caution">動画の保存には時間がかかります。長い動画はその場で無理に取り込まず、カメラを持ち帰ってPCで取り込むのを推奨します。PCでは Micro USB ⇔ USB ケーブルを使用します。</div>
+    </section>
+
+    <section class="manual-block">
+      <h2>6. Wi-Fi接続を使う場合</h2>
+      <p>Wi-Fi接続画面では、接続先の<strong>SSID</strong>と<strong>パスワード</strong>を確認できます。スマホ側から、画面に表示されたSSIDへ接続するときに使います。</p>
+      <figure class="step-photo"><img src="../images/camera-wifi-screen.jpg" alt="アクションカメラのWi-Fi接続画面"><figcaption>Wi-Fi接続画面。画面にSSIDとパスワードが表示されます。</figcaption></figure>
+      <div class="info">動画の取り込みは、手順が分かりやすい<strong>有線接続を基本</strong>として案内しています。</div>
+    </section>
+
+    <section class="manual-block">
+      <h2>7. 充電・片付け</h2>
+      <ul>
+        <li>使用後は、<strong>倉庫のポータブル電源</strong>で充電する</li>
+        <li>用意してある充電ケーブルを使用する</li>
+        <li><strong>帰る前にポータブル電源から外す</strong></li>
+        <li>カメラ・取り付け部品・ケーブル類を<strong>アクションカメラBOXへ戻す</strong></li>
+      </ul>
+      <figure class="step-photo"><img src="../images/camera-box.jpg" alt="アクションカメラBOX"><figcaption>使用後は付属品も含めてBOXへ戻します。</figcaption></figure>
+    </section>
+  </div>
+
+  <a class="back-link" href="index.html">← 動画ガイドへ戻る</a>
+</section>
+</main>
+
+<footer class="footer"><a href="../feedback.html" style="display:inline-block;margin-bottom:8px;text-decoration:underline;text-underline-offset:3px">ご意見・お問い合わせ</a><div>京都ハング ライブラリ</div></footer>
+</div>
+
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

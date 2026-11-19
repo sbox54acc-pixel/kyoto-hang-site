@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>草刈機マニュアル｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/site-header.js" defer></script>
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+</head>
+<body>
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+
+<header class="header" id="site-header"></header>
+
+<section class="hero">
+  <h1>草刈機マニュアル</h1>
+  <p>タチコマ（乗用草刈機）・るんるん（自走式草刈機）・手刈り（刈払機）の操作と安全上の注意をまとめています。</p>
+</section>
+<main class="main">
+
+<section class="section">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
+    <a href="area-management.html" style="text-decoration:none;font-weight:700">← エリア管理へ</a>
+    <a href="mowing-map.html" style="text-decoration:none;font-weight:700">草刈りマップを見る →</a>
+  </div>
+</section>
+
+<section class="section">
+  <style>
+    .machine-grid{display:grid;gap:16px}
+    .machine-card{
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .machine-card summary{
+      list-style:none;
+      cursor:pointer;
+      display:block;
+    }
+    .machine-card summary::-webkit-details-marker{display:none}
+    .machine-photo{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      display:block;
+      background:#eef3f5;
+    }
+    .machine-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 16px 16px;
+    }
+    .machine-head strong{
+      font-size:21px;
+      color:var(--ink);
+    }
+    .machine-head small{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .machine-arrow{
+      flex:0 0 auto;
+      width:30px;height:30px;
+      display:grid;place-items:center;
+      border-radius:999px;
+      background:#f1f6f8;
+      font-size:20px;
+      transition:transform .2s ease;
+    }
+    details[open] .machine-arrow{transform:rotate(90deg)}
+    .machine-body{
+      border-top:1px solid var(--line);
+      padding:16px;
+    }
+    .machine-body h3{
+      margin:0 0 6px;
+      font-size:15px;
+      color:var(--ink);
+    }
+    .machine-body p{
+      margin:0 0 14px;
+      line-height:1.8;
+    }
+    .machine-flow{
+      margin:0 0 16px;
+      padding:12px 14px;
+      background:#f6f9fa;
+      border-radius:14px;
+      line-height:1.8;
+      font-weight:700;
+    }
+    .machine-note{
+      margin-top:14px;
+      padding:12px 14px;
+      border-radius:14px;
+      background:#fff8e8;
+      line-height:1.7;
+    }
+    .role-box{
+      margin:0 0 18px;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#f8fbfc;
+      line-height:1.8;
+    }
+    .role-box strong{color:var(--ink)}
+    .manual-note{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+    }
+    .photo-set{
+      margin:0 0 16px;
+      padding:14px;
+      background:#f8fbfc;
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+    .photo-set h3{
+      margin:0 0 10px;
+      font-size:15px;
+      color:var(--ink);
+    }
+    .photo-set p, .photo-set ul{
+      margin:10px 0 0;
+      line-height:1.8;
+    }
+    .photo-set ul{padding-left:1.2em}
+    .warn-box{
+      margin:14px 0 18px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:#fff4e8;
+      border:1px solid #f2d1a8;
+    }
+    .warn-box strong{
+      display:block;
+      margin-bottom:6px;
+      color:#8a4a00;
+      font-size:14px;
+    }
+    .warn-box p, .warn-box ul{
+      margin:0;
+      line-height:1.8;
+    }
+    .warn-box ul{padding-left:1.2em}
+    .warn-title{
+      display:inline-block;
+      margin:2px 0 8px;
+      padding:5px 10px;
+      border-radius:999px;
+      background:#ffe2bf;
+      color:#8a4a00;
+      font-size:12px;
+      font-weight:700;
+    }
+    .photo-pair{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin:10px 0 0;
+    }
+    .photo-pair figure{margin:0}
+    .photo-pair figcaption{
+      margin-top:5px;
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+    .common-safety{
+      margin:0 0 18px;
+      border:2px solid #d86b36;
+      border-radius:18px;
+      overflow:hidden;
+      background:#fff8f2;
+    }
+    .common-safety summary{
+      list-style:none;
+      cursor:pointer;
+      padding:15px 16px;
+      font-weight:800;
+      color:#7a3312;
+      background:#ffe8d8;
+    }
+    .common-safety summary::-webkit-details-marker{display:none}
+    .common-safety-body{
+      padding:14px 16px 16px;
+      line-height:1.8;
+    }
+    .common-safety-body ul{
+      margin:0;
+      padding-left:1.2em;
+    }
+    .phase-block{
+      margin:0 0 18px;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+    }
+    .phase-block h3{
+      margin:0 0 10px;
+      font-size:17px;
+      color:var(--ink);
+    }
+    .phase-block p{margin:8px 0 0;line-height:1.8}
+    .phase-block ul{margin:8px 0 0;padding-left:1.2em;line-height:1.8}
+    .manual-photo-link{display:block;text-decoration:none}
+    .manual-photo-link img{border-radius:12px}
+    .manual-photo-hint{
+      margin-top:5px;
+      text-align:right;
+      color:var(--muted);
+      font-size:11px;
+    }
+    .paper-photo-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin:10px 0;
+    }
+    .paper-photo-grid.one{grid-template-columns:1fr}
+    .paper-photo-grid.three{grid-template-columns:repeat(3,1fr)}
+    .paper-photo-grid img{
+      width:100%;
+      height:auto;
+      display:block;
+      background:#eef3f5;
+    }
+    .fuel-note{
+      margin:14px 0 18px;
+      padding:14px;
+      border:1px solid #d8c48f;
+      border-radius:16px;
+      background:#fffbea;
+    }
+    @media (max-width:560px){
+      .paper-photo-grid, .paper-photo-grid.three{grid-template-columns:1fr}
+    }
+    .detail-collapse{
+      display:block;
+      margin:18px 0 0 auto;
+      padding:4px 8px;
+      border:0;
+      background:transparent;
+      color:var(--ink);
+      font:700 22px/1 sans-serif;
+      cursor:pointer;
+    }
+    .must-see{
+      display:inline-block;
+      margin-left:6px;
+      padding:2px 7px;
+      border-radius:999px;
+      background:#b94716;
+      color:#fff;
+      font-size:11px;
+      vertical-align:1px;
+    }
+  </style>
+
+  <div class="page-intro">
+    使う機械の写真をタップすると、基本の操作手順を確認できます。
+  </div>
+
+  <details class="common-safety">
+    <summary>3機種共通の安全ルール <span class="must-see">必ず見る</span></summary>
+    <div class="common-safety-body">
+      <ul>
+        <li>草刈機は<strong>音が大きく、刃や飛散物の危険がある機械</strong>です。誰かが作業しているときは、安易に近づかない。</li>
+        <li>作業者に伝えたいことがある場合は、<strong>十分離れた前方の見える位置</strong>へ移動し、<strong>手を大きく振って</strong>気付いてもらう。</li>
+        <li>気付いた作業者は、<strong>いったん移動を止め、刃を停止し、スロットルを下げてから</strong>コミュニケーションを取る。</li>
+        <li><strong>刃が回っている状態では、人に近づいたり会話したりしない。</strong></li>
+        <li>作業時は<strong>長袖・長ズボン・ゴーグル（またはサングラス）・手袋・長靴</strong>を着用し、必要に応じて<strong>耳栓</strong>も使用する。</li>
+        <li><strong>振動障害の予防</strong>のため、長時間続けて作業せず、適宜休憩を入れる。</li>
+        <li>特に<strong>草の高い場所では、ハチ・マムシなど</strong>にも注意する。</li>
+        <li><strong>危ないと感じたら無理をせず、その日の作業を終了する。</strong></li>
+      </ul>
+      <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
+    </div>
+  </details>
+
+  <div class="role-box">
+    <strong>使い分け</strong><br>
+    広い場所は<strong>タチコマ</strong>、タチコマより小回りが必要な場所は<strong>るんるん</strong>、斜面や物の近くは<strong>手刈り</strong>を使います。
+  </div>
+
+  <div class="machine-grid">
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="../images/tachikoma-paper.png" alt="タチコマ（乗用草刈機）">
+        <div class="machine-head">
+          <div><strong>タチコマ</strong><small>乗用草刈機｜ランディング全般・広い場所</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+
+        <div class="phase-block">
+          <h3>準備</h3>
+          <div class="paper-photo-grid">
+            <a class="manual-photo-link" href="../images/tachikoma-key-choke-paper.png" target="_blank"><img src="../images/tachikoma-key-choke-paper.png" alt="タチコマのキーとチョーク"></a>
+            <a class="manual-photo-link" href="../images/tachikoma-right-paper.png" target="_blank"><img src="../images/tachikoma-right-paper.png" alt="タチコマ右手側の操作部"></a>
+            <a class="manual-photo-link" href="../images/tachikoma-left-paper.png" target="_blank"><img src="../images/tachikoma-left-paper.png" alt="タチコマ左手側の操作部"></a>
+            <a class="manual-photo-link" href="../images/tachikoma-foot-paper.png" target="_blank"><img src="../images/tachikoma-foot-paper.png" alt="タチコマ足元の操作部"></a>
+          </div>
+          <div class="manual-photo-hint">画像をタップすると拡大できます</div>
+          <ul>
+            <li>キーボックスのキーを使用する。</li>
+            <li>右手側の<strong>アクセルレバーが中央（ニュートラル）</strong>にあることを確認する。</li>
+            <li>右手側の<strong>スロットルはLow</strong>にする。手前2つのレバーは触らない。</li>
+            <li>左手側のレバーは<strong>両方手前</strong>にあることを確認する。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>始動</h3>
+          <div class="machine-flow">ブレーキを強く踏む → キーをひねる → 必要ならチョーク → エンジン始動 → スロットルをHigh</div>
+          <p>エンジンがかかりにくいときは、<strong>チョークを引いて</strong>キーをひねります。エンジンがかかった、またはかかりそうなら<strong>チョークを戻します</strong>。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>移動</h3>
+          <p>足元の<strong>アクセルペダル</strong>、または右手側の<strong>アクセルレバー</strong>で前進・後退できます。2つは連動しています。</p>
+          <p>最初はいつでも止まれるよう<strong>ブレーキペダルに足を置き</strong>、右手のアクセルレバーで前進・後退の練習をします。</p>
+          <p>小回りはきかないため、<strong>旋回半径</strong>を意識します。刃が止まっていても<strong>ワイヤーの上は絶対にまたがない</strong>。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>草刈り</h3>
+          <ul>
+            <li>停車時に、左手側の<strong>黒いレバー</strong>を親指でボタンを押しながら前に倒し、刃の高さを決める。基本は<strong>80mm〜60mm</strong>くらい。</li>
+            <li>停車時に、左手側の<strong>赤いレバーを前に倒す</strong>と刃が回転する。刃の操作はどちらも停車時に行う。</li>
+            <li>アクセルを操作して移動しながら刈る。</li>
+            <li>刈った草は右側に排出されるため、再び巻き込まないよう<strong>基本は左回り</strong>で刈る。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>停止</h3>
+          <div class="machine-flow">停車 → スロットルをLow → 回転数が落ちるのを待つ → 赤レバーをゆっくり戻して刃を停止 → 刃が止まったら黒レバーを戻す → キーでエンジン停止 → キーをボックスへ戻す</div>
+          <div class="warn-box"><p><strong>高速回転のまま刃を止めない。</strong>機械に負担がかかります。</p></div>
+        </div>
+
+        <div class="warn-box">
+          <strong>注意点</strong>
+          <ul>
+            <li>はじきそうな石や岩に注意し、必要なら刃と移動を止めて取り除く。</li>
+            <li>雨の後など、<strong>地面が緩いときは使用しない</strong>。</li>
+            <li>草を刈るときは<strong>左回り</strong>。</li>
+            <li><strong>ワイヤーは絶対にまたがない。</strong>位置は草刈りマップで確認する。</li>
+          </ul>
+        </div>
+        <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
+      </div>
+    </details>
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="../images/runrun-paper.png" alt="るんるん（自走式草刈機）">
+        <div class="machine-head">
+          <div><strong>るんるん</strong><small>自走式草刈機｜砂利道・台地の淵・小回りが必要な場所</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+
+        <div class="phase-block">
+          <h3>準備</h3>
+          <div class="paper-photo-grid">
+            <a class="manual-photo-link" href="../images/runrun-gear-paper.png" target="_blank"><img src="../images/runrun-gear-paper.png" alt="るんるんのギア"></a>
+            <a class="manual-photo-link" href="../images/runrun-stop-throttle-paper.png" target="_blank"><img src="../images/runrun-stop-throttle-paper.png" alt="るんるんの停止ボタンとスロットル"></a>
+            <a class="manual-photo-link" href="../images/runrun-handles-paper.png" target="_blank"><img src="../images/runrun-handles-paper.png" alt="るんるんの黒と赤のハンドル"></a>
+            <a class="manual-photo-link" href="../images/runrun-fuel-cock-paper.png" target="_blank"><img src="../images/runrun-fuel-cock-paper.png" alt="るんるんのガソリンコック"></a>
+          </div>
+          <div class="manual-photo-hint">画像をタップすると拡大できます</div>
+          <ul>
+            <li>ギアが<strong>ニュートラル（数字と数字の間）</strong>にある。</li>
+            <li>黒と赤のハンドルが下がっている。</li>
+            <li>スロットルは<strong>Low</strong>になっている。</li>
+            <li>回転ハンドルで刃の高さを調整しておく。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>始動</h3>
+          <div class="paper-photo-grid">
+            <a class="manual-photo-link" href="../images/runrun-choke-paper.png" target="_blank"><img src="../images/runrun-choke-paper.png" alt="るんるんのチョーク"></a>
+            <a class="manual-photo-link" href="../images/runrun-starter-paper.png" target="_blank"><img src="../images/runrun-starter-paper.png" alt="るんるんのスターター"></a>
+          </div>
+          <div class="machine-flow">停止ボタンを「運転」 → ガソリンコックを開く → スターターを引く → 必要ならチョーク → エンジン始動 → スロットルをHigh</div>
+          <p>エンジンがかかりにくいときは、<strong>チョークを引いて</strong>スターターを引きます。エンジンがかかった、またはかかりそうなら<strong>チョークを開けます</strong>。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>移動</h3>
+          <p><strong>静止した状態</strong>でギアを1・2・3に合わせます。動いた状態ではギアを切り替えません。</p>
+          <p>左側の<strong>黒いハンドルを上げると進み、下げると止まります</strong>。左のレバーを握ると左へ、右のレバーを握ると右へ曲がります。</p>
+          <p>左右のレバーを同時に握るとギアから解放され、人力で押したり引いたりして移動できます。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>草刈り</h3>
+          <ul>
+            <li>草の高さや湿り具合に合わせてギアを決める。</li>
+            <li><strong>静止した状態</strong>で赤いハンドルを上げ、刃を回転させる。</li>
+            <li>黒いハンドルを上げ、移動しながら刈る。</li>
+          </ul>
+          <p>背の高い草や湿った草をしばらく刈ると、刃の回転数が落ちて<strong>キュルキュルという音</strong>が聞こえることがあります。</p>
+          <div class="machine-flow">黒ハンドルを下げて停止 → 赤ハンドルは上げたまま → 両手で操作ハンドルを下に押して刃部分を持ち上げる → エンジン音・振動が回復したら再開</div>
+        </div>
+
+        <div class="phase-block">
+          <h3>停止</h3>
+          <div class="machine-flow">赤と黒のハンドルを下げる → 停止ボタンを押す → ガソリンコックを縦向き（開）から横向き（閉）へ</div>
+          <div class="warn-box"><p><strong>ガソリンコックを閉め忘れない。</strong>開けたままだと燃料が漏れます。</p></div>
+        </div>
+
+        <div class="warn-box">
+          <strong>注意点</strong>
+          <ul>
+            <li>異変があったら速やかに赤と黒のハンドルを下げ、停止ボタンを押す。</li>
+            <li>前方に小石をはじくため、作業中のすぐ前には行かない。</li>
+            <li>刃に当たりそうな岩は、刃と移動を止めて取り除く。</li>
+          </ul>
+        </div>
+        <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
+      </div>
+    </details>
+
+    <details class="machine-card">
+      <summary>
+        <img class="machine-photo" src="../images/karibarai-paper.png" alt="手刈り（刈払機）">
+        <div class="machine-head">
+          <div><strong>手刈り（刈払機）</strong><small>斜面・溝付近・大型機械が入りにくい場所</small></div>
+          <span class="machine-arrow">›</span>
+        </div>
+      </summary>
+      <div class="machine-body">
+
+        <div class="phase-block">
+          <h3>準備</h3>
+          <a class="manual-photo-link" href="../images/karibarai-kill-paper.png" target="_blank"><img class="machine-photo" src="../images/karibarai-kill-paper.png" alt="手刈りのキルスイッチ"></a>
+          <div class="manual-photo-hint">画像をタップすると拡大できます</div>
+          <ul>
+            <li>ベルトの長さを調整する。</li>
+            <li>停止時にすぐ使えるよう<strong>キルスイッチの位置</strong>を確認する。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>始動</h3>
+          <a class="manual-photo-link" href="../images/karibarai-choke-pump-paper.png" target="_blank"><img class="machine-photo" src="../images/karibarai-choke-pump-paper.png" alt="手刈りのチョークとポンプ"></a>
+          <div class="machine-flow">ポンプを数回押して燃料を送る → スターターを引く → 必要ならチョークを閉じる → かかった／かかりそうならチョークを開ける</div>
+          <p>燃料は<strong>混合油</strong>を使用します。</p>
+        </div>
+
+        <div class="phase-block">
+          <h3>草刈り</h3>
+          <a class="manual-photo-link" href="../images/karibarai-throttle-paper.png" target="_blank"><img class="machine-photo" src="../images/karibarai-throttle-paper.png" alt="手刈りの出力レバーとアクセルレバー"></a>
+          <ul>
+            <li>親指側の<strong>出力レバー</strong>で回転数を調整する。</li>
+            <li>裏側の<strong>アクセルレバー</strong>を握って刃を回転させる。</li>
+            <li>腰に当てて左右に動かし、<strong>右から左へ</strong>刃を当てて刈る。</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <h3>停止</h3>
+          <p><strong>キルスイッチを押して</strong>エンジンを止めます。刃の回転が緩まったら、刃を水平にして、優しく地面の草むらに当てて静止させます。</p>
+        </div>
+
+        <div class="fuel-note">
+          <h3>混合油の作り方</h3>
+          <div class="paper-photo-grid three">
+            <a class="manual-photo-link" href="../images/fuel-mix-tank-paper.png" target="_blank"><img src="../images/fuel-mix-tank-paper.png" alt="混合タンク"></a>
+            <a class="manual-photo-link" href="../images/fuel-mix-scale-paper.png" target="_blank"><img src="../images/fuel-mix-scale-paper.png" alt="混合タンクの目盛り"></a>
+            <a class="manual-photo-link" href="../images/fuel-can-paper.png" target="_blank"><img src="../images/fuel-can-paper.png" alt="携行缶"></a>
+          </div>
+          <ul>
+            <li>ガソリンと<strong>2サイクル用エンジンオイル</strong>を混ぜて作る。るんるん用オイルと間違えない。</li>
+            <li>ガソリンは携行缶から使用する。<strong>エア抜きをしてから</strong>開ける。</li>
+            <li>混合タンクでは、大きなタンクにガソリンを入れ、細長いタンクにオイルを<strong>ガソリンと同じ目盛り</strong>まで入れて混ぜる。</li>
+            <li>紙マニュアルの目安：<strong>ガソリン：オイル＝25〜50：1</strong>。</li>
+          </ul>
+        </div>
+
+        <div class="warn-box">
+          <strong>注意点</strong>
+          <ul>
+            <li>岩やアンカーに刃を当てない。</li>
+            <li>小石をはじいて飛ばすため、人や車から十分距離を取る。</li>
+            <li>回転中、刃の右側が固定された物に触れると<strong>キックバック</strong>が起こる。</li>
+            <li>振動障害対策として、<strong>30分くらいを目安</strong>に作業し、長時間続けない。</li>
+          </ul>
+        </div>
+        <button class="detail-collapse" type="button" aria-label="閉じる">^</button>
+      </div>
+    </details>
+
+  </div>
+
+  <p class="manual-note">このページは京都ハングでの現場確認用の簡易マニュアルです。機体の状態や細かな操作が普段と違う場合は、無理に使用せず確認してください。</p>
+</section>
+
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+<script>
+document.querySelectorAll(".detail-collapse").forEach(function(button){
+  button.addEventListener("click",function(){
+    const details=button.closest("details");
+    if(details){details.open=false;details.scrollIntoView({behavior:"smooth",block:"start"});}
+  });
+});
+</script>
+
+</body>
+</html>
