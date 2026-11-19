@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>講習機の名前と用途｜京都ハング ライブラリ</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/site-header.js" defer></script>
+
+<style id="access-guard-style">
+#access-guard{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;background:#f5f8fa;
+}
+#access-guard[hidden]{display:none}
+#access-card{
+  width:min(100%,420px);background:#fff;border:1px solid #dce6eb;
+  border-radius:22px;padding:24px;box-shadow:0 14px 40px rgba(20,50,70,.12)
+}
+#access-card h1{margin:0 0 8px;font-size:24px;color:#173747}
+#access-card p{margin:0 0 16px;color:#71838d;font-size:14px}
+#access-pass{
+  width:100%;font-size:18px;padding:12px 14px;border:1px solid #cfdbe1;
+  border-radius:12px;outline:none
+}
+#access-pass:focus{border-color:#4b8ea9}
+#access-submit{
+  width:100%;margin-top:12px;padding:12px 14px;border:0;border-radius:12px;
+  background:#173747;color:#fff;font-size:16px;font-weight:700
+}
+#access-error{min-height:1.3em;margin-top:10px;color:#b33;font-size:13px}
+</style>
+
+<style>
+.training-menu{display:grid;gap:12px}
+.training-primary{display:grid;gap:12px}
+.training-card{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.training-card strong{font-size:17px;color:var(--ink)}
+.training-card.main{padding:22px 18px;background:#fff}
+.training-card.main strong{font-size:19px}
+.training-arrow{font-size:25px;color:var(--muted);line-height:1}
+.training-sub{margin-top:6px}
+.reference-box{margin-top:6px;padding:14px 16px;border-radius:16px;background:var(--info-surface);border:0}
+.reference-title{margin:0 0 10px;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em}
+.reference-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0}
+.reference-row+.reference-row{border-top:1px solid var(--line)}
+.reference-row strong{font-size:15px}
+.book-tag{flex:none;padding:5px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;color:var(--muted)}
+.practice-video-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:7px 12px;border-radius:999px;background:#fff;color:var(--main);font-size:12px;font-weight:700;text-decoration:none;border:1px solid var(--line)}
+</style>
+<style>
+.aircraft-intro{line-height:1.8;margin:0 0 14px}
+.aircraft-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:16px;background:#fff}
+.aircraft-matrix{width:100%;min-width:580px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.65;text-align:left}
+.aircraft-matrix th,.aircraft-matrix td{border-bottom:1px solid var(--line);padding:12px 13px;vertical-align:top}
+.aircraft-matrix thead th{font-size:15px;background:var(--info-surface);font-weight:700}
+.aircraft-matrix tbody th{width:104px;font-weight:600;color:var(--ink);background:#fff}
+.aircraft-matrix thead th:first-child{position:sticky;left:0;z-index:2}
+.aircraft-matrix tbody th{position:sticky;left:0;z-index:1}
+.aircraft-matrix tr:last-child th,.aircraft-matrix tr:last-child td{border-bottom:0}
+.aircraft-matrix td{min-width:110px}.aircraft-matrix td small{display:inline-block;color:var(--muted);font-size:11px;margin:2px 0 4px}
+.aircraft-rule{margin:14px 0 18px;padding:15px 16px;border-radius:14px;background:var(--info-surface);font-size:14px;line-height:1.75}
+.aircraft-rule strong{display:block;margin-bottom:7px;color:var(--ink)}
+.aircraft-rule p{margin:0}
+.aircraft-rule p+p{margin-top:9px}
+.aircraft-note{color:var(--muted);font-size:13px;line-height:1.8;margin-top:14px}
+.aircraft-storage{margin-top:22px;padding:18px;border:1px solid var(--line);border-radius:17px;background:#fff;font-size:14px;line-height:1.75}
+.aircraft-storage h2{font-size:18px!important;margin:0 0 10px!important}
+.aircraft-storage>p{margin:0 0 12px}
+.aircraft-storage-row{padding:11px 0;border-top:1px solid var(--line)}
+.aircraft-storage-row strong{display:block;margin-bottom:3px}
+.aircraft-storage-row p{margin:0}
+.aircraft-storage-caution{margin:12px 0 0!important;padding:12px 13px;border-radius:11px;background:var(--caution-surface)}
+.aircraft-back{display:inline-block;margin-top:18px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:13px}
+</style>
+</head>
+<body>
+
+<div id="access-guard" aria-modal="true" role="dialog">
+  <div id="access-card">
+    <h1>京都ハング ライブラリ</h1>
+    <p>共通パスコードを入力してください。</p>
+    <form id="access-form">
+      <input id="access-pass" type="password" inputmode="numeric" autocomplete="off" aria-label="パスコード">
+      <button id="access-submit" type="submit">入る</button>
+      <div id="access-error" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<div class="site">
+
+<header class="header" id="site-header"></header>
+
+<section class="hero">
+  <h1>講習機の名前と用途</h1>
+  <p>シンさんに確認した、練習段階ごとの機体の振り分けです。</p>
+</section>
+<main class="main">
+<section class="section">
+  <p class="aircraft-intro">機体サイズ（140・170・195）と練習段階ごとに整理しています。</p>
+  <div class="aircraft-rule">
+    <strong>練習進度によって機体を分ける理由</strong>
+    <p>荒いランディングを繰り返した機体は負担が蓄積している可能性があり、高度を上げて飛ばすための安全性を十分に確保できないため、用途を分けています。</p>
+    <p>高度を上げる練習では、必ず状態の良い機体を選び、点検・使用可否を指導者に確認してください。</p>
+    <p>一方、山飛びサイズの機体で練習し始めた段階では、高高度用の状態の良い機体を消耗させないよう、初期練習用の機体を使用してください。</p>
+  </div>
+  <div class="aircraft-scroll" tabindex="0" role="region" aria-label="講習機の振り分け表（横スクロール可能）">
+    <table class="aircraft-matrix">
+      <colgroup><col style="width:104px"><col><col><col></colgroup>
+      <thead>
+        <tr><th scope="col">練習段階</th><th scope="col">140</th><th scope="col">170</th><th scope="col">195</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">グラハン<br>ショート</th><td>えみ<br>佐古田<br>あまなつ</td><td>カズ<br>谷口<br>ゆういちろう<br>まちゃ</td><td>25493</td></tr>
+        <tr><th scope="row">ロング<br>浅いターン</th><td>高ナオ</td><td>吉村<br>首藤</td><td>—</td></tr>
+        <tr><th scope="row">高高度<br>山飛びレンタル</th><td>—</td><td>えいすけ<br>石田<br>たかと<br>米田</td><td>オパ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="aircraft-note">高高度での練習は、山飛びする前に滑空・レベルキープ・フレアーの感覚を身につけるために行います。山飛びレンタル機を使用することもありますが、基本的にはこの段階で自分の機体を購入し、その機体で練習します。</p>
+  <p class="aircraft-note">シンさんから教えてもらった振り分けを反映しています。「25493」「オパ」も機体名です。「—」は今回の振り分けで指定がない欄で、使用不可を意味するものではありません。</p>
+  <p class="aircraft-note">機体の選定・使用可否は、練習当日の状況を踏まえた現場の指導者の判断を優先してください。</p>
+  <div class="aircraft-storage">
+    <h2>グライダーの保管場所</h2>
+    <p>倉庫の入口シャッター側から見て、<strong>右側の1段目（下段）と2段目</strong>が普段使う講習機の置き場所です。</p>
+    <div class="aircraft-storage-row">
+      <strong>1段目（下段）</strong>
+      <p>砂丘練習用など、あまり使わない機体を下に敷き、その上に山飛びレンタル機を置きます。</p>
+    </div>
+    <div class="aircraft-storage-row">
+      <strong>2段目</strong>
+      <p>330・225と、低高度練習向けのグライダーを置きます。</p>
+    </div>
+    <p class="aircraft-storage-caution">山飛びレンタル機は高度を上げて飛ぶために使用します。下の方に置いたり、雑に扱って機体を傷めないよう注意してください。</p>
+  </div>
+  <a class="aircraft-back" href="plateau-preparation.html">← 台地練習の前にすることへ戻る</a>
+</section>
+</main>
+<footer class="footer">京都ハング ライブラリ</footer>
+</div>
+
+<script id="access-guard-script">
+(function(){
+  const KEY="kyotoHangAccess";
+  const PASS="440";
+  const guard=document.getElementById("access-guard");
+  const form=document.getElementById("access-form");
+  const input=document.getElementById("access-pass");
+  const error=document.getElementById("access-error");
+  if(sessionStorage.getItem(KEY)==="ok"){
+    guard.hidden=true;
+    return;
+  }
+  setTimeout(()=>input.focus(),50);
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(input.value===PASS){
+      sessionStorage.setItem(KEY,"ok");
+      guard.hidden=true;
+      error.textContent="";
+      window.scrollTo(0,0);
+    }else{
+      error.textContent="パスコードが違います。";
+      input.value="";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
