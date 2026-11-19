@@ -91,7 +91,7 @@ body.viewer-open{overflow:hidden}
 
 /* Hang-glider icon: increase vertical presence consistently */
 .hang-glider-icon{transform:scaleY(1.2);transform-origin:center}
-.card[href="training.html"] .icon img{width:52px;height:52px}
+.card[href="training/index.html"] .icon img{width:52px;height:52px}
 
 /* Unified large navigation cards */
 .nav-card{
