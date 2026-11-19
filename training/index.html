@@ -35,6 +35,9 @@
 
 <style>
 .training-menu{display:grid;gap:12px}
+.training-menu .nav-card.no-icon{grid-template-columns:minmax(0,1fr) 28px}
+.training-menu .nav-card-text{min-width:0}
+@media(max-width:520px){.training-menu .nav-card.no-icon{grid-template-columns:minmax(0,1fr) 24px}}
 .training-primary{display:grid;gap:12px}
 .training-card{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
 .training-card strong{font-size:17px;color:var(--ink)}
@@ -77,14 +80,14 @@
 
 <section class="section">
   <div class="training-menu">
-    <a class="nav-card" href="textbook-index.html"><span class="nav-card-text"><strong>教本 用語索引</strong><small>用語名・読み仮名から教本の掲載ページを検索</small></span><span class="nav-card-arrow">→</span></a>
+    <a class="nav-card no-icon" href="textbook-index.html"><span class="nav-card-text"><strong>教本 用語索引</strong><small>用語名・読み仮名から教本の掲載ページを検索</small></span><span class="nav-card-arrow">→</span></a>
     <a class="nav-card" href="first-flight.html"><span class="nav-card-icon"><img class="hang-glider-icon" src="../assets/icons/flow-icon.svg" alt=""></span><span class="nav-card-text"><strong>初飛びまでの流れ</strong><small>初飛びまでの練習段階とポイント</small></span><span class="nav-card-arrow">→</span></a>
     <a class="nav-card" href="../area/landing-map.html"><span class="nav-card-icon"><img src="../assets/icons/training-landing-map-icon.svg" alt=""></span><span class="nav-card-text"><strong>荒神山 練習・ランディングマップ</strong><small>練習場所とランディングを確認</small></span><span class="nav-card-arrow">→</span></a>
 
-    <a class="nav-card" href="plateau-preparation.html"><span class="nav-card-text"><strong>台地練習の前にすること</strong><small>天気・機体・セットアップ・安全確認などの準備</small></span><span class="nav-card-arrow">→</span></a>
-    <a class="nav-card" href="../manuals/glider-setup-guide.html"><span class="nav-card-text"><strong>グライダーのセットアップ・ブレイクダウン</strong><small>170・330の組み立てとばらし方／教本 p18〜</small></span><span class="nav-card-arrow">→</span></a>
-    <a class="nav-card" href="training-gliders.html"><span class="nav-card-text"><strong>講習機の名前と用途</strong><small>機体ごとの練習段階と使用者</small></span><span class="nav-card-arrow">→</span></a>
-    <a class="nav-card" href="skyfloater-sizes.html"><span class="nav-card-text"><strong>スカイフローターのサイズ</strong><small>サイズの見分け方</small></span><span class="nav-card-arrow">→</span></a>
+    <a class="nav-card no-icon" href="plateau-preparation.html"><span class="nav-card-text"><strong>台地練習の前にすること</strong><small>天気・機体・セットアップ・安全確認などの準備</small></span><span class="nav-card-arrow">→</span></a>
+    <a class="nav-card no-icon" href="../manuals/glider-setup-guide.html"><span class="nav-card-text"><strong>グライダーのセットアップ・ブレイクダウン</strong><small>170・330の組み立てとばらし方／教本 p18〜</small></span><span class="nav-card-arrow">→</span></a>
+    <a class="nav-card no-icon" href="training-gliders.html"><span class="nav-card-text"><strong>講習機の名前と用途</strong><small>機体ごとの練習段階と使用者</small></span><span class="nav-card-arrow">→</span></a>
+    <a class="nav-card no-icon" href="skyfloater-sizes.html"><span class="nav-card-text"><strong>スカイフローターのサイズ</strong><small>サイズの見分け方</small></span><span class="nav-card-arrow">→</span></a>
 
     <a class="nav-card" href="ground-handling.html"><span class="nav-card-icon"><img class="hang-glider-icon" src="../assets/icons/first-flight-icon.svg" alt=""></span><span class="nav-card-text"><strong>グラハン</strong><small>教本 p43〜、p66〜</small></span><span class="nav-card-arrow">→</span></a>
 
